@@ -47,27 +47,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <section className="section">
-      <div className="container">
-        <h1>{product.name}</h1>
-        <p className="section-lead">{product.longDescription}</p>
-
-        <div className="cards">
-          <article className="card">
-            <h2>Vantaggi principali</h2>
-            <ul>
-              {product.benefits.map((benefit) => (
-                <li key={benefit}>{benefit}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="card">
-            <h2>Per chi e pensato</h2>
-            <p>
-              Questo prodotto e ideale per PMI che vogliono ottimizzare processi
-              interni, ridurre attivita manuali e migliorare il servizio verso
-              clienti e collaboratori.
-            </p>
+    <>
+      <section className="section">
+        <div className="container">
+          <div className="section-shell">
+            <div className="section-header">
+              <span className="eyebrow">Prodotto Adekro</span>
+              <h1>{product.name}</h1>
+              <p className="section-lead">{product.longDescription}</p>
+            </div>
             <div className="cta-row">
               <Link href="/contatti" className="btn btn-primary">
                 Richiedi una demo
@@ -76,9 +64,57 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 Torna ai prodotti
               </Link>
             </div>
-          </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="section section-soft">
+        <div className="container">
+          <div className="section-shell">
+            <div className="cards">
+              <article className="card">
+                <h2>Vantaggi principali</h2>
+                <ul className="feature-list">
+                  {product.benefits.map((benefit) => (
+                    <li key={benefit}>{benefit}</li>
+                  ))}
+                </ul>
+              </article>
+              <article className="card">
+                <h2>Quando e utile</h2>
+                <p>
+                  Questa soluzione e adatta a PMI che vogliono ridurre passaggi manuali,
+                  migliorare il coordinamento operativo e offrire un&apos;esperienza piu chiara
+                  a clienti, team o collaboratori.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-accent">
+        <div className="container">
+          <div className="section-shell">
+            <div className="section-header">
+              <span className="eyebrow">Personalizzazione</span>
+              <h2>Possiamo partire da questo prodotto e adattarlo al tuo flusso di lavoro</h2>
+              <p className="section-lead">
+                Se il bisogno e vicino ma non identico, Adekro puo personalizzare struttura,
+                funzioni e integrazioni per avvicinare il prodotto al tuo contesto aziendale.
+              </p>
+            </div>
+            <div className="cta-row">
+              <Link href="/contatti" className="btn btn-primary">
+                Valuta una personalizzazione
+              </Link>
+              <Link href="/chi-siamo" className="btn btn-secondary">
+                Scopri il nostro approccio
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
