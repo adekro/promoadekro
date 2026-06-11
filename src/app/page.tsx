@@ -14,6 +14,8 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+        <div className="decorative-blob blob-1"></div>
+        <div className="decorative-blob blob-2"></div>
         <div className="container hero-inner">
           <div className="hero-copy">
             <span className="eyebrow">Soluzioni digitali su misura per PMI</span>
@@ -160,6 +162,7 @@ export default function Home() {
       </section>
 
       <section className="section">
+        <div className="decorative-blob blob-3"></div>
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
