@@ -61,10 +61,13 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${merriweather.variable}`}
     >
       <body>
+        <a href="#main-content" className="skip-to-content">
+          Salta al contenuto principale
+        </a>
         <header className="site-header">
           <div className="container nav-wrap">
             <div className="brand-block">
-              <Link href="/" className="brand">
+              <Link href="/" className="brand" aria-label="Adekro - Home">
                 Adekro
               </Link>
               <p className="brand-caption">
@@ -82,7 +85,7 @@ export default function RootLayout({
             </Link>
           </div>
         </header>
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <footer className="site-footer">
           <div className="container footer-grid">
             <div className="footer-intro">
