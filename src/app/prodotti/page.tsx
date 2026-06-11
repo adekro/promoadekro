@@ -60,6 +60,7 @@ export default function ProdottiPage() {
                     <Link
                       href={`/prodotti/${product.slug}`}
                       className="btn btn-secondary"
+                      aria-label={`Approfondisci il prodotto: ${product.name}`}
                     >
                       Approfondisci il prodotto
                     </Link>
