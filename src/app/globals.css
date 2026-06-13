@@ -671,3 +671,19 @@ ul {
     flex-direction: column;
   }
 }
+
+.site-nav a.active {
+  background: var(--brand);
+  color: white;
+  border-color: var(--brand);
+}
+
+.site-nav a.active:hover {
+  background: var(--brand-dark);
+  color: white;
+  transform: translateY(-1px);
+}
+
+#main-content {
+  scroll-margin-top: 100px;
+}
