@@ -106,6 +106,7 @@ a {
 
 main {
   flex: 1;
+  scroll-margin-top: 100px;
 }
 
 h1,
@@ -184,11 +185,24 @@ ul {
     background-color 180ms ease, transform 180ms ease;
 }
 
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a.active {
   border-color: rgba(14, 42, 71, 0.12);
   background: rgba(255, 255, 255, 0.72);
   color: var(--text-main);
   transform: translateY(-1px);
+}
+
+.site-nav a.active {
+  background: var(--brand);
+  color: white;
+  border-color: var(--brand);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.site-nav a.active:hover {
+  background: var(--brand-dark);
+  color: white;
 }
 
 .header-cta {
