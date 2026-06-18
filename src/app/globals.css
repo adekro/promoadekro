@@ -106,6 +106,7 @@ a {
 
 main {
   flex: 1;
+  scroll-margin-top: 100px;
 }
 
 h1,
@@ -189,6 +190,14 @@ ul {
   background: rgba(255, 255, 255, 0.72);
   color: var(--text-main);
   transform: translateY(-1px);
+}
+
+.site-nav a.active {
+  border-color: var(--brand);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--brand);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);
 }
 
 .header-cta {
@@ -539,6 +548,13 @@ ul {
 
 .footer-column a:hover {
   color: var(--text-main);
+}
+
+.footer-column a.active {
+  color: var(--brand);
+  font-weight: 600;
+  padding-left: 0.25rem;
+  border-left: 2px solid var(--brand);
 }
 
 .footer-contact p {
