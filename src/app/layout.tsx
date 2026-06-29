@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Merriweather, Space_Grotesk } from "next/font/google";
+import NavLinks from "./NavLinks";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -75,10 +76,7 @@ export default function RootLayout({
               </p>
             </div>
             <nav aria-label="Navigazione principale" className="site-nav">
-              <Link href="/">Home</Link>
-              <Link href="/chi-siamo">Chi siamo</Link>
-              <Link href="/prodotti">Prodotti</Link>
-              <Link href="/contatti">Contatti</Link>
+              <NavLinks />
             </nav>
             <Link href="/contatti" className="btn btn-secondary header-cta">
               Richiedi un confronto
