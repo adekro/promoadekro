@@ -5,3 +5,7 @@
 ## 2025-05-14 - Keyboard Navigation Visibility
 **Learning:** Default browser focus rings are often insufficient or inconsistent with brand identity, leading to poor keyboard navigation experiences.
 **Action:** Implement a global `*:focus-visible` style using brand-consistent colors and adequate contrast to ensure clear focus states.
+
+## 2025-05-22 - Sticky Header Anchor Offsets
+**Learning:** `scroll-padding-top` should not be nested inside `@media (prefers-reduced-motion: no-preference)`. While smooth scrolling is a motion preference, the offset for sticky headers is a layout requirement for all users.
+**Action:** Apply `scroll-padding-top` globally to `html` to ensure anchor targets are never obscured, regardless of motion settings.
