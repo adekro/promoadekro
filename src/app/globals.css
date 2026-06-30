@@ -191,6 +191,13 @@ ul {
   transform: translateY(-1px);
 }
 
+.site-nav a.active {
+  border-color: var(--brand);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-main);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);
+}
+
 .header-cta {
   white-space: nowrap;
 }
