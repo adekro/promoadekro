@@ -1,181 +1,126 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { products, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Sviluppo Software su Misura per PMI",
+  title: "App e Gestionali per il Lavoro Reale",
   description:
-    "Adekro realizza siti web, gestionali e app personalizzate per piccole e medie imprese che vogliono crescere online.",
+    "Scopri le app e i gestionali Adekro: FantAuction, DrinkTrainer, Agricola e HorseHouse.",
   alternates: {
     canonical: "/",
   },
 };
 
+function ProductPreview({ slug }: { slug: Product["slug"] }) {
+  if (slug === "fantauction") {
+    return (
+      <div className="preview-auction">
+        <div className="preview-topline"><span>ASTA LIVE</span><strong>184 cr</strong></div>
+        <div className="player-row"><span>LAUTARO</span><b>Preferito</b></div>
+        <div className="player-row"><span>LEAO</span><b>Rigorista</b></div>
+        <div className="credit-bars"><i /><i /><i /><i /></div>
+      </div>
+    );
+  }
+
+  if (slug === "drinktrainer") {
+    return (
+      <div className="preview-drink">
+        <div className="glass"><i /><i /><i /></div>
+        <div className="pour-meter"><span>1.0 oz</span><b /></div>
+        <div className="ingredient-pills"><em>lime</em><em>rum</em><em>mint</em></div>
+      </div>
+    );
+  }
+
+  if (slug === "agricola") {
+    return (
+      <div className="preview-farm">
+        <div className="field field-one" /><div className="field field-two" /><div className="field field-three" />
+        <div className="map-label">PARTICELLA 18</div>
+        <div className="satellite-dot" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="preview-horse">
+      <div className="horse-mark">H</div>
+      <div className="care-list"><span>Dieta <b>OK</b></span><span>Trattamento <b>oggi</b></span><span>Allenamento <b>16:30</b></span></div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <>
-      <section className="hero">
-        <div className="container hero-inner">
+      <section className="product-hero">
+        <div className="container product-hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Soluzioni digitali su misura per PMI</span>
-            <h1>Software, siti e automazioni costruiti per far lavorare meglio la tua impresa</h1>
+            <span className="product-kicker">Adekro / prodotti digitali</span>
+            <h1>Software che segue il lavoro, non il contrario.</h1>
             <p>
-              Adekro affianca le piccole e medie imprese che vogliono chiarire i
-              processi, ridurre attivita manuali e trasformare il digitale in un
-              vantaggio operativo. Progettiamo strumenti concreti, leggibili e
-              pronti a crescere con l&apos;azienda.
+              App e gestionali pensati per chi deve decidere, organizzare e tenere
+              tutto sotto controllo. Dall&apos;asta del fantacalcio alla gestione di un
+              terreno, di un bancone o di un maneggio.
             </p>
             <div className="cta-row">
               <Link href="/prodotti" className="btn btn-primary">
-                Vedi soluzioni e prodotti
+                Esplora i prodotti
               </Link>
               <Link href="/contatti" className="btn btn-secondary">
-                Parla con Adekro
+                Parliamo del tuo progetto
               </Link>
             </div>
           </div>
-          <aside className="hero-panel" aria-label="Punti di forza Adekro">
-            <h2>Una direzione chiara, prima ancora del codice</h2>
-            <ul className="feature-list">
-              <li>Analisi dei flussi reali prima di proporre qualsiasi soluzione</li>
-              <li>Progetti modulari, integrabili e sostenibili nel tempo</li>
-              <li>Supporto vicino al business, non solo al lato tecnico</li>
-              <li>Un unico partner per web, gestionali, app e automazioni</li>
-            </ul>
+          <aside className="hero-workspace" aria-label="Panoramica prodotti Adekro">
+            <div className="workspace-heading"><span>PRODOTTI ATTIVI</span><strong>04</strong></div>
+            <div className="workspace-grid">
+              <div className="workspace-item workspace-item-fant"><span>FA</span><p>FantAuction</p></div>
+              <div className="workspace-item workspace-item-drink"><span>DT</span><p>DrinkTrainer</p></div>
+              <div className="workspace-item workspace-item-farm"><span>AG</span><p>Agricola</p></div>
+              <div className="workspace-item workspace-item-horse"><span>HH</span><p>HorseHouse</p></div>
+            </div>
+            <div className="workspace-status"><i /> Soluzioni nate da esigenze precise</div>
           </aside>
         </div>
       </section>
 
-      <section className="section section-soft">
+      <section className="section products-section">
         <div className="container">
-          <div className="section-shell">
-            <div className="section-header">
-              <span className="eyebrow">Cosa portiamo in azienda</span>
-              <h2>Una base digitale piu chiara, piu ordinata, piu utile</h2>
-              <p className="section-lead">
-                Non ci limitiamo a consegnare un sito o un applicativo. Disegniamo
-                strumenti che aiutano a vendere meglio, coordinare il lavoro e
-                prendere decisioni con piu controllo.
-              </p>
-            </div>
-            <div className="stats-grid" aria-label="Punti chiave Adekro">
-              <article className="stat-card">
-                <span className="stat-value">PMI</span>
-                <p className="kpi-label">Focus su aziende che hanno bisogno di strumenti concreti, non complessi.</p>
+          <div className="products-heading">
+            <span className="product-kicker">Il catalogo</span>
+            <h2>Un prodotto per ogni contesto.<br />Stessa cura per i dettagli.</h2>
+            <p>Non cataloghi astratti: strumenti pensati per un gesto, una decisione e una giornata di lavoro reali.</p>
+          </div>
+          <div className="product-grid">
+            {products.map((product) => (
+              <article className={`product-card product-card-${product.slug}`} key={product.slug}>
+                <ProductPreview slug={product.slug} />
+                <div className="product-card-copy">
+                  <span>{product.category}</span>
+                  <h3>{product.name}</h3>
+                  <p>{product.shortDescription}</p>
+                  <Link href={`/prodotti/${product.slug}`} className="product-link">
+                    Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+                  </Link>
+                </div>
               </article>
-              <article className="stat-card">
-                <span className="stat-value">End-to-end</span>
-                <p className="kpi-label">Dal sito alla gestione interna, con un percorso progettuale coerente.</p>
-              </article>
-              <article className="stat-card">
-                <span className="stat-value">Su misura</span>
-                <p className="kpi-label">Ogni soluzione nasce dai processi reali e dagli obiettivi del team.</p>
-              </article>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section operational-section">
         <div className="container">
-          <div className="section-header">
-            <span className="eyebrow">Servizi principali</span>
-            <h2>Interventi mirati per migliorare presenza online e operativita</h2>
-            <p className="section-lead">
-              Ogni area e pensata per integrarsi con le altre: marketing, gestione,
-              supporto al cliente e automazione devono parlare la stessa lingua.
-            </p>
-          </div>
-          <div className="cards">
-            <article className="card">
-              <h3>Siti web orientati alla conversione</h3>
-              <p>
-                Siti veloci, chiari e costruiti per raccontare il valore dell&apos;azienda,
-                generare contatti qualificati e rafforzare il posizionamento online.
-              </p>
-            </article>
-            <article className="card">
-              <h3>Gestionali su misura</h3>
-              <p>
-                Dashboard, flussi approvativi, archivi condivisi e strumenti di controllo
-                per ridurre dispersioni operative e centralizzare le informazioni.
-              </p>
-            </article>
-            <article className="card">
-              <h3>App per team e clienti</h3>
-              <p>
-                Esperienze semplici da usare, utili sul campo e allineate ai processi
-                quotidiani di chi deve lavorare in modo rapido e ordinato.
-              </p>
-            </article>
-            <article className="card">
-              <h3>Automazioni e integrazioni</h3>
-              <p>
-                Colleghiamo strumenti esistenti, riduciamo passaggi manuali e rendiamo
-                piu fluido il lavoro tra reparti, clienti e canali digitali.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-accent">
-        <div className="container">
-          <div className="section-shell">
-            <div className="section-header">
-              <span className="eyebrow">Metodo di lavoro</span>
-              <h2>Un percorso semplice per trasformare esigenze complesse in strumenti utili</h2>
-              <p className="section-lead">
-                Partiamo dall&apos;operativita, non dalle mode. Questo permette di consegnare
-                soluzioni piu adottabili dal team e piu efficaci per il business.
-              </p>
+          <div className="operational-grid">
+            <div>
+              <span className="product-kicker">Oltre il catalogo</span>
+              <h2>Quando il lavoro ha regole sue, il software deve saperle rispettare.</h2>
             </div>
-            <div className="cards">
-              <article className="card">
-                <h3>1. Analisi e priorita</h3>
-                <p>
-                  Leggiamo processi, colli di bottiglia e obiettivi per capire dove il digitale puo produrre valore reale.
-                </p>
-              </article>
-              <article className="card">
-                <h3>2. Progettazione chiara</h3>
-                <p>
-                  Organizziamo funzioni, contenuti e flussi in modo comprensibile per chi dovra usare davvero il sistema.
-                </p>
-              </article>
-              <article className="card">
-                <h3>3. Sviluppo e rilascio</h3>
-                <p>
-                  Realizziamo la soluzione con attenzione a usabilita, integrazione e performance, senza complicazioni inutili.
-                </p>
-              </article>
-              <article className="card">
-                <h3>4. Evoluzione continua</h3>
-                <p>
-                  Monitoriamo il risultato, raccogliamo feedback e accompagniamo la crescita del progetto nel tempo.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-shell">
-            <div className="section-header">
-              <span className="eyebrow">Prossimo passo</span>
-              <h2>Vuoi capire quale soluzione e piu adatta alla tua impresa?</h2>
-              <p className="section-lead">
-                Possiamo partire da un&apos;esigenza precisa oppure aiutarti a mettere ordine tra strumenti, processi e priorita.
-              </p>
-            </div>
-            <div className="cta-row">
-              <Link href="/chi-siamo" className="btn btn-secondary">
-                Scopri come lavoriamo
-              </Link>
-              <Link href="/contatti" className="btn btn-primary">
-                Richiedi un confronto iniziale
-              </Link>
+            <div className="operational-copy">
+              <p>Progettiamo anche app, gestionali e integrazioni su misura per organizzare processi, dati e persone attorno a quello che conta davvero nella tua attivita.</p>
+              <Link href="/contatti" className="btn btn-primary">Raccontaci la tua esigenza</Link>
             </div>
           </div>
         </div>

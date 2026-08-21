@@ -5,7 +5,7 @@ import { products } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Prodotti Digitali",
   description:
-    "Catalogo prodotti Adekro: TiSposi, chatbot intelligente configurabile, gestione eventi e gestione affitti brevi e lunghi.",
+    "Catalogo prodotti Adekro: FantAuction, DrinkTrainer, Agricola e HorseHouse.",
   alternates: {
     canonical: "/prodotti",
   },
@@ -19,11 +19,11 @@ export default function ProdottiPage() {
           <div className="section-shell">
             <div className="section-header">
               <span className="eyebrow">Prodotti Adekro</span>
-              <h1>Soluzioni digitali gia pronte, da adottare o adattare al tuo contesto</h1>
+              <h1>App e gestionali gia pronti, progettati intorno al lavoro reale</h1>
               <p className="section-lead">
-                In questa area trovi prodotti pensati per esigenze operative concrete.
-                Ogni soluzione puo essere usata come base pronta oppure evoluta in
-                funzione dei processi e delle priorita della tua impresa.
+                Dall&apos;asta del fantacalcio alla cura del cavallo, dai cocktail alla
+                gestione agronomica: ogni prodotto parte da un&apos;esigenza precisa e puo
+                evolvere con il contesto in cui lo usi.
               </p>
             </div>
             <div className="stats-grid">
@@ -54,6 +54,7 @@ export default function ProdottiPage() {
             <div className="cards">
               {products.map((product) => (
                 <article className="card" key={product.slug}>
+                  <span className="product-card-category">{product.category}</span>
                   <h2>{product.name}</h2>
                   <p>{product.shortDescription}</p>
                   <div className="cta-row">

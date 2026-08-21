@@ -52,7 +52,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Prodotto Adekro</span>
+              <span className="eyebrow">{product.category}</span>
               <h1>{product.name}</h1>
               <p className="section-lead">{product.longDescription}</p>
             </div>
@@ -83,9 +83,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <article className="card">
                 <h2>Quando e utile</h2>
                 <p>
-                  Questa soluzione e adatta a PMI che vogliono ridurre passaggi manuali,
-                  migliorare il coordinamento operativo e offrire un&apos;esperienza piu chiara
-                  a clienti, team o collaboratori.
+                  {product.idealFor}
                 </p>
               </article>
             </div>
