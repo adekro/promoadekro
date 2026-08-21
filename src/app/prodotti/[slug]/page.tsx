@@ -57,7 +57,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <p className="section-lead">{product.longDescription}</p>
             </div>
             <div className="cta-row">
-              <Link href="/contatti" className="btn btn-primary">
+              <Link
+                href="/contatti"
+                className="btn btn-primary"
+                aria-label={`Richiedi una demo per ${product.name}`}
+              >
                 Richiedi una demo
               </Link>
               <Link href="/prodotti" className="btn btn-secondary">

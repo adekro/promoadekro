@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Merriweather, Space_Grotesk } from "next/font/google";
+import NavLinks from "@/components/NavLinks";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -61,10 +62,13 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${merriweather.variable}`}
     >
       <body>
+        <a href="#main-content" className="skip-to-content">
+          Salta al contenuto principale
+        </a>
         <header className="site-header">
           <div className="container nav-wrap">
             <div className="brand-block">
-              <Link href="/" className="brand">
+              <Link href="/" className="brand" aria-label="Adekro - Home">
                 Adekro
               </Link>
               <p className="brand-caption">
@@ -72,17 +76,14 @@ export default function RootLayout({
               </p>
             </div>
             <nav aria-label="Navigazione principale" className="site-nav">
-              <Link href="/">Home</Link>
-              <Link href="/chi-siamo">Chi siamo</Link>
-              <Link href="/prodotti">Prodotti</Link>
-              <Link href="/contatti">Contatti</Link>
+              <NavLinks />
             </nav>
             <Link href="/contatti" className="btn btn-secondary header-cta">
               Richiedi un confronto
             </Link>
           </div>
         </header>
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <footer className="site-footer">
           <div className="container footer-grid">
             <div className="footer-intro">
