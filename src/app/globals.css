@@ -1221,6 +1221,12 @@ ul {
     padding: 0.8rem 0;
   }
 
+  .brand-block {
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+  }
+
   .site-nav {
     width: 100%;
   }
