@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { products, type Product } from "@/lib/products";
 
@@ -123,6 +124,13 @@ export default function Home() {
               <article className={`product-card product-card-${product.slug}`} key={product.slug}>
                 <ProductPreview slug={product.slug} />
                 <div className="product-card-copy">
+                  <Image
+                    alt={`Logo ${product.name}`}
+                    className={`product-logo product-logo-${product.slug}`}
+                    height={80}
+                    src={product.logo}
+                    width={80}
+                  />
                   <span>{product.category}</span>
                   <h3>{product.name}</h3>
                   <p>{product.shortDescription}</p>

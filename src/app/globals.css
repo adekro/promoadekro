@@ -1,20 +1,22 @@
 :root {
-  --bg-main: #f8fafc;
-  --bg-surface: #ffffff;
-  --bg-accent: #1e1b4b;
-  --bg-soft: #f1f5f9;
-  --bg-strong: #0f172a;
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-light: #f8fafc;
-  --line: #e2e8f0;
-  --line-strong: rgba(15, 23, 42, 0.08);
-  --brand: #4f46e5;
-  --brand-dark: #3730a3;
+  --bg-main: #f5f5f2;
+  --bg-surface: #fffefa;
+  --bg-accent: #082b5c;
+  --bg-soft: #edf2f7;
+  --bg-strong: #03152f;
+  --text-main: #061b39;
+  --text-muted: #43546a;
+  --text-light: #f8f7f1;
+  --line: #d4dbe4;
+  --line-strong: rgba(6, 27, 57, 0.12);
+  --brand: #c8953e;
+  --brand-dark: #9d6d25;
+  --gold-light: #f1d18f;
+  --blue-mid: #0b438a;
   --radius: 16px;
   --radius-lg: 28px;
-  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-soft: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow: 0 10px 15px -3px rgba(3, 21, 47, 0.12), 0 4px 6px -4px rgba(3, 21, 47, 0.1);
+  --shadow-soft: 0 20px 25px -5px rgba(3, 21, 47, 0.14), 0 8px 10px -6px rgba(3, 21, 47, 0.1);
 }
 
 html {
@@ -51,7 +53,7 @@ body {
   height: auto;
   padding: 0.75rem 1.5rem;
   background-color: var(--brand);
-  color: white;
+  color: #03152f;
   border-radius: var(--radius);
   z-index: 1000;
   outline: 2px solid white;
@@ -66,10 +68,10 @@ body {
   position: relative;
   color: var(--text-main);
   background:
-    radial-gradient(circle at 12% 0%, rgba(255, 214, 152, 0.55) 0%, rgba(255, 214, 152, 0) 28%),
-    radial-gradient(circle at 88% 8%, rgba(122, 172, 230, 0.33) 0%, rgba(122, 172, 230, 0) 28%),
-    radial-gradient(circle at 50% 100%, rgba(188, 227, 214, 0.34) 0%, rgba(188, 227, 214, 0) 32%),
-    linear-gradient(180deg, #fbfcf8 0%, #f3f5ec 100%),
+    radial-gradient(circle at 9% 0%, rgba(213, 170, 88, 0.22) 0%, rgba(213, 170, 88, 0) 27%),
+    radial-gradient(circle at 91% 8%, rgba(50, 102, 168, 0.16) 0%, rgba(50, 102, 168, 0) 30%),
+    radial-gradient(circle at 52% 100%, rgba(159, 182, 211, 0.2) 0%, rgba(159, 182, 211, 0) 34%),
+    linear-gradient(180deg, #fbfbf8 0%, #f1f3f5 100%),
     var(--bg-main);
   font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -121,8 +123,8 @@ ul {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(18px);
-  background: rgba(248, 249, 242, 0.78);
-  border-bottom: 1px solid rgba(31, 41, 51, 0.08);
+  background: rgba(255, 254, 250, 0.84);
+  border-bottom: 1px solid rgba(6, 27, 57, 0.1);
 }
 
 .nav-wrap {
@@ -141,19 +143,20 @@ ul {
 
 .brand {
   width: fit-content;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  display: block;
+  line-height: 0;
+}
+
+.brand-logo {
+  display: block;
+  width: 10.8rem;
+  height: auto;
 }
 
 .brand-caption {
   color: var(--text-muted);
   font-size: 0.92rem;
   line-height: 1.5;
-}
-
-.brand:hover {
-  color: var(--bg-accent);
 }
 
 .site-nav {
@@ -168,23 +171,22 @@ ul {
   padding: 0.62rem 0.9rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  transition: color 180ms ease, border-color 180ms ease,
-    background-color 180ms ease, transform 180ms ease;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
 .site-nav a:hover {
-  border-color: rgba(14, 42, 71, 0.12);
-  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(6, 27, 57, 0.15);
+  background: rgba(255, 254, 250, 0.86);
   color: var(--text-main);
   transform: translateY(-1px);
 }
 
 .site-nav a.active {
   font-weight: 600;
-  color: var(--brand);
+  color: var(--brand-dark);
   border-color: var(--brand);
-  background: rgba(79, 70, 229, 0.05);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);
+  background: rgba(200, 149, 62, 0.1);
+  box-shadow: 0 4px 12px rgba(200, 149, 62, 0.12);
 }
 
 .header-cta {
@@ -931,6 +933,31 @@ ul {
   padding: 1.5rem 1.35rem;
 }
 
+.product-logo {
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 0.8rem;
+  object-fit: contain;
+}
+
+.product-logo-agricola {
+  width: 7rem;
+}
+
+.product-detail-logo {
+  display: block;
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: contain;
+}
+
+.product-detail-logo.product-logo-agricola {
+  width: min(15rem, 100%);
+  height: 5rem;
+  object-position: left center;
+}
+
 .product-card-copy > span,
 .product-card-category {
   color: #597079;
@@ -1301,4 +1328,164 @@ ul {
   .operational-grid {
     padding: 2rem 1.35rem;
   }
+}
+
+/* Palette Adekro: blu notte, blu reale e oro del marchio. */
+.btn-primary {
+  color: #03152f;
+  box-shadow: 0 10px 15px -3px rgba(157, 109, 37, 0.28);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  box-shadow: 0 20px 25px -5px rgba(157, 109, 37, 0.34);
+}
+
+.product-kicker,
+.product-link,
+.cookie-consent-label,
+.cookie-status,
+.cookie-text-button {
+  color: var(--brand-dark);
+}
+
+.product-hero .hero-copy h1,
+.products-heading h2,
+.product-card h3,
+.cookie-consent-copy h2 {
+  color: var(--text-main);
+}
+
+.hero-workspace,
+.operational-grid {
+  background: linear-gradient(135deg, var(--bg-strong), var(--bg-accent));
+}
+
+.hero-workspace {
+  border-color: rgba(200, 149, 62, 0.35);
+  box-shadow: 18px 18px 0 #d7b86f, var(--shadow-soft);
+}
+
+.hero-workspace::before,
+.workspace-status i {
+  background: var(--brand);
+}
+
+.workspace-heading strong,
+.operational-grid .product-kicker {
+  color: var(--gold-light);
+}
+
+.workspace-status i {
+  box-shadow: 0 0 0 4px rgba(200, 149, 62, 0.15);
+}
+
+.workspace-item-fant,
+.product-card-fantauction .product-preview {
+  background: #dfbc69;
+}
+
+.workspace-item-drink,
+.product-card-drinktrainer .product-preview {
+  background: #cda250;
+}
+
+.workspace-item-farm,
+.product-card-agricola .product-preview {
+  background: #7192bd;
+}
+
+.workspace-item-horse,
+.product-card-horsehouse .product-preview {
+  background: #b5c8df;
+}
+
+.product-card {
+  border-color: rgba(6, 27, 57, 0.13);
+  box-shadow: 0 14px 26px rgba(6, 27, 57, 0.08);
+}
+
+.product-card:hover {
+  box-shadow: 0 22px 34px rgba(6, 27, 57, 0.14);
+}
+
+.product-card-copy > span,
+.product-card-category {
+  color: #6d552d;
+}
+
+.preview-auction::before {
+  background-image: linear-gradient(rgba(200, 149, 62, 0.63), rgba(200, 149, 62, 0.76)), url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-drink::before {
+  background-image: linear-gradient(rgba(176, 127, 46, 0.56), rgba(176, 127, 46, 0.74)), url("https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-farm::before {
+  background-image: linear-gradient(rgba(47, 91, 151, 0.5), rgba(47, 91, 151, 0.68)), url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-horse::before {
+  background-image: linear-gradient(rgba(120, 156, 199, 0.55), rgba(120, 156, 199, 0.74)), url("https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-topline strong,
+.preview-farm .satellite-dot {
+  color: var(--brand-dark);
+}
+
+.player-row b,
+.credit-bars i,
+.horse-mark,
+.care-list span,
+.preview-farm .map-label {
+  color: var(--bg-accent);
+}
+
+.credit-bars i,
+.preview-farm .field-one {
+  background: var(--blue-mid);
+}
+
+.preview-farm {
+  background: #7192bd;
+}
+
+.preview-farm .field-two {
+  background: #dfbc69;
+}
+
+.preview-farm .field-three {
+  background: var(--bg-accent);
+}
+
+.preview-farm .satellite-dot {
+  background: var(--brand);
+  box-shadow: 0 0 0 5px rgba(200, 149, 62, 0.22);
+}
+
+.horse-mark {
+  border-color: var(--bg-accent);
+}
+
+.care-list span {
+  border-bottom-color: rgba(8, 43, 92, 0.3);
+}
+
+.cookie-primary-button {
+  background: var(--bg-accent);
+}
+
+.cookie-secondary-button {
+  border-color: #cdb37d !important;
+  color: var(--bg-accent);
+}
+
+.toggle-track {
+  background: #b8c6d6;
+}
+
+.cookie-toggle input:checked + .toggle-track {
+  background: var(--brand);
 }

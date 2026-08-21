@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Merriweather, Space_Grotesk } from "next/font/google";
 import CookieConsent from "@/components/CookieConsent";
@@ -86,7 +87,14 @@ export default function RootLayout({
           <div className="container nav-wrap">
             <div className="brand-block">
               <Link href="/" className="brand" aria-label="Adekro - Home">
-                Adekro
+                <Image
+                  alt="Adekro Software Solutions"
+                  className="brand-logo"
+                  height={100}
+                  priority
+                  src="/logo.png"
+                  width={180}
+                />
               </Link>
               <p className="brand-caption">
                 Soluzioni digitali chiare per imprese che vogliono crescere con ordine.

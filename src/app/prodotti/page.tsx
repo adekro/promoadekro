@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/products";
 
@@ -61,6 +62,13 @@ export default function ProdottiPage() {
             <div className="cards">
               {products.map((product) => (
                 <article className="card" key={product.slug}>
+                  <Image
+                    alt={`Logo ${product.name}`}
+                    className={`product-logo product-logo-${product.slug}`}
+                    height={80}
+                    src={product.logo}
+                    width={80}
+                  />
                   <span className="product-card-category">{product.category}</span>
                   <h2>{product.name}</h2>
                   <p>{product.shortDescription}</p>

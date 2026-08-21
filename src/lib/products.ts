@@ -2,6 +2,7 @@ export type Product = {
   slug: string;
   name: string;
   category: string;
+  logo: string;
   shortDescription: string;
   longDescription: string;
   benefits: string[];
@@ -14,6 +15,7 @@ export const products: Product[] = [
     slug: "fantauction",
     name: "FantAuction",
     category: "App per fantacalcio",
+    logo: "/loghiprodotti/fantauction.png",
     shortDescription:
       "L'app che mette ordine nell'asta del fantacalcio, dai giocatori preferiti ai crediti dei concorrenti.",
     longDescription:
@@ -36,6 +38,7 @@ export const products: Product[] = [
     slug: "drinktrainer",
     name: "DrinkTrainer",
     category: "App per bartender",
+    logo: "/loghiprodotti/drinktrainer.png",
     shortDescription:
       "Catalogo cocktail, filtro ingredienti e allenamento pratico per versare le once con precisione.",
     longDescription:
@@ -58,6 +61,7 @@ export const products: Product[] = [
     slug: "agricola",
     name: "Agricola",
     category: "Gestionale agricolo",
+    logo: "/loghiprodotti/agricola.png",
     shortDescription:
       "Il gestionale per visualizzare terreni, colture e trattamenti in un unico quadro operativo.",
     longDescription:
@@ -80,6 +84,7 @@ export const products: Product[] = [
     slug: "horsehouse",
     name: "HorseHouse",
     category: "Gestionale per maneggi",
+    logo: "/loghiprodotti/horsehouse.png",
     shortDescription:
       "Un gestionale dedicato alla cura quotidiana del cavallo, dalla dieta ai trattamenti fino agli allenamenti.",
     longDescription:

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/lib/products";
@@ -75,6 +76,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="section-shell">
             <div className="section-header">
               <span className="eyebrow">{product.category}</span>
+              <Image
+                alt={`Logo ${product.name}`}
+                className={`product-detail-logo product-logo-${product.slug}`}
+                height={120}
+                priority
+                src={product.logo}
+                width={120}
+              />
               <h1>{product.name}</h1>
               <p className="section-lead">{product.longDescription}</p>
             </div>
