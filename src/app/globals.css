@@ -798,8 +798,39 @@ ul {
 .preview-drink,
 .preview-farm,
 .preview-horse {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   height: 100%;
   min-height: 15rem;
+}
+
+.preview-auction::before,
+.preview-drink::before,
+.preview-farm::before,
+.preview-horse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+}
+
+.preview-auction::before {
+  background-image: linear-gradient(rgba(241, 195, 91, 0.65), rgba(241, 195, 91, 0.76)), url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-drink::before {
+  background-image: linear-gradient(rgba(240, 146, 112, 0.58), rgba(240, 146, 112, 0.74)), url("https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-farm::before {
+  background-image: linear-gradient(rgba(149, 189, 127, 0.5), rgba(149, 189, 127, 0.68)), url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80");
+}
+
+.preview-horse::before {
+  background-image: linear-gradient(rgba(186, 217, 220, 0.55), rgba(186, 217, 220, 0.74)), url("https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=900&q=80");
 }
 
 .preview-auction {
@@ -861,7 +892,7 @@ ul {
 .pour-meter b { display: block; height: 0.45rem; background: linear-gradient(90deg, #fffefa 64%, rgba(255, 254, 250, 0.4) 64%); }
 .ingredient-pills { display: flex; gap: 0.25rem; }.ingredient-pills em { padding: 0.2rem 0.35rem; border: 1px solid rgba(123, 56, 45, 0.38); color: #7b382d; font-size: 0.55rem; font-style: normal; }
 
-.preview-farm { position: relative; background: #b9d5a4; }
+.preview-farm { background: #b9d5a4; }
 .preview-farm .field { position: absolute; border: 2px solid rgba(255, 254, 250, 0.84); }.preview-farm .field-one { inset: 17% 42% 44% 7%; background: #739b5c; transform: rotate(-8deg); }.preview-farm .field-two { inset: 28% 9% 12% 48%; background: #d5ba6b; transform: rotate(12deg); }.preview-farm .field-three { inset: 61% 46% 7% 13%; background: #638a5c; transform: rotate(6deg); }
 .preview-farm .map-label { position: absolute; top: 10%; left: 10%; padding: 0.3rem 0.4rem; background: #fffefa; color: #376343; font-size: 0.56rem; font-weight: 700; letter-spacing: 0.04em; }.preview-farm .satellite-dot { position: absolute; top: 46%; left: 45%; width: 0.85rem; height: 0.85rem; border: 3px solid #fffefa; border-radius: 50%; background: #e85f45; box-shadow: 0 0 0 5px rgba(232, 95, 69, 0.22); }
 
