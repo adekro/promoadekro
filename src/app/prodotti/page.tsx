@@ -3,9 +3,16 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "Prodotti Digitali",
+  title: "App e Gestionali per Fantacalcio, Cocktail, Agricoltura e Maneggi",
   description:
-    "Catalogo prodotti Adekro: FantAuction, DrinkTrainer, Agricola e HorseHouse.",
+    "Catalogo Adekro: app per asta fantacalcio e cocktail, gestionale agricolo con Copernicus e software per la gestione del maneggio.",
+  keywords: [
+    "app asta fantacalcio",
+    "app cocktail bartender",
+    "gestionale agricolo Copernicus",
+    "gestionale maneggio",
+    "software gestione cavalli",
+  ],
   alternates: {
     canonical: "/prodotti",
   },

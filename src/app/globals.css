@@ -555,6 +555,205 @@ ul {
   border-top: 1px solid rgba(14, 42, 71, 0.08);
 }
 
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+}
+
+.footer-legal-links a,
+.footer-legal-button {
+  color: var(--text-muted);
+  font: inherit;
+}
+
+.footer-legal-links a:hover,
+.footer-legal-button:hover {
+  color: var(--text-main);
+}
+
+.footer-legal-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.legal-layout {
+  max-width: 52rem;
+}
+
+.legal-layout > h1 {
+  margin: 0.8rem 0;
+}
+
+.legal-intro {
+  color: var(--text-muted);
+}
+
+.legal-content {
+  display: grid;
+  gap: 1.8rem;
+  margin-top: 2.5rem;
+}
+
+.legal-content section {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.legal-content h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+
+.legal-content p {
+  color: var(--text-muted);
+}
+
+.legal-content a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.cookie-backdrop {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.3);
+}
+
+.cookie-consent {
+  width: min(100%, 46rem);
+  padding: 1.5rem;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  background: #fffefa;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.26);
+}
+
+.cookie-consent-copy h2 {
+  margin: 0.25rem 0 0.55rem;
+  color: #112f36;
+  font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
+  font-size: 1.6rem;
+}
+
+.cookie-consent-copy p:not(.cookie-consent-label) {
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.cookie-consent-label {
+  color: #0f6d5b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.cookie-options {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.cookie-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  background: #f8faf7;
+}
+
+.cookie-option h3,
+.cookie-option strong {
+  font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.cookie-option p,
+.cookie-option small {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.cookie-status {
+  color: #0f6d5b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cookie-toggle {
+  cursor: pointer;
+}
+
+.cookie-toggle input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle-track {
+  position: relative;
+  width: 2.6rem;
+  height: 1.45rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #cbd5d2;
+  transition: background 160ms ease;
+}
+
+.toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 0.18rem;
+  left: 0.18rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 160ms ease;
+}
+
+.cookie-toggle input:checked + .toggle-track {
+  background: #0f6d5b;
+}
+
+.cookie-toggle input:checked + .toggle-track::after {
+  transform: translateX(1.15rem);
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  margin-top: 1.25rem;
+}
+
+.cookie-actions button {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.cookie-primary-button { background: #173d42; color: #fff; }
+.cookie-secondary-button { border-color: #b8c6c4 !important; background: #fffefa; color: #173d42; }
+.cookie-text-button { margin-right: auto; background: transparent; color: #0f6d5b; }
+
 .product-hero {
   padding: 5.4rem 0 4.6rem;
 }

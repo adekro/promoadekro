@@ -30,10 +30,17 @@ export async function generateMetadata({
   }
 
   return {
-    title: product.name,
+    title: `${product.name} | ${product.category}`,
     description: product.shortDescription,
+    keywords: product.seoKeywords,
     alternates: {
       canonical: `/prodotti/${product.slug}`,
+    },
+    openGraph: {
+      title: `${product.name} | ${product.category}`,
+      description: product.shortDescription,
+      url: `/prodotti/${product.slug}`,
+      type: "website",
     },
   };
 }
@@ -46,8 +53,23 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: product.name,
+    applicationCategory: product.category,
+    operatingSystem: "Web, iOS, Android",
+    description: product.longDescription,
+    url: `https://www.adekro.it/prodotti/${product.slug}`,
+    keywords: product.seoKeywords.join(", "),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
       <section className="section">
         <div className="container">
           <div className="section-shell">

@@ -2,9 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Chi Siamo",
+  title: "Sviluppo Software e Programmazione per PMI",
   description:
-    "Scopri Adekro: partner tecnologico per PMI che cercano siti web, gestionali e app su misura orientati a efficienza e crescita.",
+    "Adekro e partner per lo sviluppo software, la programmazione di gestionali, app web e mobile, automazioni e integrazioni per PMI.",
+  keywords: [
+    "azienda sviluppo software",
+    "programmazione software PMI",
+    "sviluppo gestionali su misura",
+    "sviluppo app web",
+    "sviluppo app mobile",
+    "consulenza software",
+  ],
   alternates: {
     canonical: "/chi-siamo",
   },
@@ -18,12 +26,12 @@ export default function ChiSiamoPage() {
           <div className="section-shell">
             <div className="section-header">
               <span className="eyebrow">Chi siamo</span>
-              <h1>Un partner tecnico che ragiona insieme alla tua impresa</h1>
+              <h1>Sviluppo software e programmazione per imprese che vogliono lavorare meglio</h1>
               <p className="section-lead">
-                Adekro sviluppa soluzioni informatiche per PMI che vogliono migliorare
-                organizzazione interna, presenza online e qualita del servizio.
-                Lavoriamo con un approccio concreto: ascolto, ordine progettuale e
-                strumenti utili da adottare davvero nel quotidiano.
+                Adekro sviluppa software su misura, gestionali, app web e mobile,
+                automazioni e integrazioni per PMI che vogliono migliorare organizzazione
+                interna, presenza online e qualita del servizio. Lavoriamo con un approccio
+                concreto: ascolto, programmazione solida e strumenti utili nel quotidiano.
               </p>
             </div>
             <div className="stats-grid">

@@ -3,9 +3,22 @@ import Link from "next/link";
 import { products, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "App e Gestionali per il Lavoro Reale",
+  title: "App e Gestionali: Fantacalcio, Cocktail, Agricoltura e Maneggi",
   description:
-    "Scopri le app e i gestionali Adekro: FantAuction, DrinkTrainer, Agricola e HorseHouse.",
+    "Adekro sviluppa software su misura, app web e mobile e gestionali. Scopri FantAuction, DrinkTrainer, Agricola e HorseHouse.",
+  keywords: [
+    "sviluppo software su misura",
+    "programmazione software",
+    "sviluppo app web",
+    "sviluppo app mobile",
+    "software gestionale",
+    "automazioni e integrazioni",
+    "app asta fantacalcio",
+    "app cocktail",
+    "gestionale agricolo",
+    "gestionale maneggio",
+    "software su misura PMI",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -52,17 +65,29 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
 }
 
 export default function Home() {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Adekro",
+    url: "https://www.adekro.it",
+    description: "Sviluppo software su misura, app web e mobile, gestionali, automazioni e prodotti digitali per PMI.",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <section className="product-hero">
         <div className="container product-hero-grid">
           <div className="hero-copy">
             <span className="product-kicker">Adekro / prodotti digitali</span>
             <h1>Software che segue il lavoro, non il contrario.</h1>
             <p>
-              App e gestionali pensati per chi deve decidere, organizzare e tenere
-              tutto sotto controllo. Dall&apos;asta del fantacalcio alla gestione di un
-              terreno, di un bancone o di un maneggio.
+              Sviluppiamo software su misura, app web e mobile e gestionali per chi
+              deve decidere, organizzare e tenere tutto sotto controllo. Dall&apos;asta del
+              fantacalcio alla gestione di un terreno, di un bancone o di un maneggio.
             </p>
             <div className="cta-row">
               <Link href="/prodotti" className="btn btn-primary">
@@ -119,7 +144,7 @@ export default function Home() {
               <h2>Quando il lavoro ha regole sue, il software deve saperle rispettare.</h2>
             </div>
             <div className="operational-copy">
-              <p>Progettiamo anche app, gestionali e integrazioni su misura per organizzare processi, dati e persone attorno a quello che conta davvero nella tua attivita.</p>
+              <p>Progettiamo software gestionali, app web e mobile, automazioni e integrazioni API su misura per organizzare processi, dati e persone attorno a quello che conta davvero nella tua attivita.</p>
               <Link href="/contatti" className="btn btn-primary">Raccontaci la tua esigenza</Link>
             </div>
           </div>

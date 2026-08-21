@@ -2,9 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contatti",
+  title: "Contatti per Sviluppo Software, App e Gestionali",
   description:
-    "Contatta Adekro per sviluppare siti web, software gestionali e app su misura per la tua impresa.",
+    "Contatta Adekro per sviluppo software su misura, programmazione di app web e mobile, software gestionali, automazioni e integrazioni API.",
+  keywords: [
+    "preventivo sviluppo software",
+    "sviluppatore software PMI",
+    "sviluppo app su misura",
+    "sviluppo gestionale aziendale",
+    "automazioni aziendali",
+    "integrazioni API",
+  ],
   alternates: {
     canonical: "/contatti",
   },
@@ -18,11 +26,11 @@ export default function ContattiPage() {
           <div className="section-shell">
             <div className="section-header">
               <span className="eyebrow">Contatti</span>
-              <h1>Parliamo del progetto, dei processi o del prossimo passo digitale</h1>
+              <h1>Parliamo del tuo prossimo progetto software</h1>
               <p className="section-lead">
-                Se stai valutando un nuovo sito, un gestionale o una soluzione su misura,
-                possiamo partire da una conversazione semplice per capire obiettivi,
-                criticita e priorita operative.
+                Se stai valutando sviluppo software su misura, un&apos;app web o mobile, un
+                gestionale, un sito o un&apos;integrazione, possiamo partire da una conversazione
+                semplice per capire obiettivi, criticita e priorita operative.
               </p>
             </div>
             <div className="cta-row">

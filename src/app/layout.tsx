@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Merriweather, Space_Grotesk } from "next/font/google";
+import CookieConsent from "@/components/CookieConsent";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 import NavLinks from "@/components/NavLinks";
+import { localSoftwareKeywords } from "@/lib/seo";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -22,21 +25,35 @@ export const metadata: Metadata = {
     template: "%s | Adekro",
   },
   description:
-    "Adekro sviluppa siti web, gestionali e app su misura per piccole e medie imprese. Soluzioni digitali concrete per crescere.",
+    "Adekro sviluppa software su misura, gestionali, app web e mobile, siti web, automazioni e integrazioni API per PMI.",
   keywords: [
+    "sviluppo software",
     "sviluppo software PMI",
+    "software su misura",
+    "azienda sviluppo software",
+    "programmazione software",
+    "sviluppo applicazioni web",
+    "sviluppo app mobile",
+    "software gestionale",
     "siti web aziendali",
     "gestionali su misura",
     "app personalizzate",
-    "chatbot intelligente",
-    "gestione eventi",
-    "gestione affitti brevi",
+    "automazioni aziendali",
+    "integrazioni API",
+    "trasformazione digitale PMI",
+    "app asta fantacalcio",
+    "app cocktail",
+    "gestionale agricolo",
+    "software gestione azienda agricola",
+    "gestionale maneggio",
+    "software gestione cavalli",
     "Adekro",
+    ...localSoftwareKeywords,
   ],
   openGraph: {
     title: "Adekro | Soluzioni Informatiche per PMI",
     description:
-      "Software su misura per PMI: siti web, gestionali, app e strumenti di automazione.",
+      "Sviluppo software su misura, app web e mobile, gestionali, automazioni e integrazioni per PMI, oltre ai prodotti Adekro.",
     url: "https://www.adekro.it",
     siteName: "Adekro",
     locale: "it_IT",
@@ -121,11 +138,16 @@ export default function RootLayout({
               </div>
             </div>
             <div className="footer-bottom">
-              <p>Adekro - Soluzioni informatiche per piccole e medie imprese.</p>
-              <p>Approccio su misura, attenzione alla chiarezza e implementazione progressiva.</p>
+              <p>Adekro di Emanuele Croce - Soluzioni informatiche per piccole e medie imprese.</p>
+              <div className="footer-legal-links">
+                <Link href="/privacy-policy">Privacy Policy</Link>
+                <Link href="/cookie-policy">Cookie Policy</Link>
+                <CookieSettingsButton />
+              </div>
             </div>
           </div>
         </footer>
+        <CookieConsent />
       </body>
     </html>
   );

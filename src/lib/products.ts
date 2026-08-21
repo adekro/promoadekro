@@ -6,6 +6,7 @@ export type Product = {
   longDescription: string;
   benefits: string[];
   idealFor: string;
+  seoKeywords: string[];
 };
 
 export const products: Product[] = [
@@ -23,6 +24,13 @@ export const products: Product[] = [
       "Crediti residui aggiornati per ogni concorrente",
     ],
     idealFor: "Fantaallenatori che vogliono affrontare l'asta con dati chiari e senza perdere il filo delle offerte.",
+    seoKeywords: [
+      "app asta fantacalcio",
+      "gestione asta fantacalcio",
+      "crediti asta fantacalcio",
+      "lista giocatori fantacalcio",
+      "rigoristi fantacalcio",
+    ],
   },
   {
     slug: "drinktrainer",
@@ -38,6 +46,13 @@ export const products: Product[] = [
       "Allenamento della versata per migliorare il dosaggio delle once",
     ],
     idealFor: "Chi vuole imparare, allenarsi o trovare subito un cocktail realizzabile con gli ingredienti disponibili.",
+    seoKeywords: [
+      "app cocktail",
+      "cocktail con ingredienti che ho in casa",
+      "catalogo cocktail",
+      "allenamento versata bartender",
+      "dosare once cocktail",
+    ],
   },
   {
     slug: "agricola",
@@ -53,6 +68,13 @@ export const products: Product[] = [
       "Assegnazione e storico dei trattamenti fitosanitari",
     ],
     idealFor: "Aziende agricole e agronomi che vogliono passare da informazioni disperse a una gestione territoriale leggibile.",
+    seoKeywords: [
+      "gestionale agricolo",
+      "software gestione azienda agricola",
+      "gestione particelle agricole",
+      "Copernicus agricoltura",
+      "gestione trattamenti fitosanitari",
+    ],
   },
   {
     slug: "horsehouse",
@@ -68,6 +90,13 @@ export const products: Product[] = [
       "Registro di allenamenti e attivita di cura",
     ],
     idealFor: "Maneggi e professionisti equestri che vogliono una routine di cura tracciabile e condivisa.",
+    seoKeywords: [
+      "gestionale maneggio",
+      "software gestione cavalli",
+      "gestione dieta cavallo",
+      "gestione trattamenti cavalli",
+      "gestione allenamenti cavalli",
+    ],
   },
 ];
 
