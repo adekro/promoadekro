@@ -20,7 +20,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.adekro.it"),
+  metadataBase: new URL("https://www.adekro.com"),
   title: {
     default: "Adekro | Soluzioni Informatiche per PMI",
     template: "%s | Adekro",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Adekro | Soluzioni Informatiche per PMI",
     description:
       "Sviluppo software su misura, app web e mobile, gestionali, automazioni e integrazioni per PMI, oltre ai prodotti Adekro.",
-    url: "https://www.adekro.it",
+    url: "https://www.adekro.com",
     siteName: "Adekro",
     locale: "it_IT",
     type: "website",
@@ -136,7 +136,7 @@ export default function RootLayout({
               </div>
               <div className="footer-column footer-contact">
                 <h3>Contatto diretto</h3>
-                <Link href="mailto:info@adekro.it">info@adekro.it</Link>
+                <Link href="mailto:info@adekro.com">info@adekro.com</Link>
                 <p>Confronto iniziale su obiettivi, flussi e priorita del progetto.</p>
                 <div className="cta-row footer-cta-row">
                   <Link href="/contatti" className="btn btn-primary">

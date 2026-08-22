@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { products } from "@/lib/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.adekro.it";
+  const baseUrl = "https://www.adekro.com";
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,

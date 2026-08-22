@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             <p>
               Il titolare del trattamento e Emanuele Croce, codice fiscale CRCMNL88R04M109R,
               con sede in Via F.lli Rosselli 84, 27058 Voghera (PV). Per richieste relative
-              alla privacy puoi scrivere a <a href="mailto:info@adekro.it">info@adekro.it</a>.
+              alla privacy puoi scrivere a <a href="mailto:info@adekro.com">info@adekro.com</a>.
             </p>
           </section>
           <section>
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
             <p>
               Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilita o opposizione
               al trattamento dei tuoi dati, oltre a revocare il consenso quando previsto, scrivendo a
-              <a href="mailto:info@adekro.it"> info@adekro.it</a>. Hai inoltre diritto di proporre
+              <a href="mailto:info@adekro.com"> info@adekro.com</a>. Hai inoltre diritto di proporre
               reclamo al Garante per la protezione dei dati personali.
             </p>
           </section>

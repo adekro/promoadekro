@@ -70,7 +70,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Adekro",
-    url: "https://www.adekro.it",
+    url: "https://www.adekro.com",
     description: "Sviluppo software su misura, app web e mobile, gestionali, automazioni e prodotti digitali per PMI.",
   };
 

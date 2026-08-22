@@ -55,7 +55,7 @@ export default function CookiePolicyPage() {
             <h2>Titolare del trattamento</h2>
             <p>
               Il titolare e Emanuele Croce, con sede in Via F.lli Rosselli 84, 27058 Voghera (PV).
-              Per informazioni: <a href="mailto:info@adekro.it">info@adekro.it</a>.
+              Per informazioni: <a href="mailto:info@adekro.com">info@adekro.com</a>.
             </p>
           </section>
         </div>

@@ -34,8 +34,8 @@ export default function ContattiPage() {
               </p>
             </div>
             <div className="cta-row">
-              <Link href="mailto:info@adekro.it" className="btn btn-primary">
-                Scrivi a info@adekro.it
+              <Link href="mailto:info@adekro.com" className="btn btn-primary">
+                Scrivi a info@adekro.com
               </Link>
               <Link href="/prodotti" className="btn btn-secondary">
                 Guarda le soluzioni disponibili

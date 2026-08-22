@@ -61,7 +61,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     applicationCategory: product.category,
     operatingSystem: "Web, iOS, Android",
     description: product.longDescription,
-    url: `https://www.adekro.it/prodotti/${product.slug}`,
+    url: `https://www.adekro.com/prodotti/${product.slug}`,
     keywords: product.seoKeywords.join(", "),
   };
 
