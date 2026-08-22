@@ -12,6 +12,52 @@ export type Product = {
 
 export const products: Product[] = [
   {
+    slug: "horsehouse",
+    name: "HorseHouse",
+    category: "Gestionale per maneggi",
+    logo: "/loghiprodotti/horsehouse.png",
+    shortDescription:
+      "Un gestionale dedicato alla cura quotidiana del cavallo, dalla dieta ai trattamenti fino agli allenamenti.",
+    longDescription:
+      "HorseHouse raccoglie in un unico spazio le informazioni essenziali per il benessere del cavallo: piani alimentari, trattamenti, allenamenti e attivita di cura del maneggio.",
+    benefits: [
+      "Scheda completa per ogni cavallo",
+      "Pianificazione di dieta e trattamenti",
+      "Registro di allenamenti e attivita di cura",
+    ],
+    idealFor: "Maneggi e professionisti equestri che vogliono una routine di cura tracciabile e condivisa.",
+    seoKeywords: [
+      "gestionale maneggio",
+      "software gestione cavalli",
+      "gestione dieta cavallo",
+      "gestione trattamenti cavalli",
+      "gestione allenamenti cavalli",
+    ],
+  },
+  {
+    slug: "agricola",
+    name: "Agricola",
+    category: "Gestionale agricolo",
+    logo: "/loghiprodotti/agricola.png",
+    shortDescription:
+      "Il gestionale per visualizzare terreni, colture e trattamenti in un unico quadro operativo.",
+    longDescription:
+      "Agricola aiuta agricoltori e agronomi a disegnare terreni e particelle, associare le colture, consultare dati satellitari Copernicus e gestire i prodotti fitosanitari impiegati in campo.",
+    benefits: [
+      "Mappa di terreni, particelle e colture",
+      "Consultazione satellitare con dati Copernicus",
+      "Assegnazione e storico dei trattamenti fitosanitari",
+    ],
+    idealFor: "Aziende agricole e agronomi che vogliono passare da informazioni disperse a una gestione territoriale leggibile.",
+    seoKeywords: [
+      "gestionale agricolo",
+      "software gestione azienda agricola",
+      "gestione particelle agricole",
+      "Copernicus agricoltura",
+      "gestione trattamenti fitosanitari",
+    ],
+  },
+  {
     slug: "fantauction",
     name: "FantAuction",
     category: "App per fantacalcio",
@@ -55,52 +101,6 @@ export const products: Product[] = [
       "catalogo cocktail",
       "allenamento versata bartender",
       "dosare once cocktail",
-    ],
-  },
-  {
-    slug: "agricola",
-    name: "Agricola",
-    category: "Gestionale agricolo",
-    logo: "/loghiprodotti/agricola.png",
-    shortDescription:
-      "Il gestionale per visualizzare terreni, colture e trattamenti in un unico quadro operativo.",
-    longDescription:
-      "Agricola aiuta agricoltori e agronomi a disegnare terreni e particelle, associare le colture, consultare dati satellitari Copernicus e gestire i prodotti fitosanitari impiegati in campo.",
-    benefits: [
-      "Mappa di terreni, particelle e colture",
-      "Consultazione satellitare con dati Copernicus",
-      "Assegnazione e storico dei trattamenti fitosanitari",
-    ],
-    idealFor: "Aziende agricole e agronomi che vogliono passare da informazioni disperse a una gestione territoriale leggibile.",
-    seoKeywords: [
-      "gestionale agricolo",
-      "software gestione azienda agricola",
-      "gestione particelle agricole",
-      "Copernicus agricoltura",
-      "gestione trattamenti fitosanitari",
-    ],
-  },
-  {
-    slug: "horsehouse",
-    name: "HorseHouse",
-    category: "Gestionale per maneggi",
-    logo: "/loghiprodotti/horsehouse.png",
-    shortDescription:
-      "Un gestionale dedicato alla cura quotidiana del cavallo, dalla dieta ai trattamenti fino agli allenamenti.",
-    longDescription:
-      "HorseHouse raccoglie in un unico spazio le informazioni essenziali per il benessere del cavallo: piani alimentari, trattamenti, allenamenti e attivita di cura del maneggio.",
-    benefits: [
-      "Scheda completa per ogni cavallo",
-      "Pianificazione di dieta e trattamenti",
-      "Registro di allenamenti e attivita di cura",
-    ],
-    idealFor: "Maneggi e professionisti equestri che vogliono una routine di cura tracciabile e condivisa.",
-    seoKeywords: [
-      "gestionale maneggio",
-      "software gestione cavalli",
-      "gestione dieta cavallo",
-      "gestione trattamenti cavalli",
-      "gestione allenamenti cavalli",
     ],
   },
 ];

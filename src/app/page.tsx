@@ -102,10 +102,10 @@ export default function Home() {
           <aside className="hero-workspace" aria-label="Panoramica prodotti Adekro">
             <div className="workspace-heading"><span>PRODOTTI ATTIVI</span><strong>04</strong></div>
             <div className="workspace-grid">
+              <div className="workspace-item workspace-item-horse"><span>HH</span><p>HorseHouse</p></div>
+              <div className="workspace-item workspace-item-farm"><span>AG</span><p>Agricola</p></div>
               <div className="workspace-item workspace-item-fant"><span>FA</span><p>FantAuction</p></div>
               <div className="workspace-item workspace-item-drink"><span>DT</span><p>DrinkTrainer</p></div>
-              <div className="workspace-item workspace-item-farm"><span>AG</span><p>Agricola</p></div>
-              <div className="workspace-item workspace-item-horse"><span>HH</span><p>HorseHouse</p></div>
             </div>
             <div className="workspace-status"><i /> Soluzioni nate da esigenze precise</div>
           </aside>
