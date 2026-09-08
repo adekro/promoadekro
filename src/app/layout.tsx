@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "automazioni aziendali",
     "integrazioni API",
     "trasformazione digitale PMI",
-    "app asta fantacalcio",
+    "app asta cio",
     "app cocktail",
     "gestionale agricolo",
     "software gestione azienda agricola",
@@ -94,11 +94,13 @@ export default function RootLayout({
     <html
       lang="it"
       className={`${spaceGrotesk.variable} ${merriweather.variable}`}
-      >
+    >
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
         <a href="#main-content" className="skip-to-content">
           Salta al contenuto principale
@@ -117,7 +119,8 @@ export default function RootLayout({
                 />
               </Link>
               <p className="brand-caption">
-                Soluzioni digitali chiare per imprese che vogliono crescere con ordine.
+                Soluzioni digitali chiare per imprese che vogliono crescere con
+                ordine.
               </p>
             </div>
             <nav aria-label="Navigazione principale" className="site-nav">
@@ -133,10 +136,14 @@ export default function RootLayout({
           <div className="container footer-grid">
             <div className="footer-intro">
               <span className="eyebrow">Adekro</span>
-              <h2>Dal sito al software operativo, con una direzione progettuale chiara.</h2>
+              <h2>
+                Dal sito al software operativo, con una direzione progettuale
+                chiara.
+              </h2>
               <p>
-                Affianchiamo le PMI nella costruzione di strumenti digitali piu utili,
-                leggibili e sostenibili: presenza online, processi interni, prodotti e automazioni.
+                Affianchiamo le PMI nella costruzione di strumenti digitali piu
+                utili, leggibili e sostenibili: presenza online, processi
+                interni, prodotti e automazioni.
               </p>
             </div>
             <div className="footer-columns">
@@ -157,7 +164,10 @@ export default function RootLayout({
               <div className="footer-column footer-contact">
                 <h3>Contatto diretto</h3>
                 <Link href="mailto:info@adekro.com">info@adekro.com</Link>
-                <p>Confronto iniziale su obiettivi, flussi e priorita del progetto.</p>
+                <p>
+                  Confronto iniziale su obiettivi, flussi e priorita del
+                  progetto.
+                </p>
                 <div className="cta-row footer-cta-row">
                   <Link href="/contatti" className="btn btn-primary">
                     Parla con Adekro
@@ -166,7 +176,10 @@ export default function RootLayout({
               </div>
             </div>
             <div className="footer-bottom">
-              <p>Adekro di Emanuele Croce - Soluzioni informatiche per piccole e medie imprese.</p>
+              <p>
+                Adekro di Emanuele Croce - Soluzioni informatiche per piccole e
+                medie imprese.
+              </p>
               <div className="footer-legal-links">
                 <Link href="/privacy-policy">Privacy Policy</Link>
                 <Link href="/cookie-policy">Cookie Policy</Link>

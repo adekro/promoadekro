@@ -27,25 +27,34 @@ export default function ProdottiPage() {
           <div className="section-shell">
             <div className="section-header">
               <span className="eyebrow">Prodotti Adekro</span>
-              <h1>App e gestionali gia pronti, progettati intorno al lavoro reale</h1>
+              <h1>
+                App e gestionali gia pronti, progettati intorno al lavoro reale
+              </h1>
               <p className="section-lead">
-                Dall&apos;asta del fantacalcio alla cura del cavallo, dai cocktail alla
-                gestione agronomica: ogni prodotto parte da un&apos;esigenza precisa e puo
-                evolvere con il contesto in cui lo usi.
+                Ogni prodotto parte da un&apos;esigenza precisa e puo evolvere
+                con il contesto in cui lo usi.
               </p>
             </div>
             <div className="stats-grid">
               <article className="stat-card">
                 <span className="stat-value">Rapido</span>
-                <p className="kpi-label">Parti da una struttura gia definita e riduci il tempo di avvio.</p>
+                <p className="kpi-label">
+                  Parti da una struttura gia definita e riduci il tempo di
+                  avvio.
+                </p>
               </article>
               <article className="stat-card">
                 <span className="stat-value">Adattabile</span>
-                <p className="kpi-label">Ogni prodotto puo essere personalizzato sulle tue priorita operative.</p>
+                <p className="kpi-label">
+                  Ogni prodotto puo essere personalizzato sulle tue priorita
+                  operative.
+                </p>
               </article>
               <article className="stat-card">
                 <span className="stat-value">Scalabile</span>
-                <p className="kpi-label">Le soluzioni sono pensate per evolvere insieme al business.</p>
+                <p className="kpi-label">
+                  Le soluzioni sono pensate per evolvere insieme al business.
+                </p>
               </article>
             </div>
           </div>
@@ -69,7 +78,9 @@ export default function ProdottiPage() {
                     src={product.logo}
                     width={80}
                   />
-                  <span className="product-card-category">{product.category}</span>
+                  <span className="product-card-category">
+                    {product.category}
+                  </span>
                   <h2>{product.name}</h2>
                   <p>{product.shortDescription}</p>
                   <div className="cta-row">

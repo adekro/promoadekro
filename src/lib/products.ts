@@ -26,7 +26,8 @@ export const products: Product[] = [
       "Pianificazione di dieta e trattamenti",
       "Registro di allenamenti e attivita di cura",
     ],
-    idealFor: "Maneggi e professionisti equestri che vogliono una routine di cura tracciabile e condivisa.",
+    idealFor:
+      "Maneggi e professionisti equestri che vogliono una routine di cura tracciabile e condivisa.",
     seoKeywords: [
       "gestionale maneggio",
       "software gestione cavalli",
@@ -35,8 +36,16 @@ export const products: Product[] = [
       "gestione allenamenti cavalli",
     ],
     faqs: [
-      { question: "A chi serve HorseHouse?", answer: "HorseHouse e pensato per maneggi e professionisti equestri che vogliono centralizzare le informazioni quotidiane su ogni cavallo." },
-      { question: "Quali attivita posso gestire con HorseHouse?", answer: "Puoi organizzare dieta, trattamenti, allenamenti e attivita di cura, mantenendo uno storico leggibile per il team." },
+      {
+        question: "A chi serve HorseHouse?",
+        answer:
+          "HorseHouse e pensato per maneggi e professionisti equestri che vogliono centralizzare le informazioni quotidiane su ogni cavallo.",
+      },
+      {
+        question: "Quali attivita posso gestire con HorseHouse?",
+        answer:
+          "Puoi organizzare dieta, trattamenti, allenamenti e attivita di cura, mantenendo uno storico leggibile per il team.",
+      },
     ],
   },
   {
@@ -53,7 +62,8 @@ export const products: Product[] = [
       "Consultazione satellitare con dati Copernicus",
       "Assegnazione e storico dei trattamenti fitosanitari",
     ],
-    idealFor: "Aziende agricole e agronomi che vogliono passare da informazioni disperse a una gestione territoriale leggibile.",
+    idealFor:
+      "Aziende agricole e agronomi che vogliono passare da informazioni disperse a una gestione territoriale leggibile.",
     seoKeywords: [
       "gestionale agricolo",
       "software gestione azienda agricola",
@@ -62,8 +72,16 @@ export const products: Product[] = [
       "gestione trattamenti fitosanitari",
     ],
     faqs: [
-      { question: "Agricola aiuta a gestire terreni e particelle?", answer: "Si, Agricola raccoglie terreni, particelle e colture in una mappa operativa consultabile dal team." },
-      { question: "Quali dati agricoli posso tenere sotto controllo?", answer: "Puoi consultare dati satellitari Copernicus e mantenere lo storico dei trattamenti fitosanitari associati alle colture." },
+      {
+        question: "Agricola aiuta a gestire terreni e particelle?",
+        answer:
+          "Si, Agricola raccoglie terreni, particelle e colture in una mappa operativa consultabile dal team.",
+      },
+      {
+        question: "Quali dati agricoli posso tenere sotto controllo?",
+        answer:
+          "Puoi consultare dati satellitari Copernicus e mantenere lo storico dei trattamenti fitosanitari associati alle colture.",
+      },
     ],
   },
   {
@@ -80,7 +98,8 @@ export const products: Product[] = [
       "Indicazione dei rigoristi per fare scelte piu consapevoli",
       "Crediti residui aggiornati per ogni concorrente",
     ],
-    idealFor: "Fantaallenatori che vogliono affrontare l'asta con dati chiari e senza perdere il filo delle offerte.",
+    idealFor:
+      "Fantaallenatori che vogliono affrontare l'asta con dati chiari e senza perdere il filo delle offerte.",
     seoKeywords: [
       "app asta fantacalcio",
       "gestione asta fantacalcio",
@@ -89,8 +108,16 @@ export const products: Product[] = [
       "rigoristi fantacalcio",
     ],
     faqs: [
-      { question: "FantAuction serve durante l'asta del fantacalcio?", answer: "Si, aiuta a segnare preferiti, rigoristi, assegnazioni e crediti residui mentre l'asta e in corso." },
-      { question: "Posso controllare i crediti degli altri partecipanti?", answer: "Si, puoi aggiornare i crediti residui di ogni fantaallenatore per seguire le offerte con maggiore chiarezza." },
+      {
+        question: "FantAuction serve durante l'asta del fantacalcio?",
+        answer:
+          "Si, aiuta a segnare preferiti, rigoristi, assegnazioni e crediti residui mentre l'asta e in corso.",
+      },
+      {
+        question: "Posso controllare i crediti degli altri partecipanti?",
+        answer:
+          "Si, puoi aggiornare i crediti residui di ogni fantaallenatore per seguire le offerte con maggiore chiarezza.",
+      },
     ],
   },
   {
@@ -107,7 +134,8 @@ export const products: Product[] = [
       "Funzione 'Cosa hai in casa' per filtrare le ricette disponibili",
       "Allenamento della versata per migliorare il dosaggio delle once",
     ],
-    idealFor: "Chi vuole imparare, allenarsi o trovare subito un cocktail realizzabile con gli ingredienti disponibili.",
+    idealFor:
+      "Chi vuole imparare, allenarsi o trovare subito un cocktail realizzabile con gli ingredienti disponibili.",
     seoKeywords: [
       "app cocktail",
       "cocktail con ingredienti che ho in casa",
@@ -116,8 +144,16 @@ export const products: Product[] = [
       "dosare once cocktail",
     ],
     faqs: [
-      { question: "DrinkTrainer suggerisce cocktail in base agli ingredienti?", answer: "Si, la funzione Cosa hai in casa filtra le ricette in base agli ingredienti disponibili." },
-      { question: "DrinkTrainer e utile per allenare la versata?", answer: "Si, include un allenamento pratico per migliorare il dosaggio delle once e acquisire maggiore sicurezza nel gesto." },
+      {
+        question: "DrinkTrainer suggerisce cocktail in base agli ingredienti?",
+        answer:
+          "Si, la funzione Cosa hai in casa filtra le ricette in base agli ingredienti disponibili.",
+      },
+      {
+        question: "DrinkTrainer e utile per allenare la versata?",
+        answer:
+          "Si, include un allenamento pratico per migliorare il dosaggio delle once e acquisire maggiore sicurezza nel gesto.",
+      },
     ],
   },
 ];
