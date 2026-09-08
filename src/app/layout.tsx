@@ -5,7 +5,6 @@ import { Merriweather, Space_Grotesk } from "next/font/google";
 import CookieConsent from "@/components/CookieConsent";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 import NavLinks from "@/components/NavLinks";
-import { localSoftwareKeywords } from "@/lib/seo";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -49,7 +48,6 @@ export const metadata: Metadata = {
     "gestionale maneggio",
     "software gestione cavalli",
     "Adekro",
-    ...localSoftwareKeywords,
   ],
   openGraph: {
     title: "Adekro | Soluzioni Informatiche per PMI",
@@ -74,12 +72,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Adekro",
+    legalName: "Adekro di Emanuele Croce",
+    url: "https://www.adekro.com",
+    logo: "https://www.adekro.com/logo.png",
+    email: "info@adekro.com",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Via F.lli Rosselli 84",
+      postalCode: "27058",
+      addressLocality: "Voghera",
+      addressRegion: "PV",
+      addressCountry: "IT",
+    },
+  };
+
   return (
     <html
       lang="it"
       className={`${spaceGrotesk.variable} ${merriweather.variable}`}
-    >
+      >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <a href="#main-content" className="skip-to-content">
           Salta al contenuto principale
         </a>

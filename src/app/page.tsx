@@ -4,9 +4,9 @@ import Link from "next/link";
 import { products, type Product } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "App e Gestionali: Fantacalcio, Cocktail, Agricoltura e Maneggi",
+  title: "Software su Misura e Gestionali per PMI",
   description:
-    "Adekro sviluppa software su misura, app web e mobile e gestionali. Scopri FantAuction, DrinkTrainer, Agricola e HorseHouse.",
+    "Adekro sviluppa software su misura, gestionali, app web e mobile, automazioni e integrazioni API per PMI.",
   keywords: [
     "sviluppo software su misura",
     "programmazione software",
@@ -180,6 +180,40 @@ export default function Home() {
             <div className="operational-copy">
               <p>Progettiamo software gestionali, app web e mobile, automazioni e integrazioni API su misura per organizzare processi, dati e persone attorno a quello che conta davvero nella tua attivita.</p>
               <Link href="/contatti" className="btn btn-primary">Raccontaci la tua esigenza</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-soft">
+        <div className="container">
+          <div className="section-shell">
+            <div className="section-header">
+              <span className="eyebrow">Sviluppo su misura per PMI</span>
+              <h2>Strumenti digitali costruiti sui processi della tua impresa.</h2>
+              <p className="section-lead">
+                Quando un software standard non segue il tuo modo di lavorare, progettiamo
+                una soluzione chiara, evolutiva e integrata con gli strumenti che usi gia.
+              </p>
+            </div>
+            <div className="cards">
+              <article className="card">
+                <h3>Gestionali su misura</h3>
+                <p>Organizza dati, attivita e persone in un unico flusso operativo.</p>
+              </article>
+              <article className="card">
+                <h3>Web app e app mobile</h3>
+                <p>Porta processi e servizi dove servono, dal browser allo smartphone.</p>
+              </article>
+              <article className="card">
+                <h3>Automazioni e integrazioni API</h3>
+                <p>Riduci i passaggi manuali e fai dialogare i sistemi gia presenti in azienda.</p>
+              </article>
+            </div>
+            <div className="cta-row">
+              <Link href="/contatti" className="btn btn-primary">
+                Raccontaci il tuo progetto
+              </Link>
             </div>
           </div>
         </div>

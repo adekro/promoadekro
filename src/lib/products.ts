@@ -8,6 +8,7 @@ export type Product = {
   benefits: string[];
   idealFor: string;
   seoKeywords: string[];
+  faqs: { question: string; answer: string }[];
 };
 
 export const products: Product[] = [
@@ -33,6 +34,10 @@ export const products: Product[] = [
       "gestione trattamenti cavalli",
       "gestione allenamenti cavalli",
     ],
+    faqs: [
+      { question: "A chi serve HorseHouse?", answer: "HorseHouse e pensato per maneggi e professionisti equestri che vogliono centralizzare le informazioni quotidiane su ogni cavallo." },
+      { question: "Quali attivita posso gestire con HorseHouse?", answer: "Puoi organizzare dieta, trattamenti, allenamenti e attivita di cura, mantenendo uno storico leggibile per il team." },
+    ],
   },
   {
     slug: "agricola",
@@ -55,6 +60,10 @@ export const products: Product[] = [
       "gestione particelle agricole",
       "Copernicus agricoltura",
       "gestione trattamenti fitosanitari",
+    ],
+    faqs: [
+      { question: "Agricola aiuta a gestire terreni e particelle?", answer: "Si, Agricola raccoglie terreni, particelle e colture in una mappa operativa consultabile dal team." },
+      { question: "Quali dati agricoli posso tenere sotto controllo?", answer: "Puoi consultare dati satellitari Copernicus e mantenere lo storico dei trattamenti fitosanitari associati alle colture." },
     ],
   },
   {
@@ -79,6 +88,10 @@ export const products: Product[] = [
       "lista giocatori fantacalcio",
       "rigoristi fantacalcio",
     ],
+    faqs: [
+      { question: "FantAuction serve durante l'asta del fantacalcio?", answer: "Si, aiuta a segnare preferiti, rigoristi, assegnazioni e crediti residui mentre l'asta e in corso." },
+      { question: "Posso controllare i crediti degli altri partecipanti?", answer: "Si, puoi aggiornare i crediti residui di ogni fantaallenatore per seguire le offerte con maggiore chiarezza." },
+    ],
   },
   {
     slug: "drinktrainer",
@@ -101,6 +114,10 @@ export const products: Product[] = [
       "catalogo cocktail",
       "allenamento versata bartender",
       "dosare once cocktail",
+    ],
+    faqs: [
+      { question: "DrinkTrainer suggerisce cocktail in base agli ingredienti?", answer: "Si, la funzione Cosa hai in casa filtra le ricette in base agli ingredienti disponibili." },
+      { question: "DrinkTrainer e utile per allenare la versata?", answer: "Si, include un allenamento pratico per migliorare il dosaggio delle once e acquisire maggiore sicurezza nel gesto." },
     ],
   },
 ];

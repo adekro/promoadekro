@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Cookie Policy",
   description: "Informativa sull'uso dei cookie nel sito Adekro.",
   alternates: { canonical: "/cookie-policy" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default function CookiePolicyPage() {

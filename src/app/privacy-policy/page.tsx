@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Informativa privacy del sito Adekro ai sensi del Regolamento (UE) 2016/679.",
   alternates: { canonical: "/privacy-policy" },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default function PrivacyPolicyPage() {

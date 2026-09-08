@@ -64,12 +64,25 @@ export default async function ProductPage({ params }: ProductPageProps) {
     url: `https://www.adekro.com/prodotti/${product.slug}`,
     keywords: product.seoKeywords.join(", "),
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: product.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <section className="section">
         <div className="container">
@@ -121,6 +134,25 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   {product.idealFor}
                 </p>
               </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-shell">
+            <div className="section-header">
+              <span className="eyebrow">Domande frequenti</span>
+              <h2>Prima di iniziare con {product.name}</h2>
+            </div>
+            <div className="cards">
+              {product.faqs.map((faq) => (
+                <article className="card" key={faq.question}>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
