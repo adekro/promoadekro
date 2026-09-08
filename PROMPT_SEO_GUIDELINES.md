@@ -15,6 +15,11 @@ Questo progetto deve sempre puntare all'indicizzazione organica sui motori di ri
 - Quando possibile, aggiungi sezioni FAQ e contenuti informativi utili.
 - Mantieni tono professionale e orientato al valore per il cliente.
 
+## Tono delle pagine app
+
+- Per Fantacalcio e DrinkTrainer, usa un tono più giocoso, coinvolgente e dinamico, mantenendo contenuti chiari e utili per l'utente.
+- Per HorseHouse e Agricola, usa un tono professionale, affidabile e orientato alla gestione operativa e al valore per il cliente.
+
 ## Nota operativa
 
 Nei futuri prompt su questo repository, considera la SEO come requisito prioritario insieme a chiarezza dei contenuti e velocita del sito.

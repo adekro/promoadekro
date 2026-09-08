@@ -99,16 +99,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <aside className="hero-workspace" aria-label="Panoramica prodotti Adekro">
-            <div className="workspace-heading"><span>PRODOTTI ATTIVI</span><strong>04</strong></div>
-            <div className="workspace-grid">
-              <div className="workspace-item workspace-item-horse"><span>HH</span><p>HorseHouse</p></div>
-              <div className="workspace-item workspace-item-farm"><span>AG</span><p>Agricola</p></div>
-              <div className="workspace-item workspace-item-fant"><span>FA</span><p>FantAuction</p></div>
-              <div className="workspace-item workspace-item-drink"><span>DT</span><p>DrinkTrainer</p></div>
-            </div>
-            <div className="workspace-status"><i /> Soluzioni nate da esigenze precise</div>
-          </aside>
         </div>
       </section>
 
@@ -116,11 +106,46 @@ export default function Home() {
         <div className="container">
           <div className="products-heading">
             <span className="product-kicker">Il catalogo</span>
-            <h2>Un prodotto per ogni contesto.<br />Stessa cura per i dettagli.</h2>
-            <p>Non cataloghi astratti: strumenti pensati per un gesto, una decisione e una giornata di lavoro reali.</p>
+            <h2>Soluzioni digitali per il lavoro e per le passioni.</h2>
+            <p>Ogni app nasce da un bisogno concreto: rendere più semplice un&apos;attività, un&apos;allenamento o un momento da condividere.</p>
           </div>
-          <div className="product-grid">
-            {products.map((product) => (
+          <div className="product-category-group product-category-group-professional">
+            <div className="product-category-heading">
+              <span className="product-kicker">Per gestire il lavoro</span>
+              <h3>Controllo e continuità per ogni giornata operativa.</h3>
+              <p>Gestionali affidabili per maneggi e aziende agricole che vogliono organizzare dati, attività e decisioni.</p>
+            </div>
+            <div className="product-grid">
+              {products.filter((product) => product.slug === "horsehouse" || product.slug === "agricola").map((product) => (
+                <article className={`product-card product-card-${product.slug}`} key={product.slug}>
+                  <ProductPreview slug={product.slug} />
+                  <div className="product-card-copy">
+                    <Image
+                      alt={`Logo ${product.name}`}
+                      className={`product-logo product-logo-${product.slug}`}
+                      height={80}
+                      src={product.logo}
+                      width={80}
+                    />
+                    <span>{product.category}</span>
+                    <h4>{product.name}</h4>
+                    <p>{product.shortDescription}</p>
+                    <Link href={`/prodotti/${product.slug}`} className="product-link">
+                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+                    </Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="product-category-group product-category-group-playful">
+            <div className="product-category-heading">
+              <span className="product-kicker">Per divertirsi e migliorare</span>
+              <h3>Gioca, sperimenta, brinda.</h3>
+              <p>App leggere e coinvolgenti per vivere meglio l&apos;asta del fantacalcio e imparare l&apos;arte dei cocktail.</p>
+            </div>
+            <div className="product-grid">
+              {products.filter((product) => product.slug === "fantauction" || product.slug === "drinktrainer").map((product) => (
               <article className={`product-card product-card-${product.slug}`} key={product.slug}>
                 <ProductPreview slug={product.slug} />
                 <div className="product-card-copy">
@@ -132,7 +157,7 @@ export default function Home() {
                     width={80}
                   />
                   <span>{product.category}</span>
-                  <h3>{product.name}</h3>
+                  <h4>{product.name}</h4>
                   <p>{product.shortDescription}</p>
                   <Link href={`/prodotti/${product.slug}`} className="product-link">
                     Scopri {product.name} <b aria-hidden="true">&rarr;</b>
@@ -140,6 +165,7 @@ export default function Home() {
                 </div>
               </article>
             ))}
+            </div>
           </div>
         </div>
       </section>
