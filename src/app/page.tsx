@@ -31,6 +31,25 @@ export const metadata: Metadata = {
 };
 
 function ProductPreview({ slug }: { slug: Product["slug"] }) {
+  if (slug === "siplanner") {
+    return (
+      <div className="preview-wedding">
+        <div className="wedding-rings">
+          <span />
+          <span />
+        </div>
+        <div className="wedding-row">
+          <span>Invitati</span>
+          <b>142</b>
+        </div>
+        <div className="wedding-row">
+          <span>Budget</span>
+          <b>OK</b>
+        </div>
+      </div>
+    );
+  }
+
   if (slug === "gestionali-su-misura") {
     return (
       <div className="preview-custom">
@@ -94,7 +113,8 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
         <div className="field field-one" />
         <div className="field field-two" />
         <div className="field field-three" />
-        <div className="map-label">PARTICELLA 18</div>
+        <div className="map-label">PARCELLA 18</div>
+        <div className="map-label">FOGLIO 3</div>
         <div className="satellite-dot" />
       </div>
     );
@@ -229,6 +249,46 @@ export default function Home() {
                     product.slug === "fantauction" ||
                     product.slug === "drinktrainer",
                 )
+                .map((product) => (
+                  <article
+                    className={`product-card product-card-${product.slug}`}
+                    key={product.slug}
+                  >
+                    <ProductPreview slug={product.slug} />
+                    <div className="product-card-copy">
+                      <Image
+                        alt={`Logo di ${product.name}, ${product.category}`}
+                        className={`product-logo product-logo-${product.slug}`}
+                        height={80}
+                        src={product.logo}
+                        width={80}
+                      />
+                      <span>{product.category}</span>
+                      <h4>{product.name}</h4>
+                      <p>{product.shortDescription}</p>
+                      <Link
+                        href={`/prodotti/${product.slug}`}
+                        className="product-link"
+                      >
+                        Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+                      </Link>
+                    </div>
+                  </article>
+                ))}
+            </div>
+          </div>
+          <div className="product-category-group product-category-group-events">
+            <div className="product-category-heading">
+              <span className="product-kicker">Per i momenti importanti</span>
+              <h3>Organizza il matrimonio senza perdere nulla di vista.</h3>
+              <p>
+                Invitati, budget e fornitori in un unico spazio, dal primo
+                pensiero al giorno del si.
+              </p>
+            </div>
+            <div className="product-grid">
+              {products
+                .filter((product) => product.slug === "siplanner")
                 .map((product) => (
                   <article
                     className={`product-card product-card-${product.slug}`}

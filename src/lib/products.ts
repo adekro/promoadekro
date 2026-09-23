@@ -238,6 +238,51 @@ export const products: Product[] = [
       },
     ],
   },
+  {
+    slug: "siplanner",
+    name: "SiPlanner",
+    kind: "prodotto",
+    category: "App per organizzare il matrimonio",
+    logo: "/loghiprodotti/siplanner.svg",
+    shortDescription:
+      "L'app che raccoglie invitati, budget e fornitori del matrimonio in un unico spazio organizzato.",
+    metaDescription:
+      "Organizza il matrimonio senza perdere nulla di vista: lista invitati con conferme, budget, fornitori e cronoprogramma in un'unica app. Scopri SiPlanner.",
+    longDescription:
+      "SiPlanner accompagna gli sposi da quando iniziano a organizzare il matrimonio fino al giorno del si: lista degli invitati con conferme e tavoli, budget con spese previste e reali, contatti e stato dei fornitori, e un cronoprogramma per non perdere di vista le scadenze.",
+    benefits: [
+      "Lista invitati con conferme, tavoli e accompagnatori",
+      "Budget con spese previste e spese reali sempre confrontabili",
+      "Rubrica fornitori con stato di ogni trattativa",
+      "Cronoprogramma con le scadenze principali verso il giorno del si",
+    ],
+    idealFor:
+      "Coppie che stanno organizzando il matrimonio e vogliono tenere invitati, budget e fornitori in un unico posto invece che sparsi tra fogli e chat.",
+    seoKeywords: [
+      "app organizzare matrimonio",
+      "app pianificazione matrimonio",
+      "lista invitati matrimonio online",
+      "budget matrimonio app",
+      "gestione fornitori matrimonio",
+    ],
+    faqs: [
+      {
+        question: "SiPlanner aiuta a gestire la lista degli invitati?",
+        answer:
+          "Si, puoi registrare invitati, conferme di partecipazione, tavoli e accompagnatori in un unico elenco sempre aggiornato.",
+      },
+      {
+        question: "Posso tenere sotto controllo il budget del matrimonio?",
+        answer:
+          "Si, SiPlanner confronta le spese previste con quelle effettive per ogni voce, cosi sai sempre a che punto sei rispetto al budget.",
+      },
+      {
+        question: "SiPlanner tiene traccia anche dei fornitori?",
+        answer:
+          "Si, puoi salvare contatti e stato di ogni fornitore (fotografo, catering, location e altri) e le scadenze da rispettare.",
+      },
+    ],
+  },
 ];
 
 export function getProductBySlug(slug: string) {
