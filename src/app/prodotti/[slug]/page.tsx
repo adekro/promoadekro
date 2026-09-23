@@ -63,16 +63,29 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
-  const softwareSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: product.name,
-    applicationCategory: product.category,
-    operatingSystem: "Web, iOS, Android",
-    description: product.longDescription,
-    url: `${SITE_URL}/prodotti/${product.slug}`,
-    keywords: product.seoKeywords.join(", "),
-  };
+  const offeringSchema =
+    product.kind === "servizio"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: product.name,
+          serviceType: product.category,
+          description: product.longDescription,
+          url: `${SITE_URL}/prodotti/${product.slug}`,
+          provider: { "@type": "Organization", name: "Adekro", url: SITE_URL },
+          areaServed: "IT",
+          keywords: product.seoKeywords.join(", "),
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: product.name,
+          applicationCategory: product.category,
+          operatingSystem: "Web, iOS, Android",
+          description: product.longDescription,
+          url: `${SITE_URL}/prodotti/${product.slug}`,
+          keywords: product.seoKeywords.join(", "),
+        };
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -118,7 +131,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offeringSchema) }}
       />
       <script
         type="application/ld+json"
@@ -167,9 +180,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <Link
                 href="/contatti"
                 className="btn btn-primary"
-                aria-label={`Richiedi una demo per ${product.name}`}
+                aria-label={
+                  product.kind === "servizio"
+                    ? `Parla con Adekro del tuo ${product.name.toLowerCase()}`
+                    : `Richiedi una demo per ${product.name}`
+                }
               >
-                Richiedi una demo
+                {product.kind === "servizio"
+                  ? "Parliamo del tuo progetto"
+                  : "Richiedi una demo"}
               </Link>
               <Link href="/prodotti" className="btn btn-secondary">
                 Torna ai prodotti
@@ -246,17 +265,30 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <section className="section section-accent">
         <div className="container">
           <div className="section-shell">
-            <div className="section-header">
-              <span className="eyebrow">Personalizzazione</span>
-              <h2>Possiamo partire da questo prodotto e adattarlo al tuo flusso di lavoro</h2>
-              <p className="section-lead">
-                Se il bisogno e vicino ma non identico, Adekro puo personalizzare struttura,
-                funzioni e integrazioni per avvicinare il prodotto al tuo contesto aziendale.
-              </p>
-            </div>
+            {product.kind === "servizio" ? (
+              <div className="section-header">
+                <span className="eyebrow">Il primo passo</span>
+                <h2>Non hai ancora le idee chiare? Partiamo da una conversazione</h2>
+                <p className="section-lead">
+                  Non serve arrivare con un progetto gia definito: raccontaci come lavora
+                  oggi la tua azienda e valutiamo insieme se e da dove ha senso partire.
+                </p>
+              </div>
+            ) : (
+              <div className="section-header">
+                <span className="eyebrow">Personalizzazione</span>
+                <h2>Possiamo partire da questo prodotto e adattarlo al tuo flusso di lavoro</h2>
+                <p className="section-lead">
+                  Se il bisogno e vicino ma non identico, Adekro puo personalizzare struttura,
+                  funzioni e integrazioni per avvicinare il prodotto al tuo contesto aziendale.
+                </p>
+              </div>
+            )}
             <div className="cta-row">
               <Link href="/contatti" className="btn btn-primary">
-                Valuta una personalizzazione
+                {product.kind === "servizio"
+                  ? "Racconta la tua esigenza"
+                  : "Valuta una personalizzazione"}
               </Link>
               <Link href="/chi-siamo" className="btn btn-secondary">
                 Scopri il nostro approccio

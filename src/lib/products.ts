@@ -1,6 +1,9 @@
 export type Product = {
   slug: string;
   name: string;
+  // "prodotto": un'app o un gestionale gia pronto (Agricola, HorseHouse, ...).
+  // "servizio": un percorso di sviluppo su misura, non un prodotto con un nome proprio.
+  kind: "prodotto" | "servizio";
   category: string;
   logo: string;
   shortDescription: string;
@@ -17,12 +20,13 @@ export const products: Product[] = [
   {
     slug: "gestionali-su-misura",
     name: "Gestionali su Misura",
+    kind: "servizio",
     category: "Gestionale personalizzato",
     logo: "/loghiprodotti/gestionali-su-misura.svg",
     shortDescription:
       "Il servizio con cui costruiamo, insieme ai nostri esperti, un gestionale personalizzato ad hoc sulle esigenze reali della tua azienda.",
     metaDescription:
-      "Costruiamo insieme ai nostri esperti un gestionale su misura per la tua azienda: analisi guidata, sviluppo per fasi, evoluzione continua. Richiedi una demo.",
+      "Costruiamo insieme ai nostri esperti un gestionale su misura per la tua azienda: analisi guidata, sviluppo per fasi, evoluzione continua. Parliamone insieme.",
     longDescription:
       "Gestionali su Misura nasce dal confronto diretto con te: ci racconti come lavora davvero la tua azienda, quali dati e attivita vuoi tenere sotto controllo, e i nostri esperti progettano e sviluppano un gestionale personalizzato costruito passo dopo passo insieme al tuo team, senza forzare i tuoi processi dentro uno strumento standard.",
     benefits: [
@@ -82,6 +86,7 @@ export const products: Product[] = [
   },
   {
     slug: "horsehouse",
+    kind: "prodotto",
     name: "HorseHouse",
     category: "Gestionale per maneggi",
     logo: "/loghiprodotti/horsehouse.png",
@@ -122,6 +127,7 @@ export const products: Product[] = [
   {
     slug: "agricola",
     name: "Agricola",
+    kind: "prodotto",
     category: "Gestionale agricolo",
     logo: "/loghiprodotti/agricola.png",
     shortDescription:
@@ -161,6 +167,7 @@ export const products: Product[] = [
   {
     slug: "fantauction",
     name: "FantAuction",
+    kind: "prodotto",
     category: "App per fantacalcio",
     logo: "/loghiprodotti/fantauction.png",
     shortDescription:
@@ -197,6 +204,7 @@ export const products: Product[] = [
   {
     slug: "drinktrainer",
     name: "DrinkTrainer",
+    kind: "prodotto",
     category: "App per bartender",
     logo: "/loghiprodotti/drinktrainer.png",
     shortDescription:
