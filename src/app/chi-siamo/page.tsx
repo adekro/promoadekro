@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Sviluppo Software e Programmazione per PMI",
   description:
-    "Adekro e partner per lo sviluppo software, la programmazione di gestionali, app web e mobile, automazioni e integrazioni per PMI.",
+    "Adekro e partner per lo sviluppo software su misura: gestionali personalizzati, app web e mobile, automazioni e integrazioni per PMI, maneggi e agricoltura.",
   keywords: [
     "azienda sviluppo software",
     "programmazione software PMI",
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "sviluppo app web",
     "sviluppo app mobile",
     "consulenza software",
+    "sviluppo gestionali personalizzati ad hoc",
   ],
   alternates: {
     canonical: "/chi-siamo",

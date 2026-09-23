@@ -5,6 +5,7 @@ import { Merriweather, Space_Grotesk } from "next/font/google";
 import CookieConsent from "@/components/CookieConsent";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 import NavLinks from "@/components/NavLinks";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -19,7 +20,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.adekro.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Adekro | Soluzioni Informatiche per PMI",
     template: "%s | Adekro",
@@ -53,10 +54,16 @@ export const metadata: Metadata = {
     title: "Adekro | Soluzioni Informatiche per PMI",
     description:
       "Sviluppo software su misura, app web e mobile, gestionali, automazioni e integrazioni per PMI, oltre ai prodotti Adekro.",
-    url: "https://www.adekro.com",
+    url: SITE_URL,
     siteName: "Adekro",
     locale: "it_IT",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adekro | Soluzioni Informatiche per PMI",
+    description:
+      "Sviluppo software su misura, app web e mobile, gestionali, automazioni e integrazioni per PMI, oltre ai prodotti Adekro.",
   },
   alternates: {
     canonical: "/",
@@ -77,8 +84,8 @@ export default function RootLayout({
     "@type": "Organization",
     name: "Adekro",
     legalName: "Adekro di Emanuele Croce",
-    url: "https://www.adekro.com",
-    logo: "https://www.adekro.com/logo.png",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
     email: "info@adekro.com",
     address: {
       "@type": "PostalAddress",
@@ -152,13 +159,17 @@ export default function RootLayout({
                 <Link href="/">Home</Link>
                 <Link href="/chi-siamo">Chi siamo</Link>
                 <Link href="/prodotti">Prodotti</Link>
+                <Link href="/novita">Novita</Link>
                 <Link href="/contatti">Contatti</Link>
               </div>
               <div className="footer-column">
                 <h3>Ambiti</h3>
                 <p>Siti web aziendali</p>
-                <p>Gestionali su misura</p>
-                <p>App e strumenti operativi</p>
+                <Link href="/prodotti/gestionali-su-misura">
+                  Gestionali su misura
+                </Link>
+                <Link href="/prodotti/agricola">Gestionale agricolo</Link>
+                <Link href="/prodotti/horsehouse">Gestionale per maneggi</Link>
                 <p>Automazioni e integrazioni</p>
               </div>
               <div className="footer-column footer-contact">

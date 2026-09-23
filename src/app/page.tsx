@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { products, type Product } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Software su Misura e Gestionali per PMI",
   description:
-    "Adekro sviluppa software su misura, gestionali, app web e mobile, automazioni e integrazioni API per PMI.",
+    "Adekro sviluppa gestionali su misura, software gestionale per PMI, app web e mobile, automazioni e integrazioni API per aziende agricole, maneggi e imprese.",
   keywords: [
     "sviluppo software su misura",
+    "gestionale su misura",
+    "gestionali personalizzati ad hoc",
     "programmazione software",
     "sviluppo app web",
     "sviluppo app mobile",
@@ -19,6 +22,8 @@ export const metadata: Metadata = {
     "gestionale agricolo",
     "gestionale maneggio",
     "software su misura PMI",
+    "gestionale maneggio e cavalli online",
+    "gestionale agricolo con dati satellitari Copernicus",
   ],
   alternates: {
     canonical: "/",
@@ -26,6 +31,17 @@ export const metadata: Metadata = {
 };
 
 function ProductPreview({ slug }: { slug: Product["slug"] }) {
+  if (slug === "gestionali-su-misura") {
+    return (
+      <div className="preview-custom">
+        <div className="blueprint-line blueprint-line-one" />
+        <div className="blueprint-line blueprint-line-two" />
+        <div className="blueprint-node">Analisi</div>
+        <div className="blueprint-node blueprint-node-active">Sviluppo</div>
+      </div>
+    );
+  }
+
   if (slug === "fantauction") {
     return (
       <div className="preview-auction">
@@ -107,7 +123,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Adekro",
-    url: "https://www.adekro.com",
+    url: SITE_URL,
     description:
       "Sviluppo software su misura, app web e mobile, gestionali, automazioni e prodotti digitali per PMI.",
   };
@@ -154,8 +170,9 @@ export default function Home() {
               <span className="product-kicker">Per gestire il lavoro</span>
               <h3>Controllo e continuità per ogni giornata operativa.</h3>
               <p>
-                Gestionali affidabili per maneggi e aziende agricole che
-                vogliono organizzare dati, attività e decisioni.
+                Gestionali affidabili per maneggi e aziende agricole, oppure
+                costruiti su misura insieme ai nostri esperti quando le tue
+                esigenze sono uniche.
               </p>
             </div>
             <div className="product-grid">
@@ -163,7 +180,8 @@ export default function Home() {
                 .filter(
                   (product) =>
                     product.slug === "horsehouse" ||
-                    product.slug === "agricola",
+                    product.slug === "agricola" ||
+                    product.slug === "gestionali-su-misura",
                 )
                 .map((product) => (
                   <article
@@ -173,7 +191,7 @@ export default function Home() {
                     <ProductPreview slug={product.slug} />
                     <div className="product-card-copy">
                       <Image
-                        alt={`Logo ${product.name}`}
+                        alt={`Logo di ${product.name}, ${product.category}`}
                         className={`product-logo product-logo-${product.slug}`}
                         height={80}
                         src={product.logo}
@@ -219,7 +237,7 @@ export default function Home() {
                     <ProductPreview slug={product.slug} />
                     <div className="product-card-copy">
                       <Image
-                        alt={`Logo ${product.name}`}
+                        alt={`Logo di ${product.name}, ${product.category}`}
                         className={`product-logo product-logo-${product.slug}`}
                         height={80}
                         src={product.logo}

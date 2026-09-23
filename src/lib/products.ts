@@ -9,9 +9,77 @@ export type Product = {
   idealFor: string;
   seoKeywords: string[];
   faqs: { question: string; answer: string }[];
+  process?: { title: string; description: string }[];
+  metaDescription?: string;
 };
 
 export const products: Product[] = [
+  {
+    slug: "gestionali-su-misura",
+    name: "Gestionali su Misura",
+    category: "Gestionale personalizzato",
+    logo: "/loghiprodotti/gestionali-su-misura.svg",
+    shortDescription:
+      "Il servizio con cui costruiamo, insieme ai nostri esperti, un gestionale personalizzato ad hoc sulle esigenze reali della tua azienda.",
+    metaDescription:
+      "Costruiamo insieme ai nostri esperti un gestionale su misura per la tua azienda: analisi guidata, sviluppo per fasi, evoluzione continua. Richiedi una demo.",
+    longDescription:
+      "Gestionali su Misura nasce dal confronto diretto con te: ci racconti come lavora davvero la tua azienda, quali dati e attivita vuoi tenere sotto controllo, e i nostri esperti progettano e sviluppano un gestionale personalizzato costruito passo dopo passo insieme al tuo team, senza forzare i tuoi processi dentro uno strumento standard.",
+    benefits: [
+      "Analisi guidata delle esigenze insieme ai nostri esperti, senza tecnicismi",
+      "Gestionale costruito passo dopo passo con il tuo contributo diretto",
+      "Struttura, flussi e permessi disegnati sui processi reali della tua azienda",
+      "Evoluzione nel tempo con nuove funzioni aggiunte quando servono davvero",
+    ],
+    idealFor:
+      "PMI che non trovano un gestionale standard adatto al proprio modo di lavorare e vogliono costruire, insieme ai nostri esperti, un software su misura per la propria attivita.",
+    seoKeywords: [
+      "gestionale su misura",
+      "gestionali personalizzati ad hoc",
+      "software gestionale personalizzato",
+      "sviluppo gestionale ad hoc",
+      "gestionale aziendale su misura per PMI",
+    ],
+    faqs: [
+      {
+        question: "Come funziona la creazione di un gestionale su misura con Adekro?",
+        answer:
+          "Partiamo da un confronto in cui ci racconti esigenze, processi e priorita. I nostri esperti progettano poi il gestionale insieme a te, in fasi verificabili, cosi da costruire uno strumento realmente aderente al tuo modo di lavorare.",
+      },
+      {
+        question: "Quanto tempo serve per avere un gestionale personalizzato?",
+        answer:
+          "Dipende dalla complessita dei processi da digitalizzare. Lavorando per fasi condivise, puoi vedere e validare progressivamente le funzioni gia pronte, invece di attendere un'unica consegna finale.",
+      },
+      {
+        question: "Posso far evolvere il gestionale anche dopo il rilascio?",
+        answer:
+          "Si, un gestionale ad hoc e pensato per crescere: possiamo aggiungere nuove funzioni, automazioni e integrazioni man mano che l'azienda cambia esigenze.",
+      },
+    ],
+    process: [
+      {
+        title: "Ascolto delle esigenze",
+        description:
+          "Analizziamo insieme a te attivita, dati e criticita operative per capire cosa il gestionale deve davvero risolvere.",
+      },
+      {
+        title: "Progettazione condivisa",
+        description:
+          "I nostri esperti disegnano flussi, ruoli e schermate insieme al tuo team, validando ogni scelta prima di sviluppare.",
+      },
+      {
+        title: "Sviluppo per fasi",
+        description:
+          "Costruiamo il gestionale in fasi verificabili, cosi puoi vedere e testare le funzioni man mano che vengono realizzate.",
+      },
+      {
+        title: "Rilascio ed evoluzione",
+        description:
+          "Formiamo il team all'uso del gestionale e continuiamo ad affiancarti per aggiungere nuove funzioni quando servono.",
+      },
+    ],
+  },
   {
     slug: "horsehouse",
     name: "HorseHouse",
@@ -19,6 +87,8 @@ export const products: Product[] = [
     logo: "/loghiprodotti/horsehouse.png",
     shortDescription:
       "Un gestionale dedicato alla cura quotidiana del cavallo, dalla dieta ai trattamenti fino agli allenamenti.",
+    metaDescription:
+      "Organizza dieta, trattamenti e allenamenti di ogni cavallo del maneggio in un'unica scheda condivisa dal team, aggiornata ogni giorno. Richiedi una demo.",
     longDescription:
       "HorseHouse raccoglie in un unico spazio le informazioni essenziali per il benessere del cavallo: piani alimentari, trattamenti, allenamenti e attivita di cura del maneggio.",
     benefits: [
@@ -34,6 +104,7 @@ export const products: Product[] = [
       "gestione dieta cavallo",
       "gestione trattamenti cavalli",
       "gestione allenamenti cavalli",
+      "scheda digitale cura cavalli maneggio",
     ],
     faqs: [
       {
@@ -55,6 +126,8 @@ export const products: Product[] = [
     logo: "/loghiprodotti/agricola.png",
     shortDescription:
       "Il gestionale per visualizzare terreni, colture e trattamenti in un unico quadro operativo.",
+    metaDescription:
+      "Gestisci terreni, particelle e colture con dati satellitari Copernicus e storico dei trattamenti fitosanitari in un'unica mappa operativa. Richiedi una demo.",
     longDescription:
       "Agricola aiuta agricoltori e agronomi a disegnare terreni e particelle, associare le colture, consultare dati satellitari Copernicus e gestire i prodotti fitosanitari impiegati in campo.",
     benefits: [
@@ -70,6 +143,7 @@ export const products: Product[] = [
       "gestione particelle agricole",
       "Copernicus agricoltura",
       "gestione trattamenti fitosanitari",
+      "gestionale agricolo con dati satellitari Copernicus",
     ],
     faqs: [
       {

@@ -4,15 +4,19 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "App e Gestionali per Fantacalcio, Cocktail, Agricoltura e Maneggi",
+  title: "Agricola, HorseHouse e Gestionali su Misura",
   description:
-    "Catalogo Adekro: app per asta fantacalcio e cocktail, gestionale agricolo con Copernicus e software per la gestione del maneggio.",
+    "Catalogo Adekro: gestionali su misura costruiti con i nostri esperti, gestionale agricolo con dati Copernicus e software per la gestione del maneggio.",
   keywords: [
-    "app asta fantacalcio",
-    "app cocktail bartender",
+    "gestionale su misura",
+    "gestionali personalizzati ad hoc",
     "gestionale agricolo Copernicus",
     "gestionale maneggio",
     "software gestione cavalli",
+    "app asta fantacalcio",
+    "app cocktail bartender",
+    "gestionale agricolo con dati satellitari Copernicus",
+    "scheda digitale cura cavalli maneggio",
   ],
   alternates: {
     canonical: "/prodotti",
@@ -72,7 +76,7 @@ export default function ProdottiPage() {
               {products.map((product) => (
                 <article className="card" key={product.slug}>
                   <Image
-                    alt={`Logo ${product.name}`}
+                    alt={`Logo di ${product.name}, ${product.category}`}
                     className={`product-logo product-logo-${product.slug}`}
                     height={80}
                     src={product.logo}
@@ -81,7 +85,7 @@ export default function ProdottiPage() {
                   <span className="product-card-category">
                     {product.category}
                   </span>
-                  <h2>{product.name}</h2>
+                  <h3>{product.name}</h3>
                   <p>{product.shortDescription}</p>
                   <div className="cta-row">
                     <Link

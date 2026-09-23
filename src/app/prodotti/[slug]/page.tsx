@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/lib/products";
+import { SITE_URL } from "@/lib/site";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -30,18 +31,26 @@ export async function generateMetadata({
     };
   }
 
+  const title = `${product.name} | ${product.category}`;
+  const description = product.metaDescription ?? product.shortDescription;
+
   return {
-    title: `${product.name} | ${product.category}`,
-    description: product.shortDescription,
+    title,
+    description,
     keywords: product.seoKeywords,
     alternates: {
       canonical: `/prodotti/${product.slug}`,
     },
     openGraph: {
-      title: `${product.name} | ${product.category}`,
-      description: product.shortDescription,
+      title,
+      description,
       url: `/prodotti/${product.slug}`,
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
@@ -61,7 +70,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     applicationCategory: product.category,
     operatingSystem: "Web, iOS, Android",
     description: product.longDescription,
-    url: `https://www.adekro.com/prodotti/${product.slug}`,
+    url: `${SITE_URL}/prodotti/${product.slug}`,
     keywords: product.seoKeywords.join(", "),
   };
   const faqSchema = {
@@ -73,6 +82,37 @@ export default async function ProductPage({ params }: ProductPageProps) {
       acceptedAnswer: { "@type": "Answer", text: faq.answer },
     })),
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Prodotti",
+        item: `${SITE_URL}/prodotti`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.name,
+        item: `${SITE_URL}/prodotti/${product.slug}`,
+      },
+    ],
+  };
+  const howToSchema = product.process
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: `Come nasce ${product.name} con Adekro`,
+        step: product.process.map((step) => ({
+          "@type": "HowToStep",
+          name: step.title,
+          text: step.description,
+        })),
+      }
+    : null;
 
   return (
     <>
@@ -84,13 +124,36 @@ export default async function ProductPage({ params }: ProductPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      {howToSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      ) : null}
+      <nav aria-label="Percorso di navigazione" className="breadcrumb-nav">
+        <div className="container">
+          <ol className="breadcrumb-list">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/prodotti">Prodotti</Link>
+            </li>
+            <li aria-current="page">{product.name}</li>
+          </ol>
+        </div>
+      </nav>
       <section className="section">
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
               <span className="eyebrow">{product.category}</span>
               <Image
-                alt={`Logo ${product.name}`}
+                alt={`Logo di ${product.name}, ${product.category} firmato Adekro`}
                 className={`product-detail-logo product-logo-${product.slug}`}
                 height={120}
                 priority
@@ -138,6 +201,28 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </section>
+
+      {product.process ? (
+        <section className="section">
+          <div className="container">
+            <div className="section-shell">
+              <div className="section-header">
+                <span className="eyebrow">Come lavoriamo</span>
+                <h2>Come nasce {product.name} insieme a te</h2>
+              </div>
+              <ol className="cards process-steps">
+                {product.process.map((step, index) => (
+                  <li className="card" key={step.title}>
+                    <span className="eyebrow">Fase {index + 1}</span>
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section">
         <div className="container">

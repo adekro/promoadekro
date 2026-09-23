@@ -7,6 +7,7 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/prodotti", label: "Prodotti" },
+  { href: "/novita", label: "Novita" },
   { href: "/contatti", label: "Contatti" },
 ];
 

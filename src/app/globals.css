@@ -430,6 +430,45 @@ ul {
   gap: 0.8rem;
 }
 
+.process-steps {
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumb-nav {
+  padding: 1rem 0 0;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.4rem;
+  color: var(--line-strong);
+}
+
+.breadcrumb-list a {
+  color: var(--text-muted);
+}
+
+.breadcrumb-list a:hover {
+  color: var(--brand);
+}
+
+.breadcrumb-list li[aria-current="page"] {
+  color: #112f36;
+  font-weight: 600;
+}
+
 .feature-list li {
   position: relative;
   padding-left: 1.25rem;
@@ -1046,6 +1085,54 @@ ul {
 .product-card-drinktrainer .product-preview { background: #f09270; }
 .product-card-agricola .product-preview { background: #95bd7f; }
 .product-card-horsehouse .product-preview { background: #bad9dc; }
+.product-card-gestionali-su-misura .product-preview { background: #dfe7f2; }
+
+.preview-custom {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  height: 100%;
+  min-height: 15rem;
+  padding: 1.2rem;
+  background-image:
+    linear-gradient(rgba(16, 42, 67, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 42, 67, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.blueprint-line {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: rgba(16, 42, 67, 0.3);
+}
+
+.blueprint-line-one { top: 32%; }
+.blueprint-line-two { top: 68%; }
+
+.blueprint-node {
+  align-self: flex-start;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 254, 250, 0.88);
+  color: #102a43;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(16, 42, 67, 0.25);
+}
+
+.blueprint-node-active {
+  align-self: flex-end;
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+}
 
 .preview-auction,
 .preview-drink,
@@ -1373,7 +1460,8 @@ ul {
   .preview-auction,
   .preview-drink,
   .preview-farm,
-  .preview-horse {
+  .preview-horse,
+  .preview-custom {
     min-height: 14rem;
   }
 
@@ -1451,6 +1539,10 @@ ul {
 .workspace-item-horse,
 .product-card-horsehouse .product-preview {
   background: #b5c8df;
+}
+
+.product-card-gestionali-su-misura .product-preview {
+  background: #e6cd94;
 }
 
 .product-card {
