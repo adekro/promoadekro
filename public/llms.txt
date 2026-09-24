@@ -1,0 +1,37 @@
+# Adekro
+
+> Adekro (Adekro di Emanuele Croce, Voghera, Italia) sviluppa software su misura, gestionali, app web e mobile, automazioni e integrazioni API per piccole e medie imprese italiane.
+
+## Servizio
+
+- [Gestionali su Misura](https://www.adekro.com/prodotti/gestionali-su-misura): sviluppo di un gestionale personalizzato ad hoc, in fasi verificabili, insieme al team del cliente.
+
+## Prodotti
+
+- [Agricola](https://www.adekro.com/prodotti/agricola): gestionale agricolo per terreni, particelle, colture e trattamenti fitosanitari, con dati satellitari Copernicus.
+- [HorseHouse](https://www.adekro.com/prodotti/horsehouse): gestionale per maneggi con scheda cavallo, dieta, trattamenti e allenamenti.
+- [FantAuction](https://www.adekro.com/prodotti/fantauction): app per gestire l'asta del fantacalcio, preferiti, rigoristi e crediti dei concorrenti.
+- [DrinkTrainer](https://www.adekro.com/prodotti/drinktrainer): app con catalogo cocktail, ricerca per ingredienti disponibili e allenamento alla versata.
+- [SiPlanner](https://www.adekro.com/prodotti/siplanner): app per organizzare il matrimonio: invitati, budget, fornitori e cronoprogramma.
+
+## Guide
+
+- [Come gestire una scuderia](https://www.adekro.com/guide/come-gestire-una-scuderia): le aree da tenere sotto controllo (cavalli, box, alimentazione, allenamenti, terapie).
+- [Come organizzare l'alimentazione dei cavalli](https://www.adekro.com/guide/gestione-alimentazione-cavalli)
+- [Come pianificare gli allenamenti dei cavalli](https://www.adekro.com/guide/gestione-allenamenti-cavalli)
+- [Come registrare le terapie veterinarie dei cavalli](https://www.adekro.com/guide/gestione-terapie-veterinarie-cavalli)
+- [Excel o software gestionale per una scuderia?](https://www.adekro.com/guide/excel-vs-software-gestione-scuderia)
+- [Come gestire un'azienda agricola](https://www.adekro.com/guide/come-gestire-unazienda-agricola): terreni, particelle, colture, dati satellitari e trattamenti fitosanitari.
+- [Dati satellitari Copernicus per piccole aziende agricole](https://www.adekro.com/guide/dati-satellitari-copernicus-per-piccole-aziende-agricole)
+- [Come tenere lo storico dei trattamenti fitosanitari](https://www.adekro.com/guide/gestione-trattamenti-fitosanitari)
+- [Excel o gestionale agricolo?](https://www.adekro.com/guide/excel-vs-gestionale-agricolo)
+- [Come si sviluppa un gestionale su misura](https://www.adekro.com/guide/come-si-sviluppa-un-gestionale-su-misura)
+- [Quando serve un gestionale su misura](https://www.adekro.com/guide/quando-serve-un-gestionale-su-misura)
+- [Quanto costa un gestionale su misura](https://www.adekro.com/guide/quanto-costa-un-gestionale-su-misura)
+- [Gestionale standard o su misura?](https://www.adekro.com/guide/gestionale-standard-vs-gestionale-su-misura)
+
+## Altre pagine
+
+- [Chi siamo](https://www.adekro.com/chi-siamo)
+- [Novita](https://www.adekro.com/novita)
+- [Contatti](https://www.adekro.com/contatti)

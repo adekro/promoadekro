@@ -8,6 +8,7 @@ export type NewsItem = {
   summary: string;
   body: string[];
   relatedProductSlug?: Product["slug"];
+  source?: { name: string; url: string };
 };
 
 export const sectorLabels: Record<NewsItem["sector"], string> = {
@@ -21,47 +22,62 @@ export const sectorLabels: Record<NewsItem["sector"], string> = {
 // resta sempre la prima mostrata in elenco e nella sitemap.
 export const news: NewsItem[] = [
   {
-    slug: "dati-satellitari-copernicus-piccole-aziende-agricole",
+    slug: "giovani-agricoltori-innovazione-suolo-soil-date",
     title:
-      "[Esempio] Perche i dati satellitari Copernicus non sono solo per le grandi aziende agricole",
+      "Il futuro dell'agricoltura riparte dal suolo: 250 giovani scelgono l'innovazione",
     sector: "agricola",
-    date: "2026-09-15",
+    date: "2026-09-23",
     summary:
-      "Sempre piu aziende agricole di piccole e medie dimensioni iniziano a consultare dati satellitari per monitorare le colture, non solo le grandi realta strutturate.",
+      "A Roma oltre 250 giovani tra studenti di istituti agrari e giovani agricoltori Coldiretti hanno valutato cinque progetti di ricerca su clima, acqua, fertilita del suolo e competitivita agricola, nell'iniziativa SOIL Date promossa da CREA.",
     body: [
-      "[Sostituisci questo paragrafo con la notizia della settimana: una novita normativa, un bando, un dato di settore o un'osservazione pratica dal campo.]",
-      "L'accesso a dati satellitari come quelli di Copernicus si sta allargando anche a chi gestisce pochi ettari, perche permette di intervenire prima su un problema alla coltura invece di accorgersene troppo tardi.",
-      "Per chi gestisce terreni e particelle senza un quadro unico, integrare questi dati in un gestionale evita di dover consultare fonti separate ogni volta.",
+      "Durante la Rome Future Week si e svolto SOIL Date, un contest che ha messo a confronto ricerca scientifica e innovazione agricola: oltre 250 giovani, tra cui piu di 150 studenti di istituti agrari e oltre 100 giovani agricoltori di Coldiretti Giovani Impresa, hanno valutato cinque progetti di ricerca presentati da CREA, con la collaborazione di SISS e IUSS.",
+      "La particolarita dell'iniziativa e che non sono stati giudici esperti a decidere quali innovazioni premiare, ma gli stessi giovani partecipanti, chiamati a valutare direttamente quali proposte rispondessero meglio alle grandi sfide dell'agricoltura di oggi: cambiamento climatico, gestione dell'acqua, fertilita del suolo e competitivita delle imprese agricole.",
+      "Come ha sottolineato il presidente di CREA Andrea Rocchi, l'iniziativa fa incontrare ricerca, scuola e impresa agricola per costruire soluzioni di sostenibilita concrete. Un segnale che la salute del suolo, e i dati per monitorarla nel tempo, sono un tema su cui le nuove generazioni di agricoltori vogliono avere strumenti chiari e non solo intuizioni.",
+      "E' lo stesso principio su cui lavora Agricola: dare a chi gestisce terreni e particelle una mappa operativa unica, capace di integrare i dati satellitari con lo storico dei trattamenti, invece di lasciare che le informazioni restino sparse tra sopralluoghi, fogli di calcolo e memoria personale.",
     ],
     relatedProductSlug: "agricola",
+    source: {
+      name: "ANSA",
+      url: "https://www.ansa.it/sito/notizie/economia/2026/09/23/il-futuro-dellagricoltura-parte-dal-suolo-250-giovani-scelgono-vie-dellinnovazione_2174893e-658c-4ba9-b4ed-fc3035b30332.html",
+    },
   },
   {
-    slug: "routine-cura-cavallo-tracciabile",
-    title: "[Esempio] Perche una routine di cura tracciabile riduce gli errori nei maneggi",
+    slug: "francesco-dagnelli-campione-italiano-equitazione",
+    title:
+      "Francesco D'Agnelli campione italiano di equitazione per la seconda volta",
     sector: "horsehouse",
-    date: "2026-09-08",
+    date: "2026-09-15",
     summary:
-      "Nei maneggi con piu persone coinvolte nella cura dei cavalli, la mancanza di uno storico condiviso e una delle cause piu comuni di trattamenti dimenticati o duplicati.",
+      "Francesco D'Agnelli, della scuola di equitazione Il Ginepro di Isernia, ha conquistato a Montefalco il titolo di campione italiano nella categoria T2, il secondo della carriera, sotto la guida dell'istruttore Loris Matticoli.",
     body: [
-      "[Sostituisci questo paragrafo con la notizia della settimana: un evento del settore equestre, una buona pratica di gestione, un'osservazione stagionale.]",
-      "Quando piu persone si alternano nella cura di un cavallo, la memoria individuale non basta: senza uno storico condiviso di dieta, trattamenti e allenamenti, e facile perdere il filo.",
-      "Una scheda digitale unica per ogni cavallo, consultabile da tutto il team, riduce questo rischio e rende piu semplice il passaggio di consegne tra collaboratori.",
+      "A Montefalco, in Umbria, si sono svolti i campionati italiani organizzati dalla Federazione Italiana Turismo Equestre - Attivita Equestri per persone con abilita diverse. Francesco D'Agnelli, della scuola di equitazione Il Ginepro di Isernia, ha conquistato il titolo nazionale nella categoria T2 (trotto con autonomia), introdotta solo l'anno precedente: per lui e la seconda vittoria italiana in carriera.",
+      "L'istruttore Loris Matticoli e la scuola molisana hanno sottolineato come questo risultato rappresenti molto piu di una vittoria sportiva: e una prova concreta di come le attivita equestri possano essere uno strumento straordinario di inclusione, crescita personale e conquista di autonomia.",
+      "Dietro un risultato agonistico come questo c'e un lavoro quotidiano fatto di allenamenti costanti, cura del cavallo e continuita nella routine: gli stessi elementi che, su scala di maneggio, HorseHouse aiuta a tenere organizzati in un'unica scheda per ogni cavallo, dalla dieta agli allenamenti fino ai trattamenti.",
     ],
     relatedProductSlug: "horsehouse",
+    source: {
+      name: "ANSA",
+      url: "https://www.ansa.it/molise/notizie/2026/09/15/equitazione-francesco-dagnelli-per-la-seconda-volta-campione-italiano_46190c47-9e69-41e7-8b39-841b91547c86.html",
+    },
   },
   {
-    slug: "quando-un-gestionale-standard-non-basta",
-    title: "[Esempio] I segnali che indicano che un gestionale standard non basta piu",
+    slug: "med-salute-2026-innovazione-liste-attesa",
+    title:
+      "Dalle liste d'attesa all'innovazione: le sfide della sanita a Med Salute",
     sector: "gestionali-su-misura",
-    date: "2026-09-01",
+    date: "2026-09-23",
     summary:
-      "Fogli di calcolo, chat e software diversi che non comunicano tra loro sono spesso il primo segnale che serve un sistema pensato sui processi reali dell'azienda.",
+      "A Med Salute 2026, la due giorni promossa da Fiaso e Regione Calabria con otto regioni del Sud, il tema centrale e come innovazione e digitalizzazione possano affrontare liste d'attesa, sostenibilita e medicina di prossimita.",
     body: [
-      "[Sostituisci questo paragrafo con la notizia della settimana: una tendenza nel software gestionale per PMI, un caso pratico, una domanda ricorrente dei clienti.]",
-      "Molte PMI si accorgono di aver bisogno di un gestionale su misura non da un singolo evento, ma dall'accumularsi di piccole frizioni quotidiane: dati sparsi, passaggi manuali, informazioni che non tornano tra un foglio e l'altro.",
-      "In questi casi il punto di partenza non e scegliere un software piu grande, ma capire quali processi reali il team sta gia seguendo e costruire lo strumento intorno a quelli.",
+      "Si intitola 'Economia e salute: la sfida della sostenibilita nel Mezzogiorno' la due giorni di Med Salute 2026, organizzata da Fiaso (Federazione Italiana Aziende Sanitarie e Ospedaliere) insieme alla Regione Calabria a Gizzeria Lido e Lamezia Terme, con la partecipazione di otto regioni del Sud: Abruzzo, Basilicata, Calabria, Campania, Molise, Puglia, Sardegna e Sicilia.",
+      "Tra i temi al centro del confronto: gestione delle liste d'attesa, sostenibilita del sistema sanitario, medicina di prossimita, innovazione tecnologica, salute mentale e prevenzione. Il presidente Fiaso Giuseppe Quintavalle ha parlato di una 'Community of Practice' tra regioni per condividere modelli e soluzioni efficaci, invece di lasciare che ogni realta affronti da sola le stesse difficolta.",
+      "E' un principio che vale anche fuori dalla sanita pubblica: davanti a processi complessi e a esigenze che cambiano da territorio a territorio (o da azienda ad azienda), l'innovazione utile raramente arriva da uno strumento identico per tutti. Che si tratti di una rete di ospedali o di una PMI, il punto di partenza resta lo stesso: capire davvero come si lavora oggi, prima di scegliere con cosa lavorare domani. E' l'approccio con cui costruiamo, insieme ai nostri esperti, un gestionale su misura sui processi reali di ogni azienda.",
     ],
     relatedProductSlug: "gestionali-su-misura",
+    source: {
+      name: "ANSA",
+      url: "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/09/23/dalle-liste-dattesa-allinnovazione-le-sfide-della-sanita-a-med-salute_8b3e2c65-2bd8-47a6-a4fb-25df38d865f4.html",
+    },
   },
 ];
 

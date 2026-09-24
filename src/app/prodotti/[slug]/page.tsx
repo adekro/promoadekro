@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/lib/products";
+import { getGuidesByProduct } from "@/lib/guides";
 import { SITE_URL } from "@/lib/site";
 
 type ProductPageProps = {
@@ -62,6 +63,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (!product) {
     notFound();
   }
+
+  const relatedGuides = getGuidesByProduct(product.slug);
 
   const offeringSchema =
     product.kind === "servizio"
@@ -259,6 +262,34 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
         </div>
       </section>
+
+      {relatedGuides.length > 0 ? (
+        <section className="section">
+          <div className="container">
+            <div className="section-header">
+              <h2>Guide correlate a {product.name}</h2>
+            </div>
+            <div className="cards">
+              {relatedGuides.map((guide) => (
+                <article className="card" key={guide.slug}>
+                  <span className="sheet-tab">{guide.topic}</span>
+                  <h3>
+                    <Link href={`/guide/${guide.slug}`}>{guide.title}</Link>
+                  </h3>
+                  <p>{guide.metaDescription}</p>
+                  <Link
+                    href={`/guide/${guide.slug}`}
+                    className="product-link"
+                    aria-label={`Leggi: ${guide.title}`}
+                  >
+                    Leggi la guida <b aria-hidden="true">&rarr;</b>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section section-accent">
         <div className="container">

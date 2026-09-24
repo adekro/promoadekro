@@ -52,6 +52,11 @@ export default function NovitaPage() {
                 >
                   Leggi la notizia <b aria-hidden="true">&rarr;</b>
                 </Link>
+                {item.source ? (
+                  <p style={{ marginTop: "0.3rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                    Fonte: {item.source.name}
+                  </p>
+                ) : null}
               </article>
             ))}
           </div>

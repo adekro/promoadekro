@@ -69,6 +69,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
     author: { "@type": "Organization", name: "Adekro" },
     publisher: { "@type": "Organization", name: "Adekro" },
     mainEntityOfPage: `${SITE_URL}/novita/${item.slug}`,
+    ...(item.source ? { citation: item.source.url } : {}),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -130,6 +131,14 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
                 </p>
               ))}
             </div>
+            {item.source ? (
+              <p style={{ marginTop: "1.2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+                Fonte:{" "}
+                <a href={item.source.url} rel="noopener noreferrer" target="_blank">
+                  {item.source.name}
+                </a>
+              </p>
+            ) : null}
             <div className="cta-row" style={{ marginTop: "1.5rem" }}>
               <Link href="/novita" className="btn btn-secondary">
                 Tutte le novita

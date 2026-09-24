@@ -133,7 +133,10 @@ export default function RootLayout({
             <nav aria-label="Navigazione principale" className="site-nav">
               <NavLinks />
             </nav>
-            <Link href="/contatti" className="btn btn-secondary header-cta">
+            <Link
+              href="mailto:info@adekro.com"
+              className="btn btn-secondary header-cta"
+            >
               Richiedi un confronto
             </Link>
           </div>

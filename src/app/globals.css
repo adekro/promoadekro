@@ -119,6 +119,7 @@ ul {
 }
 
 .container {
+  position: relative;
   width: min(1100px, calc(100% - 2.4rem));
   margin: 0 auto;
 }
@@ -417,6 +418,53 @@ ul {
 
 .breadcrumb-nav {
   padding: 1rem 0 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-surface);
+  font-size: 0.92rem;
+}
+
+.comparison-table caption {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  color: var(--brand-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--line-strong);
+  border-bottom: none;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  text-align: left;
+}
+
+.comparison-table thead th {
+  background: var(--bg-strong);
+  color: var(--gold-light);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.comparison-table tbody th {
+  background: var(--bg-soft);
+  color: var(--text-main);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.comparison-table td {
+  color: var(--text-muted);
 }
 
 .breadcrumb-list {
