@@ -163,8 +163,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <section className="section">
         <div className="container">
           <div className="section-shell">
+            <span className="sheet-tab">{product.category}</span>
             <div className="section-header">
-              <span className="eyebrow">{product.category}</span>
               <Image
                 alt={`Logo di ${product.name}, ${product.category} firmato Adekro`}
                 className={`product-detail-logo product-logo-${product.slug}`}
@@ -226,13 +226,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="container">
             <div className="section-shell">
               <div className="section-header">
-                <span className="eyebrow">Come lavoriamo</span>
                 <h2>Come nasce {product.name} insieme a te</h2>
               </div>
               <ol className="cards process-steps">
                 {product.process.map((step, index) => (
                   <li className="card" key={step.title}>
-                    <span className="eyebrow">Fase {index + 1}</span>
+                    <span className="sheet-tab">Fase {index + 1}</span>
                     <h3>{step.title}</h3>
                     <p>{step.description}</p>
                   </li>
@@ -247,7 +246,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Domande frequenti</span>
               <h2>Prima di iniziare con {product.name}</h2>
             </div>
             <div className="cards">
@@ -267,7 +265,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <div className="section-shell">
             {product.kind === "servizio" ? (
               <div className="section-header">
-                <span className="eyebrow">Il primo passo</span>
                 <h2>Non hai ancora le idee chiare? Partiamo da una conversazione</h2>
                 <p className="section-lead">
                   Non serve arrivare con un progetto gia definito: raccontaci come lavora
@@ -276,7 +273,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
             ) : (
               <div className="section-header">
-                <span className="eyebrow">Personalizzazione</span>
                 <h2>Possiamo partire da questo prodotto e adattarlo al tuo flusso di lavoro</h2>
                 <p className="section-lead">
                   Se il bisogno e vicino ma non identico, Adekro puo personalizzare struttura,

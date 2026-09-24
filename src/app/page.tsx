@@ -157,7 +157,6 @@ export default function Home() {
       <section className="product-hero">
         <div className="container product-hero-grid">
           <div className="hero-copy">
-            <span className="product-kicker">Adekro / prodotti digitali</span>
             <h1>Software che segue il lavoro, non il contrario.</h1>
             <p>
               Sviluppiamo software su misura, app web, app mobile e gestionali
@@ -172,13 +171,46 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <div className="hero-blueprint" aria-hidden="true">
+            <div className="hero-blueprint-heading">
+              <span>Foglio di lavorazione</span>
+              <strong>Adekro</strong>
+            </div>
+            <div className="process-track">
+              <div className="process-node">
+                <span className="process-index">01</span>
+                <div className="process-label">
+                  <strong>Analisi</strong>
+                  <span>Processi e priorita reali</span>
+                </div>
+              </div>
+              <div className="process-connector" />
+              <div className="process-node">
+                <span className="process-index">02</span>
+                <div className="process-label">
+                  <strong>Progettazione</strong>
+                  <span>Flussi, dati, permessi</span>
+                </div>
+              </div>
+              <div className="process-connector" />
+              <div className="process-node process-node-active">
+                <span className="process-index">03</span>
+                <div className="process-label">
+                  <strong>Sviluppo</strong>
+                  <span>Per fasi verificabili</span>
+                </div>
+              </div>
+            </div>
+            <div className="hero-blueprint-status">
+              <i /> In lavorazione
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section products-section">
         <div className="container">
           <div className="products-heading">
-            <span className="product-kicker">Il catalogo</span>
             <h2>Soluzioni digitali per il lavoro e per le passioni.</h2>
             <p>
               Ogni app nasce da un bisogno concreto: rendere più semplice
@@ -187,8 +219,7 @@ export default function Home() {
           </div>
           <div className="product-category-group product-category-group-professional">
             <div className="product-category-heading">
-              <span className="product-kicker">Per gestire il lavoro</span>
-              <h3>Controllo e continuità per ogni giornata operativa.</h3>
+              <h3>Per gestire il lavoro: controllo e continuità per ogni giornata operativa.</h3>
               <p>
                 Gestionali affidabili per maneggi e aziende agricole, oppure
                 costruiti su misura insieme ai nostri esperti quando le tue
@@ -217,7 +248,7 @@ export default function Home() {
                         src={product.logo}
                         width={80}
                       />
-                      <span>{product.category}</span>
+                      <span className="sheet-tab sheet-tab-inline">{product.category}</span>
                       <h4>{product.name}</h4>
                       <p>{product.shortDescription}</p>
                       <Link
@@ -233,10 +264,7 @@ export default function Home() {
           </div>
           <div className="product-category-group product-category-group-playful">
             <div className="product-category-heading">
-              <span className="product-kicker">
-                Per divertirsi e migliorare
-              </span>
-              <h3>Gioca, sperimenta, brinda.</h3>
+              <h3>Per divertirsi e migliorare: gioca, sperimenta, brinda.</h3>
               <p>
                 App leggere e coinvolgenti per vivere meglio l&apos;asta del
                 fantacalcio e imparare l&apos;arte dei cocktail.
@@ -263,7 +291,7 @@ export default function Home() {
                         src={product.logo}
                         width={80}
                       />
-                      <span>{product.category}</span>
+                      <span className="sheet-tab sheet-tab-inline">{product.category}</span>
                       <h4>{product.name}</h4>
                       <p>{product.shortDescription}</p>
                       <Link
@@ -279,8 +307,7 @@ export default function Home() {
           </div>
           <div className="product-category-group product-category-group-events">
             <div className="product-category-heading">
-              <span className="product-kicker">Per i momenti importanti</span>
-              <h3>Organizza il matrimonio senza perdere nulla di vista.</h3>
+              <h3>Per i momenti importanti: organizza il matrimonio senza perdere nulla di vista.</h3>
               <p>
                 Invitati, budget e fornitori in un unico spazio, dal primo
                 pensiero al giorno del si.
@@ -303,7 +330,7 @@ export default function Home() {
                         src={product.logo}
                         width={80}
                       />
-                      <span>{product.category}</span>
+                      <span className="sheet-tab sheet-tab-inline">{product.category}</span>
                       <h4>{product.name}</h4>
                       <p>{product.shortDescription}</p>
                       <Link
@@ -324,7 +351,6 @@ export default function Home() {
         <div className="container">
           <div className="operational-grid">
             <div>
-              <span className="product-kicker">Oltre il catalogo</span>
               <h2>
                 Quando il lavoro ha regole sue, il software deve saperle
                 rispettare.
@@ -348,7 +374,6 @@ export default function Home() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Sviluppo su misura per PMI</span>
               <h2>
                 Strumenti digitali costruiti sui processi della tua impresa.
               </h2>

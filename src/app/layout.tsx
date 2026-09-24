@@ -142,7 +142,6 @@ export default function RootLayout({
         <footer className="site-footer">
           <div className="container footer-grid">
             <div className="footer-intro">
-              <span className="eyebrow">Adekro</span>
               <h2>
                 Dal sito al software operativo, con una direzione progettuale
                 chiara.

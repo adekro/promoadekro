@@ -12,7 +12,6 @@ export default function CookiePolicyPage() {
   return (
     <section className="section legal-section">
       <div className="container legal-layout">
-        <span className="eyebrow">Informativa cookie</span>
         <h1>Cookie Policy</h1>
         <p className="legal-intro">
           Questa pagina descrive come Adekro utilizza cookie e tecnologie analoghe.

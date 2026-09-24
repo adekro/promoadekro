@@ -26,7 +26,6 @@ export default function ChiSiamoPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Chi siamo</span>
               <h1>Sviluppo software e programmazione per imprese che vogliono lavorare meglio</h1>
               <p className="section-lead">
                 Adekro sviluppa software su misura, gestionali, app web e mobile,
@@ -57,7 +56,6 @@ export default function ChiSiamoPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Il nostro approccio</span>
               <h2>Prima mettiamo a fuoco il problema, poi costruiamo la soluzione</h2>
             </div>
             <div className="cards">
@@ -94,7 +92,6 @@ export default function ChiSiamoPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Perche Adekro</span>
               <h2>Ci scegli se cerchi un interlocutore che unisce business e sviluppo</h2>
             </div>
             <ul className="feature-list">

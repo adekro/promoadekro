@@ -30,7 +30,6 @@ export default function ProdottiPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Prodotti Adekro</span>
               <h1>
                 App e gestionali gia pronti, progettati intorno al lavoro reale
               </h1>
@@ -69,7 +68,6 @@ export default function ProdottiPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Catalogo</span>
               <h2>Prodotti orientati a efficienza, servizio e controllo</h2>
             </div>
             <div className="cards">
@@ -82,7 +80,7 @@ export default function ProdottiPage() {
                     src={product.logo}
                     width={80}
                   />
-                  <span className="product-card-category">
+                  <span className="sheet-tab sheet-tab-inline">
                     {product.category}
                   </span>
                   <h3>{product.name}</h3>

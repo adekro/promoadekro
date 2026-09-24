@@ -25,7 +25,6 @@ export default function ContattiPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Contatti</span>
               <h1>Parliamo del tuo prossimo progetto software</h1>
               <p className="section-lead">
                 Se stai valutando sviluppo software su misura, un&apos;app web o mobile, un
@@ -49,7 +48,6 @@ export default function ContattiPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Come possiamo aiutarti</span>
               <h2>Richieste frequenti su cui possiamo darti subito una direzione</h2>
             </div>
             <div className="cards">
@@ -86,7 +84,6 @@ export default function ContattiPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <span className="eyebrow">Cosa includere nel primo contatto</span>
               <h2>Piu informazioni ci dai, piu rapidamente possiamo essere utili</h2>
             </div>
             <ul className="feature-list">

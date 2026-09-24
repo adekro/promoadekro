@@ -11,7 +11,6 @@ export default function PrivacyPolicyPage() {
   return (
     <section className="section legal-section">
       <div className="container legal-layout">
-        <span className="eyebrow">Informativa privacy</span>
         <h1>Privacy Policy</h1>
         <p className="legal-intro">
           Informativa sul trattamento dei dati personali ai sensi del Regolamento (UE) 2016/679 (GDPR).

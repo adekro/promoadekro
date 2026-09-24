@@ -112,8 +112,8 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
       <section className="section">
         <div className="container">
           <div className="section-shell">
+            <span className="sheet-tab">{sectorLabels[item.sector]}</span>
             <div className="section-header">
-              <span className="eyebrow">{sectorLabels[item.sector]}</span>
               <h1>{item.title}</h1>
               <time dateTime={item.date} className="section-lead" style={{ display: "block" }}>
                 {new Date(item.date).toLocaleDateString("it-IT", {

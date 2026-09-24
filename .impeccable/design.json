@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T00:00:00.000Z",
+  "title": "Design System: Adekro",
+  "extensions": {
+    "colorMeta": {
+      "bg-strong": { "role": "primary", "displayName": "Deep Navy Plate", "canonical": "#03152f", "tonalRamp": ["#03152f", "#082140", "#0d2d51", "#173f6c", "#2a5788", "#5a80a8", "#9cb6cd", "#dbe6ef"] },
+      "bg-accent": { "role": "primary", "displayName": "Royal Blue Accent", "canonical": "#082b5c", "tonalRamp": ["#03152f", "#082b5c", "#0b438a", "#2a5da3", "#5580ba", "#8aa8d0", "#bcd0e6", "#e6eef7"] },
+      "blue-mid": { "role": "primary", "displayName": "Blue-Mid", "canonical": "#0b438a", "tonalRamp": ["#031729", "#082b5c", "#0b438a", "#2e63a8", "#5f8bc0", "#93b3d8", "#c6d8ec", "#eef3f9"] },
+      "brand": { "role": "secondary", "displayName": "Brand Gold", "canonical": "#c8953e", "tonalRamp": ["#4a3413", "#6d4c1c", "#9d6d25", "#c8953e", "#dab26a", "#e8c896", "#f1d9ba", "#faf0dc"] },
+      "brand-dark": { "role": "secondary", "displayName": "Brand Gold Dark", "canonical": "#9d6d25", "tonalRamp": ["#382712", "#5a3d1a", "#9d6d25", "#c8953e", "#dab26a", "#e8c896", "#f1d9ba", "#faf0dc"] },
+      "gold-light": { "role": "secondary", "displayName": "Gold-Light Ink", "canonical": "#f1d18f", "tonalRamp": ["#5a4720", "#836531", "#a9803e", "#c8953e", "#f1d18f", "#f6dfab", "#fae9c5", "#fdf5e3"] },
+      "bg-main": { "role": "neutral", "displayName": "Warm Ivory", "canonical": "#fbf9f4", "tonalRamp": ["#3a352a", "#635a45", "#948a6d", "#c4b998", "#e2dcc4", "#f0ece0", "#fbf9f4", "#fffefc"] },
+      "bg-surface": { "role": "neutral", "displayName": "Paper White", "canonical": "#fffefa", "tonalRamp": ["#3d3b32", "#655f4e", "#968f75", "#c6bfa3", "#e5e1cf", "#f2efe4", "#fffefa", "#ffffff"] },
+      "bg-soft": { "role": "neutral", "displayName": "Soft Slate Tint", "canonical": "#edf2f7", "tonalRamp": ["#232b33", "#3d4a56", "#5c6f81", "#8496a7", "#aebfcd", "#cddae4", "#edf2f7", "#f9fbfc"] },
+      "text-main": { "role": "neutral", "displayName": "Ink Text", "canonical": "#061b39", "tonalRamp": ["#020a16", "#061b39", "#0d3162", "#1a4c8f", "#4571ad", "#7d9dc6", "#b8cadf", "#e8eef6"] },
+      "text-muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#43546a", "tonalRamp": ["#151b22", "#293440", "#43546a", "#5f7288", "#8296a9", "#adbbc8", "#d3dbe3", "#eef1f4"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#d4dbe4", "tonalRamp": ["#2e3843", "#4c5966", "#6e7c89", "#97a2ac", "#bcc4cc", "#d4dbe4", "#e9edf1", "#f7f8fa"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Product-detail hero h1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Standard section h1." },
+      "title": { "displayName": "Title", "purpose": "Section and card h2/h3." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, tabular numerals on for any inline figures." },
+      "label": { "displayName": "Label", "purpose": "Sheet-tab text, process-index digits, footer/nav labels." }
+    },
+    "shadows": [
+      { "name": "plate-light", "value": "6px 6px 0 rgba(6, 27, 57, 0.16)", "purpose": "Resting offset shadow for light cards, stat cards, product cards." },
+      { "name": "plate-dark", "value": "6px 6px 0 rgba(200, 149, 62, 0.32)", "purpose": "Resting offset shadow for dark panels (hero blueprint, section-accent, operational grid)." },
+      { "name": "plate-hover-card", "value": "10px 10px 0 rgba(200, 149, 62, 0.16)", "purpose": "Card/stat-card hover: offset grows, tints gold." },
+      { "name": "plate-hover-product", "value": "12px 12px 0 rgba(6, 27, 57, 0.12)", "purpose": "Product-card hover: offset grows, stays navy-tinted." },
+      { "name": "cta-ambient", "value": "0 10px 15px -3px rgba(157, 109, 37, 0.28)", "purpose": "Primary CTA pill's own soft ambient shadow, the one diffuse shadow allowed on an in-flow element." }
+    ],
+    "motion": [
+      { "name": "sheet-rise", "value": "640ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Hero blueprint panel entrance animation." },
+      { "name": "status-pulse", "value": "2.4s ease-in-out infinite", "purpose": "Hero blueprint status dot pulse." },
+      { "name": "state-transition", "value": "160-180ms ease", "purpose": "Default hover/focus transition for buttons, cards, nav links." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "640px" },
+      { "name": "tablet", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The system's one deliberately soft (pill) shape; the primary call to action everywhere.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Parliamo del tuo progetto</a>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 0.82rem 1.3rem; border-radius: 999px; background: #c8953e; color: #03152f; font-family: 'Space Grotesk', 'Segoe UI', sans-serif; font-weight: 600; text-decoration: none; box-shadow: 0 10px 15px -3px rgba(157, 109, 37, 0.28); transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease; } .ds-btn-primary:hover { background: #9d6d25; color: #fff; transform: translateY(-2px); box-shadow: 0 20px 25px -5px rgba(157, 109, 37, 0.34); } .ds-btn-primary:focus-visible { outline: 3px solid #c8953e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Sharp-cornered secondary action, hairline border on paper white.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Richiedi un confronto</a>",
+      "css": ".ds-btn-secondary { display: inline-block; padding: 0.82rem 1.3rem; border-radius: 4px; border: 1px solid rgba(6, 27, 57, 0.16); background: #fffefa; color: #061b39; font-family: 'Space Grotesk', 'Segoe UI', sans-serif; font-weight: 600; text-decoration: none; transition: border-color 160ms ease, background-color 160ms ease; } .ds-btn-secondary:hover { border-color: #082b5c; background: #edf2f7; } .ds-btn-secondary:focus-visible { outline: 3px solid #c8953e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Hairline-bordered paper card with a hard zero-blur offset shadow that grows and gold-tints on hover.",
+      "html": "<article class=\"ds-card\"><h3>Gestionali su misura</h3><p>Organizza dati, attivita e persone in un unico flusso operativo.</p></article>",
+      "css": ".ds-card { position: relative; border: 1px solid rgba(6, 27, 57, 0.16); border-radius: 6px; background: #fffefa; padding: 1.4rem 1.35rem; box-shadow: 6px 6px 0 rgba(6, 27, 57, 0.16); transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; } .ds-card h3 { font-family: Merriweather, Georgia, serif; font-size: 1.3rem; margin-bottom: 0.6rem; color: #061b39; } .ds-card p { color: #43546a; } .ds-card:hover, .ds-card:focus-within { transform: translate(-2px, -2px); border-color: #c8953e; box-shadow: 10px 10px 0 rgba(200, 149, 62, 0.16); }"
+    },
+    {
+      "name": "Sheet Tab",
+      "kind": "custom",
+      "refersTo": "sheet-tab",
+      "description": "The drafting title-block tag that replaces every eyebrow/kicker; carries only real category/sector/step information.",
+      "html": "<span class=\"ds-sheet-tab\">Software gestionale</span>",
+      "css": ".ds-sheet-tab { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.32rem 0.7rem; background: #03152f; color: #f1d18f; font-family: 'Space Grotesk', 'Segoe UI', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 3px; box-shadow: 0 4px 10px rgba(3, 21, 47, 0.18); }"
+    },
+    {
+      "name": "Process Node",
+      "kind": "custom",
+      "refersTo": "process-node",
+      "description": "A numbered step row from the hero blueprint's process track, joined by a dashed connector; the active step highlights in brand gold.",
+      "html": "<div class=\"ds-process-node ds-process-node-active\"><span class=\"ds-process-index\">03</span><div class=\"ds-process-label\"><strong>Sviluppo</strong><span>Per fasi verificabili</span></div></div>",
+      "css": ".ds-process-node { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 0.9rem; } .ds-process-index { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border: 1px solid rgba(241, 209, 143, 0.4); color: #f1d18f; font-family: 'Space Grotesk', sans-serif; font-variant-numeric: tabular-nums; font-size: 0.78rem; font-weight: 700; } .ds-process-node-active .ds-process-index { background: #c8953e; border-color: #c8953e; color: #03152f; } .ds-process-label strong { font-size: 0.98rem; font-weight: 700; color: #f8f7f1; } .ds-process-label span { font-size: 0.74rem; color: rgba(247, 246, 236, 0.62); }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "Two-column illustrative product card: art preview on the left, copy and sheet-tab category label on the right.",
+      "html": "<article class=\"ds-product-card\"><div class=\"ds-product-preview\"></div><div class=\"ds-product-card-copy\"><span class=\"ds-sheet-tab\">Gestionale agricolo</span><h4>Agricola</h4><p>Gestisci parcelle, colture e dati satellitari.</p></div></article>",
+      "css": ".ds-product-card { position: relative; display: grid; grid-template-columns: minmax(10rem, 0.78fr) 1fr; min-height: 20rem; overflow: hidden; border: 1px solid rgba(6, 27, 57, 0.16); border-radius: 6px; background: #fffefa; box-shadow: 6px 6px 0 rgba(6, 27, 57, 0.16); transition: transform 180ms ease, box-shadow 180ms ease; } .ds-product-card:hover { transform: translate(-3px, -3px); box-shadow: 12px 12px 0 rgba(6, 27, 57, 0.12); } .ds-product-preview { background: #7192bd; } .ds-product-card-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 1.5rem 1.35rem; gap: 0.4rem; } .ds-product-card-copy h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; color: #061b39; margin: 0.6rem 0 0.65rem; } .ds-product-card-copy p { color: #43546a; font-size: 0.93rem; line-height: 1.55; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "site-nav",
+      "description": "Sticky, blurred-glass header nav with a gold underline that scales in on hover/active.",
+      "html": "<nav class=\"ds-site-nav\"><a class=\"ds-nav-link ds-nav-link-active\" href=\"#\">Prodotti</a><a class=\"ds-nav-link\" href=\"#\">Chi siamo</a></nav>",
+      "css": ".ds-site-nav { display: flex; gap: 0.15rem; color: #43546a; font-family: 'Space Grotesk', sans-serif; } .ds-nav-link { position: relative; padding: 0.62rem 0.75rem; border-radius: 4px; text-decoration: none; color: inherit; transition: color 180ms ease, background-color 180ms ease; } .ds-nav-link::after { content: ''; position: absolute; left: 0.75rem; right: 0.75rem; bottom: 0.42rem; height: 2px; background: #c8953e; transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; } .ds-nav-link:hover { color: #061b39; background: #edf2f7; } .ds-nav-link:hover::after, .ds-nav-link-active::after { transform: scaleX(1); } .ds-nav-link-active { font-weight: 600; color: #9d6d25; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Lo Studio di Progettazione (The Drafting Studio)",
+    "overview": "Adekro's marketing site was rebuilt from a generic SaaS look — blurred gradient blobs, soft-shadow cards, stock-icon badges — into the visual language of a technical drafting studio: the place where a project is measured, annotated, and drawn before it is built. The system keeps Adekro's existing navy/gold brand palette but re-stages it on a warm ivory ground with a fine millimeter grid, hairline borders, tabular data, and hard offset \"plate\" shadows standing in for blur. Gold is used as drafting ink — annotation tabs, index numbers, dimension-style accents — never as a filled background. Density is moderate and confident: generous section padding, but text blocks and cards keep hard edges and a measured rhythm rather than airy whitespace with rounded-everything softness. The one deliberately soft shape in the whole system is the primary CTA pill button, kept round on purpose so the single action a visitor should take always reads as the exception, not the rule.",
+    "keyCharacteristics": [
+      "Fine millimeter blueprint grid used sparingly: hero panel and a couple of illustrative product-card previews only, never as an ambient global texture.",
+      "Hard 'offset plate' shadows (zero blur, 6px 6px 0) at rest, pushed further and gold-tinted on hover, instead of diffuse blur.",
+      "Sharp-to-slightly-softened corners (6px/8px) everywhere except the primary CTA, which stays a pill.",
+      "Merriweather serif for headings treated as technical caption type; Space Grotesk with tabular numerals for UI, data, and process indices.",
+      "The sheet-tab component replaces every eyebrow/kicker label with a drafting title-block tag."
+    ],
+    "rules": [
+      { "name": "The Ink, Not Fill Rule", "body": "Brand gold marks lines, numbers, tabs, and small accent shapes; it does not fill large surfaces. A gold background is reserved for the primary CTA pill and small state dots — never a card, section, or panel.", "section": "colors" },
+      { "name": "The One Soft Shape Rule", "body": "The primary CTA button is the only pill in the system. Every other surface — cards, tabs, stat blocks, footer columns, product panels — uses the sharp/near-sharp radius scale, so the one rounded shape stays legible as 'the action.'", "section": "colors" },
+      { "name": "The Labeled-Information Rule", "body": "A small uppercase label is only used when it carries real information (a product category, a news sector, a numbered process step); it always renders as the sheet-tab drafting tab, never as a bare decorative eyebrow line above a heading.", "section": "typography" },
+      { "name": "The Offset-Not-Blur Rule", "body": "Card and panel depth at rest is a hard zero-blur offset shadow, never a blurred glow. Blur is reserved for true overlays (modal, floating tab), not for in-flow surfaces.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use the hard offset plate shadow (6px 6px 0, zero blur) for any new in-flow card or panel; grow the offset and tint it gold on hover instead of adding blur.",
+      "Do use .sheet-tab for any new category, sector, or step label; never place a bare uppercase caption line above a heading.",
+      "Do keep the millimeter blueprint grid rare — one hero panel or one illustrative preview per screen, not an ambient global texture.",
+      "Do keep the primary CTA as the system's only pill; every other new component uses the 6px/8px sharp radius scale.",
+      "Do use Space Grotesk with tabular numerals for any counted value (stats, indices, prices, quantities)."
+    ],
+    "donts": [
+      "Don't add a decorative eyebrow/kicker caption; if a label doesn't carry real category/sector/step information, don't add a label at all.",
+      "Don't fill a large surface with solid brand gold; gold is ink and small accents, not a background field.",
+      "Don't introduce diffuse blurred drop shadows on in-flow cards or panels; blur is reserved for true overlays (the sheet-tab's own small drop shadow and the cookie-consent modal are the only exceptions).",
+      "Don't round a second element into a pill; the primary CTA is the system's one deliberately soft shape.",
+      "Don't change route URLs, SEO metadata (titles/descriptions/keywords/canonical/schema.org), or the product copy in src/lib/products.ts / src/lib/news.ts — this system is a visual layer over fixed content and information architecture."
+    ]
+  }
+}

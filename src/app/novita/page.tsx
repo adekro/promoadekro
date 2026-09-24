@@ -24,7 +24,6 @@ export default function NovitaPage() {
       <div className="container">
         <div className="section-shell">
           <div className="section-header">
-            <span className="eyebrow">Novita Adekro</span>
             <h1>Una nota a settimana da agricoltura, maneggi e software su misura</h1>
             <p className="section-lead">
               Brevi aggiornamenti dai settori in cui lavoriamo, con un collegamento diretto
@@ -34,7 +33,7 @@ export default function NovitaPage() {
           <div className="cards">
             {sortedNews.map((item) => (
               <article className="card" key={item.slug}>
-                <span className="eyebrow">{sectorLabels[item.sector]}</span>
+                <span className="sheet-tab">{sectorLabels[item.sector]}</span>
                 <h2>
                   <Link href={`/novita/${item.slug}`}>{item.title}</Link>
                 </h2>
