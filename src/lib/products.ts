@@ -46,7 +46,8 @@ export const products: Product[] = [
     ],
     faqs: [
       {
-        question: "Come funziona la creazione di un gestionale su misura con Adekro?",
+        question:
+          "Come funziona la creazione di un gestionale su misura con Adekro?",
         answer:
           "Partiamo da un confronto in cui ci racconti esigenze, processi e priorita. I nostri esperti progettano poi il gestionale insieme a te, in fasi verificabili, cosi da costruire uno strumento realmente aderente al tuo modo di lavorare.",
       },
@@ -139,6 +140,10 @@ export const products: Product[] = [
     benefits: [
       "Mappa di terreni, particelle e colture",
       "Consultazione satellitare con dati Copernicus",
+      "Mappa con indici vegetativi NDVI",
+      "Mappa catastale",
+      "Mappa con confini zone vulnerabili",
+      "Creazione del quaderno di campagna agricolo",
       "Assegnazione e storico dei trattamenti fitosanitari",
     ],
     idealFor:
