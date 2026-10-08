@@ -22,6 +22,62 @@ export const sectorLabels: Record<NewsItem["sector"], string> = {
 // resta sempre la prima mostrata in elenco e nella sitemap.
 export const news: NewsItem[] = [
   {
+    slug: "coldiretti-basilicata-mobilitazione-reddito-agricolo",
+    title:
+      "Coldiretti Basilicata in stato di mobilitazione: pronti a scendere in piazza",
+    sector: "agricola",
+    date: "2026-10-03",
+    summary:
+      "Coldiretti Basilicata denuncia risorse insufficienti per il settore e annuncia di essere pronta a mobilitarsi in tutte le sedi per difendere il reddito degli agricoltori.",
+    body: [
+      "Coldiretti Basilicata ha annunciato lo stato di mobilitazione, dichiarandosi pronta a scendere in piazza se non arriveranno misure strutturali a sostegno del comparto agricolo. Nel mirino ci sono le risorse di bilancio ritenute insufficienti e la mancanza di interventi concreti da parte di governo regionale e consiglio.",
+      "L'organizzazione ricorda il peso dell'agricoltura sul territorio: quasi il 60% della superficie regionale e gestito dagli agricoltori, un'impresa su tre iscritta alle camere di commercio lucane e agricola e le esportazioni del settore valgono circa un quinto dell'export regionale.",
+      "In una fase di crisi, avere sotto controllo costi, trattamenti e rese di ogni appezzamento fa la differenza nel difendere il margine. E' per questo che Agricola riunisce in un'unica mappa terreni, particelle e storico delle lavorazioni, cosi chi gestisce l'azienda decide sui dati e non a memoria.",
+    ],
+    relatedProductSlug: "agricola",
+    source: {
+      name: "ANSA",
+      url: "https://www.ansa.it/basilicata/notizie/2026/10/03/coldiretti-basilicata-in-stato-di-mobilitazione-pronti-a-scendere-in-piazza_7649fed3-6980-438a-bcda-906ca447d8a0.html",
+    },
+  },
+  {
+    slug: "lo-sport-che-cura-cavallo-coni-centenario-fise",
+    title:
+      "Lo sport che cura: il cavallo protagonista al CONI per il centenario FISE",
+    sector: "horsehouse",
+    date: "2026-10-05",
+    summary:
+      "Al Salone d'Onore del CONI un convegno della Federazione Italiana Sport Equestri ha raccontato come l'equitazione favorisca crescita, inclusione e salute mentale dei giovani.",
+    body: [
+      "Lunedi 5 ottobre, nel Salone d'Onore del CONI a Roma, si e tenuto il convegno 'Lo sport che cura', nell'ambito delle celebrazioni per il centenario della Federazione Italiana Sport Equestri. L'evento ha ricevuto il patrocinio, tra gli altri, di CONI, CIP, Istituto Superiore di Sanita e Ministero della Salute.",
+      "Il presidente FISE Marco Di Paola ha definito lo sport equestre 'una straordinaria occasione di riscatto sociale e crescita personale'. Esperti di Istituto Superiore di Sanita, Universita di Roma 'Foro Italico', ASL Roma 2 e Istituto Zooprofilattico hanno presentato evidenze scientifiche sull'uso degli interventi assistiti con i cavalli in ambito educativo e sanitario.",
+      "Nel pomeriggio, alla Societa Ippica Romana, i partecipanti hanno provato in prima persona a osservare il comportamento del cavallo e a costruire una relazione di fiducia. Una relazione che richiede continuita e attenzione ai dettagli: HorseHouse aiuta i maneggi a tenere in una scheda per ogni cavallo dieta, allenamenti e trattamenti.",
+    ],
+    relatedProductSlug: "horsehouse",
+    source: {
+      name: "FISE",
+      url: "https://www.fise.it/federazione/news-la-federazione/archivio-news-la-federazione/22617-lo-sport-che-cura-il-cavallo-protagonista-al-coni-per-il-convegno-per-il-centenario-fise-su-crescita,-inclusione-e-salute-mentale-dei-giovani.html",
+    },
+  },
+  {
+    slug: "a2a-confindustria-varese-ia-pmi",
+    title: "A2A e Confindustria Varese: l'intelligenza artificiale per far crescere le PMI",
+    sector: "gestionali-su-misura",
+    date: "2026-10-01",
+    summary:
+      "A2A e Confindustria Varese hanno presentato strumenti e percorsi per portare l'IA nei processi produttivi delle piccole e medie imprese, con indicazioni sui finanziamenti disponibili.",
+    body: [
+      "A2A e Confindustria Varese hanno organizzato un incontro per promuovere l'adozione dell'intelligenza artificiale nelle PMI del territorio, presentando strumenti pratici e attivita misurabili per introdurla nei processi produttivi, insieme a informazioni sui canali di finanziamento europei, nazionali e regionali.",
+      "Il presidente di A2A Roberto Tasca ha ricordato che le imprese con meno di 50 addetti rappresentano il 99% della capacita produttiva italiana e che l'IA puo diventare un alleato competitivo. Per la vicepresidente di Confindustria Varese Chiara Radrizzani servono pero competenze, investimenti e strumenti adeguati per trasformarne il potenziale in risultati.",
+      "Il punto e proprio questo: l'innovazione rende quando parte dai processi reali dell'azienda. Con i nostri esperti progettiamo gestionali su misura che sostituiscono fogli di calcolo e strumenti scollegati, e preparano il terreno a un uso concreto di dati e automazioni.",
+    ],
+    relatedProductSlug: "gestionali-su-misura",
+    source: {
+      name: "ANSA",
+      url: "https://www.ansa.it/lombardia/notizie/2026/10/01/a2a-e-confindustria-varese-lia-supportera-la-crescita-delle-pmi_d0d6b8d0-adfb-45a4-9345-718148203fc4.html",
+    },
+  },
+  {
     slug: "giovani-agricoltori-innovazione-suolo-soil-date",
     title:
       "Il futuro dell'agricoltura riparte dal suolo: 250 giovani scelgono l'innovazione",

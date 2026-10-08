@@ -201,7 +201,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
       </section>
 
-      <section className="section section-soft">
+      <section className="section section-soft section-spaced">
         <div className="container">
           <div className="section-shell">
             <div className="cards">
@@ -225,7 +225,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </section>
 
       {product.process ? (
-        <section className="section">
+        <section className="section section-spaced">
           <div className="container">
             <div className="section-shell">
               <div className="section-header">
@@ -245,7 +245,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </section>
       ) : null}
 
-      <section className="section">
+      <section className="section section-spaced">
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
@@ -264,7 +264,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </section>
 
       {relatedGuides.length > 0 ? (
-        <section className="section">
+        <section className="section section-spaced">
           <div className="container">
             <div className="section-header">
               <h2>Guide correlate a {product.name}</h2>
@@ -291,7 +291,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </section>
       ) : null}
 
-      <section className="section section-accent">
+      <section className="section section-accent section-spaced">
         <div className="container">
           <div className="section-shell">
             {product.kind === "servizio" ? (

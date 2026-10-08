@@ -313,6 +313,11 @@ ul {
   padding-top: 1rem;
 }
 
+.section + .section.section-spaced {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
 .section-shell {
   position: relative;
 }
