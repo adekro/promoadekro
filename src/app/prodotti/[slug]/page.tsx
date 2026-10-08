@@ -181,7 +181,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
             <div className="cta-row">
               <Link
-                href="/contatti"
+                href={
+                  product.kind === "servizio"
+                    ? "/contatti"
+                    : `mailto:info@adekro.com?subject=${encodeURIComponent(`Richiesta demo ${product.name}`)}`
+                }
                 className="btn btn-primary"
                 aria-label={
                   product.kind === "servizio"
