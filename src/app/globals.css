@@ -1110,31 +1110,9 @@ ul {
 
 .product-link:hover b { transform: translateX(4px); }
 
-/* Product previews: one drafting-sheet language. Navy plate, gold-light ink, a
-   dimension line along the foot. Gold is line and type here, never a fill. */
-.product-preview {
-  position: relative;
-  overflow: hidden;
-  padding: 1rem 1rem 2rem;
-  background: var(--bg-strong);
-  color: var(--text-light);
-}
-
-.product-preview::after {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  right: 1rem;
-  bottom: 0.8rem;
-  height: 9px;
-  opacity: 0.6;
-  background:
-    linear-gradient(var(--gold-light), var(--gold-light)) center / 100% 1px no-repeat,
-    linear-gradient(var(--gold-light), var(--gold-light)) left / 1px 100% no-repeat,
-    linear-gradient(var(--gold-light), var(--gold-light)) right / 1px 100% no-repeat;
-  pointer-events: none;
-}
-
+/* Product previews: one drafting-sheet language. Navy plate, gold-light linework,
+   ivory type, a dimension line along the foot. Gold is line and type here, never a fill.
+   The plate is set on each preview root: there is no wrapper element. */
 .preview-wedding,
 .preview-custom,
 .preview-auction,
@@ -1146,7 +1124,29 @@ ul {
   overflow: hidden;
   height: 100%;
   min-height: 15rem;
-  padding: 1.2rem;
+  padding: 1.2rem 1.2rem 2.4rem;
+  background-color: var(--bg-strong);
+  color: var(--text-light);
+}
+
+.preview-wedding::after,
+.preview-custom::after,
+.preview-auction::after,
+.preview-drink::after,
+.preview-farm::after,
+.preview-horse::after {
+  content: "";
+  position: absolute;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 0.9rem;
+  height: 9px;
+  opacity: 0.6;
+  background:
+    linear-gradient(var(--gold-light), var(--gold-light)) center / 100% 1px no-repeat,
+    linear-gradient(var(--gold-light), var(--gold-light)) left / 1px 100% no-repeat,
+    linear-gradient(var(--gold-light), var(--gold-light)) right / 1px 100% no-repeat;
+  pointer-events: none;
 }
 
 .preview-wedding,
