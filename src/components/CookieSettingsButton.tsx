@@ -7,7 +7,7 @@ export default function CookieSettingsButton() {
       onClick={() => window.dispatchEvent(new Event("adekro:open-cookie-settings"))}
       type="button"
     >
-      Gestisci cookie
+      Informativa cookie
     </button>
   );
 }

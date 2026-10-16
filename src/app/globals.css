@@ -757,87 +757,6 @@ ul {
   letter-spacing: 0.1em;
 }
 
-.cookie-options {
-  display: grid;
-  gap: 0.7rem;
-  margin-top: 1.2rem;
-}
-
-.cookie-option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.8rem;
-  border: 1px solid var(--line);
-  background: var(--bg-soft);
-}
-
-.cookie-option h3,
-.cookie-option strong {
-  font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
-  font-size: var(--text-small);
-}
-
-.cookie-option p,
-.cookie-option small {
-  display: block;
-  color: var(--text-muted);
-  font-size: var(--text-small);
-  line-height: 1.4;
-}
-
-.cookie-status {
-  color: var(--brand-ink);
-  font-size: var(--text-label);
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.cookie-toggle {
-  cursor: pointer;
-}
-
-.cookie-toggle input {
-  position: absolute;
-  opacity: 0;
-}
-
-.toggle-track {
-  position: relative;
-  width: 2.6rem;
-  height: 1.45rem;
-  flex: 0 0 auto;
-  border-radius: 999px;
-  background: var(--text-muted);
-  transition: background 160ms ease;
-}
-
-.toggle-track::after {
-  content: "";
-  position: absolute;
-  top: 0.18rem;
-  left: 0.18rem;
-  width: 1.1rem;
-  height: 1.1rem;
-  border-radius: 50%;
-  background: #fff;
-  transition: transform 160ms ease;
-}
-
-.cookie-toggle input:checked + .toggle-track {
-  background: var(--brand-dark);
-}
-
-.cookie-toggle input:focus-visible + .toggle-track {
-  outline: 3px solid var(--brand-dark);
-  outline-offset: 3px;
-}
-
-.cookie-toggle input:checked + .toggle-track::after {
-  transform: translateX(1.15rem);
-}
-
 .cookie-actions {
   display: flex;
   flex-wrap: wrap;
@@ -858,8 +777,6 @@ ul {
 }
 
 .cookie-primary-button { background: var(--bg-accent); color: #fff; }
-.cookie-secondary-button { border-color: var(--line-strong) !important; background: var(--bg-surface); color: var(--bg-accent); }
-.cookie-text-button { margin-right: auto; background: transparent; color: var(--brand-dark); }
 
 .product-hero {
   padding: 5.4rem 0 4.6rem;

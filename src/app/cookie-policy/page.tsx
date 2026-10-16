@@ -29,9 +29,9 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Cookie tecnici</h2>
             <p>
-              Il sito usa una preferenza tecnica salvata nel browser per ricordare la scelta relativa
-              al consenso cookie. Questa preferenza e necessaria per non riproporre il banner a ogni
-              visita e non richiede consenso.
+              Il sito salva nel browser (localStorage) una preferenza tecnica, con data e versione
+              dell&apos;avviso, per ricordare che l&apos;avviso è stato mostrato e non riproporlo a ogni
+              visita. Non è un cookie di tracciamento e non richiede consenso.
             </p>
           </section>
           <section>
@@ -45,9 +45,11 @@ export default function CookiePolicyPage() {
           <section>
             <h2>Gestione delle preferenze</h2>
             <p>
-              Puoi modificare o ritirare la scelta in ogni momento dal link “Gestisci cookie” nel footer.
-              Puoi anche eliminare i cookie direttamente dalle impostazioni del browser. Per il trattamento
-              dei dati personali consulta la <Link href="/privacy-policy">Privacy Policy</Link>.
+              Poiché il sito non usa cookie statistici né di profilazione, non c&apos;è alcuna scelta
+              da esprimere: l&apos;avviso iniziale si limita a informarti. Puoi rileggerlo in ogni
+              momento dal link “Informativa cookie” nel footer e cancellare la preferenza tecnica
+              dalle impostazioni del browser. Per il trattamento dei dati personali consulta la{" "}
+              <Link href="/privacy-policy">Privacy Policy</Link>.
             </p>
           </section>
           <section>

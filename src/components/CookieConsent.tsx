@@ -1,11 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 const storageKey = "adekro-cookie-preferences";
+const noticeVersion = "2026-10-16";
 
 type CookiePreferences = {
   analytics: boolean;
+  savedAt?: string;
+  noticeVersion?: string;
 };
 
 function readPreferences(): CookiePreferences | null {
@@ -17,32 +21,28 @@ function readPreferences(): CookiePreferences | null {
   }
 }
 
+// The site sets no statistics or profiling cookies, so there is nothing to consent to:
+// this is an information notice. The stored value only remembers that it was shown.
 export default function CookieConsent() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [analytics, setAnalytics] = useState(false);
   const dialogRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const returnFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const frameId = requestAnimationFrame(() => {
-      const preferences = readPreferences();
-      setAnalytics(preferences?.analytics ?? false);
-      setIsOpen(!preferences);
+      setIsOpen(!readPreferences());
     });
 
-    const openSettings = () => {
+    const openNotice = () => {
       returnFocusRef.current = document.activeElement as HTMLElement | null;
-      setAnalytics(readPreferences()?.analytics ?? false);
-      setShowSettings(true);
       setIsOpen(true);
     };
 
-    window.addEventListener("adekro:open-cookie-settings", openSettings);
+    window.addEventListener("adekro:open-cookie-settings", openNotice);
     return () => {
       cancelAnimationFrame(frameId);
-      window.removeEventListener("adekro:open-cookie-settings", openSettings);
+      window.removeEventListener("adekro:open-cookie-settings", openNotice);
     };
   }, []);
 
@@ -57,20 +57,13 @@ export default function CookieConsent() {
 
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        // Esc declines optional cookies on first visit; when reopened from the
-        // footer it just closes and keeps the stored choice.
-        if (readPreferences()) {
-          setShowSettings(false);
-          setIsOpen(false);
-        } else {
-          savePreferences(false);
-        }
+        acknowledge();
         return;
       }
 
       if (event.key !== "Tab" || !dialogRef.current) return;
       const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
-        "button, input, [tabindex]:not([tabindex='-1'])",
+        "a[href], button, [tabindex]:not([tabindex='-1'])",
       );
       if (focusable.length === 0) return;
       const first = focusable[0];
@@ -89,12 +82,18 @@ export default function CookieConsent() {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [isOpen]);
 
-  function savePreferences(nextAnalytics: boolean) {
-    const preferences: CookiePreferences = { analytics: nextAnalytics };
-    localStorage.setItem(storageKey, JSON.stringify(preferences));
-    setAnalytics(nextAnalytics);
+  function acknowledge() {
+    const preferences: CookiePreferences = {
+      analytics: false,
+      savedAt: new Date().toISOString(),
+      noticeVersion,
+    };
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(preferences));
+    } catch {
+      // Storage unavailable: the notice may reappear on the next visit.
+    }
     setIsOpen(false);
-    setShowSettings(false);
   }
 
   if (!isOpen) {
@@ -111,51 +110,21 @@ export default function CookieConsent() {
         role="dialog"
       >
         <div className="cookie-consent-copy">
-          <p className="cookie-consent-label">PREFERENZE COOKIE</p>
+          <p className="cookie-consent-label">Informativa cookie</p>
           <h2 id="cookie-consent-title" ref={titleRef} tabIndex={-1}>
-            {showSettings ? "Gestisci le preferenze" : "La tua privacy conta"}
+            Nessun cookie di tracciamento
           </h2>
           <p>
-            Usiamo cookie tecnici necessari al funzionamento del sito. Puoi scegliere
-            se autorizzare anche strumenti statistici, quando saranno attivati.
+            Questo sito non usa cookie statistici né di profilazione. Salva nel tuo browser
+            solo una preferenza tecnica per non riproporti questo avviso. Trovi i dettagli
+            nella <Link href="/cookie-policy">Cookie Policy</Link> e nella{" "}
+            <Link href="/privacy-policy">Privacy Policy</Link>.
           </p>
         </div>
 
-        {showSettings && (
-          <div className="cookie-options">
-            <div className="cookie-option">
-              <div>
-                <h3>Cookie tecnici</h3>
-                <p>Necessari per memorizzare la tua scelta sui cookie.</p>
-              </div>
-              <span className="cookie-status">Sempre attivi</span>
-            </div>
-            <label className="cookie-option cookie-toggle">
-              <span>
-                <strong>Cookie statistici</strong>
-                <small>Ci aiutano a capire come viene usato il sito.</small>
-              </span>
-              <input
-                checked={analytics}
-                onChange={(event) => setAnalytics(event.target.checked)}
-                type="checkbox"
-              />
-              <span aria-hidden="true" className="toggle-track" />
-            </label>
-          </div>
-        )}
-
         <div className="cookie-actions">
-          {!showSettings && (
-            <button className="cookie-text-button" onClick={() => setShowSettings(true)} type="button">
-              Personalizza
-            </button>
-          )}
-          <button className="cookie-secondary-button" onClick={() => savePreferences(false)} type="button">
-            Rifiuta facoltativi
-          </button>
-          <button className="cookie-primary-button" onClick={() => savePreferences(showSettings ? analytics : true)} type="button">
-            {showSettings ? "Salva preferenze" : "Accetta tutti"}
+          <button className="cookie-primary-button" onClick={acknowledge} type="button">
+            Ho capito
           </button>
         </div>
       </section>
