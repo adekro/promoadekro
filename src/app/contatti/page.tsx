@@ -29,7 +29,7 @@ export default function ContattiPage() {
               <p className="section-lead">
                 Se stai valutando sviluppo software su misura, un&apos;app web o mobile, un
                 gestionale, un sito o un&apos;integrazione, possiamo partire da una conversazione
-                semplice per capire obiettivi, criticita e priorita operative.
+                semplice per capire obiettivi, criticità e priorità operative.
               </p>
             </div>
             <div className="cta-row">
@@ -54,13 +54,13 @@ export default function ContattiPage() {
               <article className="card">
                 <h3>Nuovo sito o restyling</h3>
                 <p>
-                  Quando la presenza online non rappresenta piu l&apos;azienda o non genera contatti utili, progettiamo una base piu efficace.
+                  Quando la presenza online non rappresenta più l&apos;azienda o non genera contatti utili, progettiamo una base più efficace.
                 </p>
               </article>
               <article className="card">
                 <h3>Gestione interna dispersiva</h3>
                 <p>
-                  Se dati e attivita sono sparsi tra fogli, chat e strumenti scollegati, definiamo un flusso piu ordinato e controllabile.
+                  Se dati e attività sono sparsi tra fogli, chat e strumenti scollegati, definiamo un flusso più ordinato e controllabile.
                 </p>
               </article>
               <article className="card">
@@ -72,7 +72,7 @@ export default function ContattiPage() {
               <article className="card">
                 <h3>Prodotti da personalizzare</h3>
                 <p>
-                  Se una soluzione Adekro e gia vicina al tuo bisogno, possiamo adattarla al tuo contesto operativo con tempi piu rapidi.
+                  Se una soluzione Adekro è già vicina al tuo bisogno, possiamo adattarla al tuo contesto operativo con tempi più rapidi.
                 </p>
               </article>
             </div>
@@ -84,12 +84,12 @@ export default function ContattiPage() {
         <div className="container">
           <div className="section-shell">
             <div className="section-header">
-              <h2>Piu informazioni ci dai, piu rapidamente possiamo essere utili</h2>
+              <h2>Più informazioni ci dai, più rapidamente possiamo essere utili</h2>
             </div>
             <ul className="feature-list">
               <li>Che tipo di progetto stai valutando: sito, gestionale, app o automazione.</li>
-              <li>Quali problemi vuoi risolvere subito o quali attivita oggi ti fanno perdere tempo.</li>
-              <li>Se esistono gia strumenti da mantenere, integrare o sostituire.</li>
+              <li>Quali problemi vuoi risolvere subito o quali attività oggi ti fanno perdere tempo.</li>
+              <li>Se esistono già strumenti da mantenere, integrare o sostituire.</li>
               <li>Tempi desiderati, vincoli operativi e obiettivi principali del progetto.</li>
             </ul>
           </div>

@@ -189,7 +189,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 className="btn btn-primary"
                 aria-label={
                   product.kind === "servizio"
-                    ? `Parla con Adekro del tuo ${product.name.toLowerCase()}`
+                    ? `Parliamo del tuo progetto: ${product.name}`
                     : `Richiedi una demo per ${product.name}`
                 }
               >
@@ -218,7 +218,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </ul>
               </article>
               <article className="card">
-                <h2>Quando e utile</h2>
+                <h2>Quando è utile</h2>
                 <p>
                   {product.idealFor}
                 </p>
@@ -302,7 +302,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="section-header">
                 <h2>Non hai ancora le idee chiare? Partiamo da una conversazione</h2>
                 <p className="section-lead">
-                  Non serve arrivare con un progetto gia definito: raccontaci come lavora
+                  Non serve arrivare con un progetto già definito: raccontaci come lavora
                   oggi la tua azienda e valutiamo insieme se e da dove ha senso partire.
                 </p>
               </div>
@@ -310,7 +310,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="section-header">
                 <h2>Possiamo partire da questo prodotto e adattarlo al tuo flusso di lavoro</h2>
                 <p className="section-lead">
-                  Se il bisogno e vicino ma non identico, Adekro puo personalizzare struttura,
+                  Se il bisogno è vicino ma non identico, Adekro può personalizzare struttura,
                   funzioni e integrazioni per avvicinare il prodotto al tuo contesto aziendale.
                 </p>
               </div>
@@ -318,7 +318,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <div className="cta-row">
               <Link href="/contatti" className="btn btn-primary">
                 {product.kind === "servizio"
-                  ? "Racconta la tua esigenza"
+                  ? "Parliamo del tuo progetto"
                   : "Valuta una personalizzazione"}
               </Link>
               <Link href="/chi-siamo" className="btn btn-secondary">

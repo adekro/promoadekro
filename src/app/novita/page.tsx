@@ -27,7 +27,7 @@ export default function NovitaPage() {
             <h1>Una nota a settimana da agricoltura, maneggi e software su misura</h1>
             <p className="section-lead">
               Brevi aggiornamenti dai settori in cui lavoriamo, con un collegamento diretto
-              al prodotto Adekro piu utile per affrontarli.
+              al prodotto Adekro più utile per affrontarli.
             </p>
           </div>
           <div className="cards">
@@ -53,7 +53,7 @@ export default function NovitaPage() {
                   Leggi la notizia <b aria-hidden="true">&rarr;</b>
                 </Link>
                 {item.source ? (
-                  <p style={{ marginTop: "0.3rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                  <p style={{ marginTop: "0.3rem", fontSize: "var(--text-small)", color: "var(--text-muted)" }}>
                     Fonte: {item.source.name}
                   </p>
                 ) : null}

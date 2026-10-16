@@ -26,7 +26,7 @@ export default function GuidePage() {
           <h1>Guide pratiche su gestione scuderia, azienda agricola e software su misura</h1>
           <p className="section-lead">
             Approfondimenti scritti per rispondere a domande concrete, con un
-            collegamento diretto al prodotto Adekro piu utile per affrontarle.
+            collegamento diretto al prodotto Adekro più utile per affrontarle.
           </p>
         </div>
         <div className="cards">
@@ -58,7 +58,7 @@ export default function GuidePage() {
                   Leggi la guida <b aria-hidden="true">&rarr;</b>
                 </Link>
                 {product ? (
-                  <p style={{ marginTop: "0.4rem", fontSize: "0.82rem" }}>
+                  <p style={{ marginTop: "0.4rem", fontSize: "var(--text-small)" }}>
                     Prodotto collegato:{" "}
                     <Link href={`/prodotti/${product.slug}`}>{product.name}</Link>
                   </p>

@@ -1,44 +1,332 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-24T00:00:00.000Z",
+  "generatedAt": "2026-10-16T07:35:06.000Z",
   "title": "Design System: Adekro",
   "extensions": {
     "colorMeta": {
-      "bg-strong": { "role": "primary", "displayName": "Deep Navy Plate", "canonical": "#03152f", "tonalRamp": ["#03152f", "#082140", "#0d2d51", "#173f6c", "#2a5788", "#5a80a8", "#9cb6cd", "#dbe6ef"] },
-      "bg-accent": { "role": "primary", "displayName": "Royal Blue Accent", "canonical": "#082b5c", "tonalRamp": ["#03152f", "#082b5c", "#0b438a", "#2a5da3", "#5580ba", "#8aa8d0", "#bcd0e6", "#e6eef7"] },
-      "blue-mid": { "role": "primary", "displayName": "Blue-Mid", "canonical": "#0b438a", "tonalRamp": ["#031729", "#082b5c", "#0b438a", "#2e63a8", "#5f8bc0", "#93b3d8", "#c6d8ec", "#eef3f9"] },
-      "brand": { "role": "secondary", "displayName": "Brand Gold", "canonical": "#c8953e", "tonalRamp": ["#4a3413", "#6d4c1c", "#9d6d25", "#c8953e", "#dab26a", "#e8c896", "#f1d9ba", "#faf0dc"] },
-      "brand-dark": { "role": "secondary", "displayName": "Brand Gold Dark", "canonical": "#9d6d25", "tonalRamp": ["#382712", "#5a3d1a", "#9d6d25", "#c8953e", "#dab26a", "#e8c896", "#f1d9ba", "#faf0dc"] },
-      "gold-light": { "role": "secondary", "displayName": "Gold-Light Ink", "canonical": "#f1d18f", "tonalRamp": ["#5a4720", "#836531", "#a9803e", "#c8953e", "#f1d18f", "#f6dfab", "#fae9c5", "#fdf5e3"] },
-      "bg-main": { "role": "neutral", "displayName": "Warm Ivory", "canonical": "#fbf9f4", "tonalRamp": ["#3a352a", "#635a45", "#948a6d", "#c4b998", "#e2dcc4", "#f0ece0", "#fbf9f4", "#fffefc"] },
-      "bg-surface": { "role": "neutral", "displayName": "Paper White", "canonical": "#fffefa", "tonalRamp": ["#3d3b32", "#655f4e", "#968f75", "#c6bfa3", "#e5e1cf", "#f2efe4", "#fffefa", "#ffffff"] },
-      "bg-soft": { "role": "neutral", "displayName": "Soft Slate Tint", "canonical": "#edf2f7", "tonalRamp": ["#232b33", "#3d4a56", "#5c6f81", "#8496a7", "#aebfcd", "#cddae4", "#edf2f7", "#f9fbfc"] },
-      "text-main": { "role": "neutral", "displayName": "Ink Text", "canonical": "#061b39", "tonalRamp": ["#020a16", "#061b39", "#0d3162", "#1a4c8f", "#4571ad", "#7d9dc6", "#b8cadf", "#e8eef6"] },
-      "text-muted": { "role": "neutral", "displayName": "Muted Ink", "canonical": "#43546a", "tonalRamp": ["#151b22", "#293440", "#43546a", "#5f7288", "#8296a9", "#adbbc8", "#d3dbe3", "#eef1f4"] },
-      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#d4dbe4", "tonalRamp": ["#2e3843", "#4c5966", "#6e7c89", "#97a2ac", "#bcc4cc", "#d4dbe4", "#e9edf1", "#f7f8fa"] }
+      "bg-strong": {
+        "role": "primary",
+        "displayName": "Deep Navy Plate",
+        "canonical": "#03152f",
+        "tonalRamp": [
+          "#03152f",
+          "#082140",
+          "#0d2d51",
+          "#173f6c",
+          "#2a5788",
+          "#5a80a8",
+          "#9cb6cd",
+          "#dbe6ef"
+        ]
+      },
+      "bg-accent": {
+        "role": "primary",
+        "displayName": "Royal Blue Accent",
+        "canonical": "#082b5c",
+        "tonalRamp": [
+          "#03152f",
+          "#082b5c",
+          "#0b438a",
+          "#2a5da3",
+          "#5580ba",
+          "#8aa8d0",
+          "#bcd0e6",
+          "#e6eef7"
+        ]
+      },
+      "blue-mid": {
+        "role": "primary",
+        "displayName": "Blue-Mid",
+        "canonical": "#0b438a",
+        "tonalRamp": [
+          "#031729",
+          "#082b5c",
+          "#0b438a",
+          "#2e63a8",
+          "#5f8bc0",
+          "#93b3d8",
+          "#c6d8ec",
+          "#eef3f9"
+        ]
+      },
+      "brand": {
+        "role": "secondary",
+        "displayName": "Brand Gold",
+        "canonical": "#c8953e",
+        "tonalRamp": [
+          "#4a3413",
+          "#6d4c1c",
+          "#9d6d25",
+          "#c8953e",
+          "#dab26a",
+          "#e8c896",
+          "#f1d9ba",
+          "#faf0dc"
+        ]
+      },
+      "brand-dark": {
+        "role": "secondary",
+        "displayName": "Brand Gold Dark",
+        "canonical": "#9d6d25",
+        "tonalRamp": [
+          "#382712",
+          "#5a3d1a",
+          "#9d6d25",
+          "#c8953e",
+          "#dab26a",
+          "#e8c896",
+          "#f1d9ba",
+          "#faf0dc"
+        ]
+      },
+      "gold-light": {
+        "role": "secondary",
+        "displayName": "Gold-Light Ink",
+        "canonical": "#f1d18f",
+        "tonalRamp": [
+          "#5a4720",
+          "#836531",
+          "#a9803e",
+          "#c8953e",
+          "#f1d18f",
+          "#f6dfab",
+          "#fae9c5",
+          "#fdf5e3"
+        ]
+      },
+      "bg-main": {
+        "role": "neutral",
+        "displayName": "Warm Ivory",
+        "canonical": "#fbf9f4",
+        "tonalRamp": [
+          "#3a352a",
+          "#635a45",
+          "#948a6d",
+          "#c4b998",
+          "#e2dcc4",
+          "#f0ece0",
+          "#fbf9f4",
+          "#fffefc"
+        ]
+      },
+      "bg-surface": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#fffefa",
+        "tonalRamp": [
+          "#3d3b32",
+          "#655f4e",
+          "#968f75",
+          "#c6bfa3",
+          "#e5e1cf",
+          "#f2efe4",
+          "#fffefa",
+          "#ffffff"
+        ]
+      },
+      "bg-soft": {
+        "role": "neutral",
+        "displayName": "Soft Slate Tint",
+        "canonical": "#edf2f7",
+        "tonalRamp": [
+          "#232b33",
+          "#3d4a56",
+          "#5c6f81",
+          "#8496a7",
+          "#aebfcd",
+          "#cddae4",
+          "#edf2f7",
+          "#f9fbfc"
+        ]
+      },
+      "text-main": {
+        "role": "neutral",
+        "displayName": "Ink Text",
+        "canonical": "#061b39",
+        "tonalRamp": [
+          "#020a16",
+          "#061b39",
+          "#0d3162",
+          "#1a4c8f",
+          "#4571ad",
+          "#7d9dc6",
+          "#b8cadf",
+          "#e8eef6"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#43546a",
+        "tonalRamp": [
+          "#151b22",
+          "#293440",
+          "#43546a",
+          "#5f7288",
+          "#8296a9",
+          "#adbbc8",
+          "#d3dbe3",
+          "#eef1f4"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d4dbe4",
+        "tonalRamp": [
+          "#2e3843",
+          "#4c5966",
+          "#6e7c89",
+          "#97a2ac",
+          "#bcc4cc",
+          "#d4dbe4",
+          "#e9edf1",
+          "#f7f8fa"
+        ]
+      },
+      "brand-ink": {
+        "role": "secondary",
+        "displayName": "Brand Ink",
+        "canonical": "#85591a",
+        "tonalRamp": [
+          "#35240a",
+          "#503510",
+          "#6a4715",
+          "#85591a",
+          "#a48253",
+          "#c2ac8c",
+          "#e0d6c6",
+          "#f3eee8"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Product-detail hero h1 only." },
-      "headline": { "displayName": "Headline", "purpose": "Standard section h1." },
-      "title": { "displayName": "Title", "purpose": "Section and card h2/h3." },
-      "body": { "displayName": "Body", "purpose": "Paragraph copy, tabular numerals on for any inline figures." },
-      "label": { "displayName": "Label", "purpose": "Sheet-tab text, process-index digits, footer/nav labels." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Product-detail hero h1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Standard section h1."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section and card h2/h3."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph copy, including product-card and service-list text on every width."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Sheet-tab text, process-index digits, dimension-line values, preview type, footer headings."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Captions, breadcrumbs, cookie help text, meta lines, hero-panel sublines."
+      },
+      "card-title": {
+        "displayName": "Card Title",
+        "purpose": "Card and stat h2/h3."
+      },
+      "stat-value": {
+        "displayName": "Stat Value",
+        "purpose": "Large figures in stat cards."
+      },
+      "subsection-title": {
+        "displayName": "Subsection Title",
+        "purpose": "Secondary section headings."
+      },
+      "category-title": {
+        "displayName": "Category Title",
+        "purpose": "Product-group h3 on the home page."
+      },
+      "section-title-lg": {
+        "displayName": "Section Title Lg",
+        "purpose": "Products section h2."
+      },
+      "cta-title": {
+        "displayName": "Cta Title",
+        "purpose": "Service block h2."
+      },
+      "service-title": {
+        "displayName": "Service Title",
+        "purpose": "Service list h3."
+      },
+      "hero-title-compact": {
+        "displayName": "Hero Title Compact",
+        "purpose": "Home hero h1 under 640px."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero paragraph."
+      },
+      "product-title": {
+        "displayName": "Product Title",
+        "purpose": "Product-card name; 1.35rem under 640px."
+      },
+      "legal-heading": {
+        "displayName": "Legal Heading",
+        "purpose": "Privacy and cookie policy h2."
+      },
+      "glyph": {
+        "displayName": "Glyph",
+        "purpose": "The H mark in the HorseHouse preview."
+      }
     },
     "shadows": [
-      { "name": "plate-light", "value": "6px 6px 0 rgba(6, 27, 57, 0.16)", "purpose": "Resting offset shadow for light cards, stat cards, product cards." },
-      { "name": "plate-dark", "value": "6px 6px 0 rgba(200, 149, 62, 0.32)", "purpose": "Resting offset shadow for dark panels (hero blueprint, section-accent, operational grid)." },
-      { "name": "plate-hover-card", "value": "10px 10px 0 rgba(200, 149, 62, 0.16)", "purpose": "Card/stat-card hover: offset grows, tints gold." },
-      { "name": "plate-hover-product", "value": "12px 12px 0 rgba(6, 27, 57, 0.12)", "purpose": "Product-card hover: offset grows, stays navy-tinted." },
-      { "name": "cta-ambient", "value": "0 10px 15px -3px rgba(157, 109, 37, 0.28)", "purpose": "Primary CTA pill's own soft ambient shadow, the one diffuse shadow allowed on an in-flow element." }
+      {
+        "name": "plate-light",
+        "value": "6px 6px 0 rgba(6, 27, 57, 0.16)",
+        "purpose": "Resting offset shadow for light cards, stat cards, product cards."
+      },
+      {
+        "name": "plate-dark",
+        "value": "6px 6px 0 rgba(200, 149, 62, 0.32)",
+        "purpose": "Resting offset shadow for dark panels (hero blueprint, section-accent, operational grid)."
+      },
+      {
+        "name": "plate-hover-card",
+        "value": "10px 10px 0 rgba(200, 149, 62, 0.16)",
+        "purpose": "Card/stat-card hover: offset grows, tints gold."
+      },
+      {
+        "name": "plate-hover-product",
+        "value": "12px 12px 0 rgba(6, 27, 57, 0.12)",
+        "purpose": "Product-card hover: offset grows, stays navy-tinted."
+      },
+      {
+        "name": "cta-ambient",
+        "value": "0 10px 15px -3px rgba(157, 109, 37, 0.28)",
+        "purpose": "Primary CTA pill's own soft ambient shadow, the one diffuse shadow allowed on an in-flow element."
+      }
     ],
     "motion": [
-      { "name": "sheet-rise", "value": "640ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Hero blueprint panel entrance animation." },
-      { "name": "status-pulse", "value": "2.4s ease-in-out infinite", "purpose": "Hero blueprint status dot pulse." },
-      { "name": "state-transition", "value": "160-180ms ease", "purpose": "Default hover/focus transition for buttons, cards, nav links." }
+      {
+        "name": "sheet-rise",
+        "value": "640ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Hero blueprint panel entrance animation."
+      },
+      {
+        "name": "status-pulse",
+        "value": "2.4s ease-in-out infinite",
+        "purpose": "Hero blueprint status dot pulse."
+      },
+      {
+        "name": "state-transition",
+        "value": "160-180ms ease",
+        "purpose": "Default hover/focus transition for buttons, cards, nav links."
+      }
     ],
     "breakpoints": [
-      { "name": "mobile", "value": "640px" },
-      { "name": "tablet", "value": "900px" }
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "tablet",
+        "value": "900px"
+      }
     ]
   },
   "components": [
@@ -94,9 +382,33 @@
       "name": "Site Navigation",
       "kind": "nav",
       "refersTo": "site-nav",
-      "description": "Sticky, blurred-glass header nav with a gold underline that scales in on hover/active.",
+      "description": "Sticky, blurred-glass header nav with a gold underline that scales in on hover/active. Sticky above 1000px, static below; active item in brand-ink.",
       "html": "<nav class=\"ds-site-nav\"><a class=\"ds-nav-link ds-nav-link-active\" href=\"#\">Prodotti</a><a class=\"ds-nav-link\" href=\"#\">Chi siamo</a></nav>",
-      "css": ".ds-site-nav { display: flex; gap: 0.15rem; color: #43546a; font-family: 'Space Grotesk', sans-serif; } .ds-nav-link { position: relative; padding: 0.62rem 0.75rem; border-radius: 4px; text-decoration: none; color: inherit; transition: color 180ms ease, background-color 180ms ease; } .ds-nav-link::after { content: ''; position: absolute; left: 0.75rem; right: 0.75rem; bottom: 0.42rem; height: 2px; background: #c8953e; transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; } .ds-nav-link:hover { color: #061b39; background: #edf2f7; } .ds-nav-link:hover::after, .ds-nav-link-active::after { transform: scaleX(1); } .ds-nav-link-active { font-weight: 600; color: #9d6d25; }"
+      "css": ".ds-site-nav { display: flex; gap: 0.15rem; color: #43546a; font-family: 'Space Grotesk', sans-serif; } .ds-nav-link { position: relative; padding: 0.62rem 0.75rem; border-radius: 4px; text-decoration: none; color: inherit; transition: color 180ms ease, background-color 180ms ease; } .ds-nav-link::after { content: ''; position: absolute; left: 0.75rem; right: 0.75rem; bottom: 0.42rem; height: 2px; background: #c8953e; transform: scaleX(0); transform-origin: left; transition: transform 180ms ease; } .ds-nav-link:hover { color: #061b39; background: #edf2f7; } .ds-nav-link:hover::after, .ds-nav-link-active::after { transform: scaleX(1); } .ds-nav-link-active { font-weight: 600; color: #85591a; }"
+    },
+    {
+      "name": "Product Preview",
+      "kind": "custom",
+      "refersTo": "product-preview",
+      "description": "Drawing-sheet illustration at the head of a product card: navy plate, gold-light linework, one accent, dimension line along the foot.",
+      "html": "<div class=\"ds-preview\"><div class=\"ds-row\"><span>Parcella 18</span><b>OK</b></div><div class=\"ds-row\"><span>Foglio 3</span><b>16:30</b></div></div>",
+      "css": ".ds-preview{position:relative;min-height:9rem;padding:1rem 1rem 2rem;background:#03152f;color:#f8f7f1;font:600 0.75rem 'Space Grotesk',sans-serif;letter-spacing:0.06em;text-transform:uppercase}.ds-preview::after{content:'';position:absolute;left:1rem;right:1rem;bottom:0.8rem;height:9px;opacity:.6;background:linear-gradient(#f1d18f,#f1d18f) center/100% 1px no-repeat,linear-gradient(#f1d18f,#f1d18f) left/1px 100% no-repeat,linear-gradient(#f1d18f,#f1d18f) right/1px 100% no-repeat}.ds-row{display:flex;justify-content:space-between;padding:0.55rem 0;border-bottom:1px solid rgba(241,209,143,.32)}.ds-row b{color:#f1d18f}"
+    },
+    {
+      "name": "Dimension Line",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Quota above a product group; the value is the real count of items.",
+      "html": "<div class=\"ds-quota\"><span class=\"ds-quota-line ds-start\"></span><span class=\"ds-quota-value\">3 soluzioni</span><span class=\"ds-quota-line ds-end\"></span></div>",
+      "css": ".ds-quota{display:flex;align-items:center;gap:0.8rem;color:#43546a;font:700 0.75rem 'Space Grotesk',sans-serif;letter-spacing:0.08em;text-transform:uppercase}.ds-quota-line{flex:1;height:11px}.ds-start{background:linear-gradient(#9d6d25,#9d6d25) center/100% 1px no-repeat,linear-gradient(#9d6d25,#9d6d25) left/1px 100% no-repeat}.ds-end{background:linear-gradient(#9d6d25,#9d6d25) center/100% 1px no-repeat,linear-gradient(#9d6d25,#9d6d25) right/1px 100% no-repeat}"
+    },
+    {
+      "name": "Service List",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Three services as a hairline-topped list inside the dark service block; not cards.",
+      "html": "<ul class=\"ds-services\"><li><h3>Gestionali su misura</h3><p>Organizza dati, attività e persone in un unico flusso operativo.</p></li></ul>",
+      "css": ".ds-services{list-style:none;margin:0;padding:1.5rem;background:#03152f;color:#f8f7f1}.ds-services li{padding-top:1rem;border-top:1px solid rgba(241,209,143,.4)}.ds-services h3{margin:0 0 .5rem;color:#f1d18f;font:700 1.25rem Merriweather,Georgia,serif}.ds-services p{margin:0;color:rgba(247,246,236,.8);font:400 1rem 'Space Grotesk',sans-serif}"
     }
   ],
   "narrative": {
@@ -107,27 +419,61 @@
       "Hard 'offset plate' shadows (zero blur, 6px 6px 0) at rest, pushed further and gold-tinted on hover, instead of diffuse blur.",
       "Sharp-to-slightly-softened corners (6px/8px) everywhere except the primary CTA, which stays a pill.",
       "Merriweather serif for headings treated as technical caption type; Space Grotesk with tabular numerals for UI, data, and process indices.",
-      "The sheet-tab component replaces every eyebrow/kicker label with a drafting title-block tag."
+      "The sheet-tab component replaces every eyebrow/kicker label with a drafting title-block tag.",
+      "Product previews are drawing sheets: flat navy plate, gold-light linework, one dimension line along the foot. No photography, no per-product palettes.",
+      "Dimension lines measure groups of content and carry a real value, never a decorative number."
     ],
     "rules": [
-      { "name": "The Ink, Not Fill Rule", "body": "Brand gold marks lines, numbers, tabs, and small accent shapes; it does not fill large surfaces. A gold background is reserved for the primary CTA pill and small state dots — never a card, section, or panel.", "section": "colors" },
-      { "name": "The One Soft Shape Rule", "body": "The primary CTA button is the only pill in the system. Every other surface — cards, tabs, stat blocks, footer columns, product panels — uses the sharp/near-sharp radius scale, so the one rounded shape stays legible as 'the action.'", "section": "colors" },
-      { "name": "The Labeled-Information Rule", "body": "A small uppercase label is only used when it carries real information (a product category, a news sector, a numbered process step); it always renders as the sheet-tab drafting tab, never as a bare decorative eyebrow line above a heading.", "section": "typography" },
-      { "name": "The Offset-Not-Blur Rule", "body": "Card and panel depth at rest is a hard zero-blur offset shadow, never a blurred glow. Blur is reserved for true overlays (modal, floating tab), not for in-flow surfaces.", "section": "elevation" }
+      {
+        "name": "The Ink, Not Fill Rule",
+        "body": "Brand gold marks lines, numbers, tabs, and small accent shapes; it does not fill large surfaces. A gold background is reserved for the primary CTA pill and small state dots — never a card, section, or panel.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Soft Shape Rule",
+        "body": "The primary CTA button is the only pill in the system. Every other surface — cards, tabs, stat blocks, footer columns, product panels — uses the sharp/near-sharp radius scale, so the one rounded shape stays legible as 'the action.'",
+        "section": "colors"
+      },
+      {
+        "name": "The Labeled-Information Rule",
+        "body": "A small uppercase label is only used when it carries real information (a product category, a news sector, a numbered process step); it always renders as the sheet-tab drafting tab, never as a bare decorative eyebrow line above a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Offset-Not-Blur Rule",
+        "body": "Card and panel depth at rest is a hard zero-blur offset shadow, never a blurred glow. Blur is reserved for true overlays (modal, floating tab), not for in-flow surfaces.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Text Ink Rule",
+        "body": "Gold-toned type on a light ground is brand-ink, never brand-dark or brand. Gold-light is for type on navy only.",
+        "section": "colors"
+      },
+      {
+        "name": "The Role Scale Rule",
+        "body": "Text below headings uses three sizes only: label 0.75rem, small 0.875rem, body 1rem. A new in-between value is a defect; map it to the nearest role.",
+        "section": "typography"
+      }
     ],
     "dos": [
       "Do use the hard offset plate shadow (6px 6px 0, zero blur) for any new in-flow card or panel; grow the offset and tint it gold on hover instead of adding blur.",
       "Do use .sheet-tab for any new category, sector, or step label; never place a bare uppercase caption line above a heading.",
       "Do keep the millimeter blueprint grid rare — one hero panel or one illustrative preview per screen, not an ambient global texture.",
       "Do keep the primary CTA as the system's only pill; every other new component uses the 6px/8px sharp radius scale.",
-      "Do use Space Grotesk with tabular numerals for any counted value (stats, indices, prices, quantities)."
+      "Do use Space Grotesk with tabular numerals for any counted value (stats, indices, prices, quantities).",
+      "Do set small gold-toned text on light grounds in brand-ink (#85591a); keep brand-dark for lines and the CTA hover fill.",
+      "Do pick text sizes from the role scale (--text-label, --text-small, --text-body) and give every tap target at least 44px.",
+      "Do wrap decorative motion in prefers-reduced-motion: no-preference and start entrances from a visible state.",
+      "Do mark illustrations that contain sample data aria-hidden."
     ],
     "donts": [
       "Don't add a decorative eyebrow/kicker caption; if a label doesn't carry real category/sector/step information, don't add a label at all.",
       "Don't fill a large surface with solid brand gold; gold is ink and small accents, not a background field.",
       "Don't introduce diffuse blurred drop shadows on in-flow cards or panels; blur is reserved for true overlays (the sheet-tab's own small drop shadow and the cookie-consent modal are the only exceptions).",
       "Don't round a second element into a pill; the primary CTA is the system's one deliberately soft shape.",
-      "Don't change route URLs, SEO metadata (titles/descriptions/keywords/canonical/schema.org), or the product copy in src/lib/products.ts / src/lib/news.ts — this system is a visual layer over fixed content and information architecture."
+      "Don't change route URLs, SEO metadata (titles/descriptions/keywords/canonical/schema.org), or the product copy in src/lib/products.ts / src/lib/news.ts — this system is a visual layer over fixed content and information architecture.",
+      "Don't add photography or a new color family to a product preview; draw it in navy, ivory and gold-light.",
+      "Don't invent live status or numbers that the data does not back; dimension lines show real counts only."
     ]
   }
 }

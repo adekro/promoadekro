@@ -30,10 +30,30 @@ export const metadata: Metadata = {
   },
 };
 
+const professionalSlugs = ["horsehouse", "agricola", "gestionali-su-misura"];
+const playfulSlugs = ["fantauction", "drinktrainer"];
+const eventSlugs = ["siplanner"];
+
+function productsIn(slugs: string[]) {
+  return products.filter((product) => slugs.includes(product.slug));
+}
+
+function Quota({ count }: { count: number }) {
+  return (
+    <div className="quota" aria-hidden="true">
+      <span className="quota-line quota-line-start" />
+      <span className="quota-value">
+        {count} {count === 1 ? "soluzione" : "soluzioni"}
+      </span>
+      <span className="quota-line quota-line-end" />
+    </div>
+  );
+}
+
 function ProductPreview({ slug }: { slug: Product["slug"] }) {
   if (slug === "siplanner") {
     return (
-      <div className="preview-wedding">
+      <div className="preview-wedding" aria-hidden="true">
         <div className="wedding-rings">
           <span />
           <span />
@@ -52,7 +72,7 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
 
   if (slug === "gestionali-su-misura") {
     return (
-      <div className="preview-custom">
+      <div className="preview-custom" aria-hidden="true">
         <div className="blueprint-line blueprint-line-one" />
         <div className="blueprint-line blueprint-line-two" />
         <div className="blueprint-node">Analisi</div>
@@ -63,7 +83,7 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
 
   if (slug === "fantauction") {
     return (
-      <div className="preview-auction">
+      <div className="preview-auction" aria-hidden="true">
         <div className="preview-topline">
           <span>ASTA LIVE</span>
           <strong>184 cr</strong>
@@ -88,7 +108,7 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
 
   if (slug === "drinktrainer") {
     return (
-      <div className="preview-drink">
+      <div className="preview-drink" aria-hidden="true">
         <div className="glass">
           <i />
           <i />
@@ -109,7 +129,7 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
 
   if (slug === "agricola") {
     return (
-      <div className="preview-farm">
+      <div className="preview-farm" aria-hidden="true">
         <div className="field field-one" />
         <div className="field field-two" />
         <div className="field field-three" />
@@ -121,7 +141,7 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
   }
 
   return (
-    <div className="preview-horse">
+    <div className="preview-horse" aria-hidden="true">
       <div className="horse-mark">H</div>
       <div className="care-list">
         <span>
@@ -181,7 +201,7 @@ export default function Home() {
                 <span className="process-index">01</span>
                 <div className="process-label">
                   <strong>Analisi</strong>
-                  <span>Processi e priorita reali</span>
+                  <span>Processi e priorità reali</span>
                 </div>
               </div>
               <div className="process-connector" />
@@ -218,8 +238,12 @@ export default function Home() {
             </p>
           </div>
           <div className="product-category-group product-category-group-professional">
+            <Quota count={productsIn(professionalSlugs).length} />
             <div className="product-category-heading">
-              <h3>Per gestire il lavoro: controllo e continuità per ogni giornata operativa.</h3>
+              <h3>
+                Per gestire il lavoro: controllo e continuità per ogni giornata
+                operativa.
+              </h3>
               <p>
                 Gestionali affidabili per maneggi e aziende agricole, oppure
                 costruiti su misura insieme ai nostri esperti quando le tue
@@ -227,42 +251,38 @@ export default function Home() {
               </p>
             </div>
             <div className="product-grid">
-              {products
-                .filter(
-                  (product) =>
-                    product.slug === "horsehouse" ||
-                    product.slug === "agricola" ||
-                    product.slug === "gestionali-su-misura",
-                )
-                .map((product) => (
-                  <article
-                    className={`product-card product-card-${product.slug}`}
-                    key={product.slug}
-                  >
-                    <ProductPreview slug={product.slug} />
-                    <div className="product-card-copy">
-                      <Image
-                        alt={`Logo di ${product.name}, ${product.category}`}
-                        className={`product-logo product-logo-${product.slug}`}
-                        height={80}
-                        src={product.logo}
-                        width={80}
-                      />
-                      <span className="sheet-tab sheet-tab-inline">{product.category}</span>
-                      <h4>{product.name}</h4>
-                      <p>{product.shortDescription}</p>
-                      <Link
-                        href={`/prodotti/${product.slug}`}
-                        className="product-link"
-                      >
-                        Scopri {product.name} <b aria-hidden="true">&rarr;</b>
-                      </Link>
-                    </div>
-                  </article>
-                ))}
+              {productsIn(professionalSlugs).map((product) => (
+                <article
+                  className={`product-card product-card-${product.slug}`}
+                  key={product.slug}
+                >
+                  <ProductPreview slug={product.slug} />
+                  <div className="product-card-copy">
+                    <Image
+                      alt={`Logo di ${product.name}, ${product.category}`}
+                      className={`product-logo product-logo-${product.slug}`}
+                      height={80}
+                      src={product.logo}
+                      width={80}
+                    />
+                    <span className="sheet-tab sheet-tab-inline">
+                      {product.category}
+                    </span>
+                    <h4>{product.name}</h4>
+                    <p>{product.shortDescription}</p>
+                    <Link
+                      href={`/prodotti/${product.slug}`}
+                      className="product-link"
+                    >
+                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
           <div className="product-category-group product-category-group-playful">
+            <Quota count={productsIn(playfulSlugs).length} />
             <div className="product-category-heading">
               <h3>Per divertirsi e migliorare: gioca, sperimenta, brinda.</h3>
               <p>
@@ -271,77 +291,77 @@ export default function Home() {
               </p>
             </div>
             <div className="product-grid">
-              {products
-                .filter(
-                  (product) =>
-                    product.slug === "fantauction" ||
-                    product.slug === "drinktrainer",
-                )
-                .map((product) => (
-                  <article
-                    className={`product-card product-card-${product.slug}`}
-                    key={product.slug}
-                  >
-                    <ProductPreview slug={product.slug} />
-                    <div className="product-card-copy">
-                      <Image
-                        alt={`Logo di ${product.name}, ${product.category}`}
-                        className={`product-logo product-logo-${product.slug}`}
-                        height={80}
-                        src={product.logo}
-                        width={80}
-                      />
-                      <span className="sheet-tab sheet-tab-inline">{product.category}</span>
-                      <h4>{product.name}</h4>
-                      <p>{product.shortDescription}</p>
-                      <Link
-                        href={`/prodotti/${product.slug}`}
-                        className="product-link"
-                      >
-                        Scopri {product.name} <b aria-hidden="true">&rarr;</b>
-                      </Link>
-                    </div>
-                  </article>
-                ))}
+              {productsIn(playfulSlugs).map((product) => (
+                <article
+                  className={`product-card product-card-${product.slug}`}
+                  key={product.slug}
+                >
+                  <ProductPreview slug={product.slug} />
+                  <div className="product-card-copy">
+                    <Image
+                      alt={`Logo di ${product.name}, ${product.category}`}
+                      className={`product-logo product-logo-${product.slug}`}
+                      height={80}
+                      src={product.logo}
+                      width={80}
+                    />
+                    <span className="sheet-tab sheet-tab-inline">
+                      {product.category}
+                    </span>
+                    <h4>{product.name}</h4>
+                    <p>{product.shortDescription}</p>
+                    <Link
+                      href={`/prodotti/${product.slug}`}
+                      className="product-link"
+                    >
+                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
           <div className="product-category-group product-category-group-events">
+            <Quota count={productsIn(eventSlugs).length} />
             <div className="product-category-heading">
-              <h3>Per i momenti importanti: organizza il matrimonio senza perdere nulla di vista.</h3>
+              <h3>
+                Per i momenti importanti: organizza il matrimonio senza perdere
+                nulla di vista.
+              </h3>
               <p>
                 Invitati, budget e fornitori in un unico spazio, dal primo
-                pensiero al giorno del si.
+                pensiero al giorno del sì.
               </p>
             </div>
             <div className="product-grid">
-              {products
-                .filter((product) => product.slug === "siplanner")
-                .map((product) => (
-                  <article
-                    className={`product-card product-card-${product.slug}`}
-                    key={product.slug}
-                  >
-                    <ProductPreview slug={product.slug} />
-                    <div className="product-card-copy">
-                      <Image
-                        alt={`Logo di ${product.name}, ${product.category}`}
-                        className={`product-logo product-logo-${product.slug}`}
-                        height={80}
-                        src={product.logo}
-                        width={80}
-                      />
-                      <span className="sheet-tab sheet-tab-inline">{product.category}</span>
-                      <h4>{product.name}</h4>
-                      <p>{product.shortDescription}</p>
-                      <Link
-                        href={`/prodotti/${product.slug}`}
-                        className="product-link"
-                      >
-                        Scopri {product.name} <b aria-hidden="true">&rarr;</b>
-                      </Link>
-                    </div>
-                  </article>
-                ))}
+              {productsIn(eventSlugs).map((product) => (
+                <article
+                  className={`product-card product-card-${product.slug}`}
+                  key={product.slug}
+                >
+                  <ProductPreview slug={product.slug} />
+                  <div className="product-card-copy">
+                    <Image
+                      alt={`Logo di ${product.name}, ${product.category}`}
+                      className={`product-logo product-logo-${product.slug}`}
+                      height={80}
+                      src={product.logo}
+                      width={80}
+                    />
+                    <span className="sheet-tab sheet-tab-inline">
+                      {product.category}
+                    </span>
+                    <h4>{product.name}</h4>
+                    <p>{product.shortDescription}</p>
+                    <Link
+                      href={`/prodotti/${product.slug}`}
+                      className="product-link"
+                    >
+                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </div>
@@ -360,57 +380,35 @@ export default function Home() {
               <p>
                 Progettiamo software gestionali, app web e mobile, automazioni e
                 integrazioni API su misura per organizzare processi, dati e
-                persone attorno a quello che conta davvero nella tua attivita.
+                persone attorno a quello che conta davvero nella tua attività.
               </p>
               <Link href="/contatti" className="btn btn-primary">
-                Raccontaci la tua esigenza
+                Parliamo del tuo progetto
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-soft">
-        <div className="container">
-          <div className="section-shell">
-            <div className="section-header">
-              <h2>
-                Strumenti digitali costruiti sui processi della tua impresa.
-              </h2>
-              <p className="section-lead">
-                Quando un software standard non segue il tuo modo di lavorare,
-                progettiamo una soluzione chiara, evolutiva e integrata con gli
-                strumenti che usi gia.
-              </p>
-            </div>
-            <div className="cards">
-              <article className="card">
+            <ul className="service-list">
+              <li>
                 <h3>Gestionali su misura</h3>
                 <p>
-                  Organizza dati, attivita e persone in un unico flusso
+                  Organizza dati, attività e persone in un unico flusso
                   operativo.
                 </p>
-              </article>
-              <article className="card">
+              </li>
+              <li>
                 <h3>Web app e app mobile</h3>
                 <p>
                   Porta processi e servizi dove servono, dal browser allo
                   smartphone.
                 </p>
-              </article>
-              <article className="card">
+              </li>
+              <li>
                 <h3>Automazioni e integrazioni API</h3>
                 <p>
-                  Riduci i passaggi manuali e fai dialogare i sistemi gia
+                  Riduci i passaggi manuali e fai dialogare i sistemi già
                   presenti in azienda.
                 </p>
-              </article>
-            </div>
-            <div className="cta-row">
-              <Link href="/contatti" className="btn btn-primary">
-                Raccontaci il tuo progetto
-              </Link>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

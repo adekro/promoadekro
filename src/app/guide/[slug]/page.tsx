@@ -135,7 +135,7 @@ export default async function GuideDetailPage({ params }: GuidePageProps) {
           <div className="section-header">
             <h1>{guide.title}</h1>
             <p className="section-lead">{guide.intro}</p>
-            <p style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+            <p style={{ fontSize: "var(--text-small)", color: "var(--text-muted)" }}>
               Pubblicato il{" "}
               {new Date(guide.publishedDate).toLocaleDateString("it-IT", {
                 day: "numeric",

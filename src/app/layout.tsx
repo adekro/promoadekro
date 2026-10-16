@@ -85,7 +85,7 @@ export default function RootLayout({
     name: "Adekro",
     legalName: "Adekro di Emanuele Croce",
     url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
+    logo: `${SITE_URL}/logo-web.png`,
     email: "info@adekro.com",
     address: {
       "@type": "PostalAddress",
@@ -133,11 +133,8 @@ export default function RootLayout({
             <nav aria-label="Navigazione principale" className="site-nav">
               <NavLinks />
             </nav>
-            <Link
-              href="mailto:info@adekro.com"
-              className="btn btn-secondary header-cta"
-            >
-              Richiedi un confronto
+            <Link href="/contatti" className="btn btn-secondary header-cta">
+              Parliamo del tuo progetto
             </Link>
           </div>
         </header>
@@ -150,7 +147,7 @@ export default function RootLayout({
                 chiara.
               </h2>
               <p>
-                Affianchiamo le PMI nella costruzione di strumenti digitali piu
+                Affianchiamo le PMI nella costruzione di strumenti digitali più
                 utili, leggibili e sostenibili: presenza online, processi
                 interni, prodotti e automazioni.
               </p>
@@ -161,7 +158,7 @@ export default function RootLayout({
                 <Link href="/">Home</Link>
                 <Link href="/chi-siamo">Chi siamo</Link>
                 <Link href="/prodotti">Prodotti</Link>
-                <Link href="/novita">Novita</Link>
+                <Link href="/novita">Novità</Link>
                 <Link href="/contatti">Contatti</Link>
               </div>
               <div className="footer-column">
@@ -178,12 +175,12 @@ export default function RootLayout({
                 <h3>Contatto diretto</h3>
                 <Link href="mailto:info@adekro.com">info@adekro.com</Link>
                 <p>
-                  Confronto iniziale su obiettivi, flussi e priorita del
+                  Confronto iniziale su obiettivi, flussi e priorità del
                   progetto.
                 </p>
                 <div className="cta-row footer-cta-row">
                   <Link href="/contatti" className="btn btn-primary">
-                    Parla con Adekro
+                    Parliamo del tuo progetto
                   </Link>
                 </div>
               </div>

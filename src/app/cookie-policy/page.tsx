@@ -39,7 +39,7 @@ export default function CookiePolicyPage() {
             <p>
               Al momento il sito non utilizza strumenti statistici o cookie di profilazione. Se tali
               strumenti verranno introdotti, saranno attivati solo dopo il tuo consenso e questa
-              informativa verra aggiornata.
+              informativa verrà aggiornata.
             </p>
           </section>
           <section>

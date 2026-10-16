@@ -103,7 +103,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/novita">Novita</Link>
+              <Link href="/novita">Novità</Link>
             </li>
             <li aria-current="page">{item.title}</li>
           </ol>
@@ -132,7 +132,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
               ))}
             </div>
             {item.source ? (
-              <p style={{ marginTop: "1.2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+              <p style={{ marginTop: "1.2rem", fontSize: "var(--text-small)", color: "var(--text-muted)" }}>
                 Fonte:{" "}
                 <a href={item.source.url} rel="noopener noreferrer" target="_blank">
                   {item.source.name}
@@ -141,7 +141,7 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
             ) : null}
             <div className="cta-row" style={{ marginTop: "1.5rem" }}>
               <Link href="/novita" className="btn btn-secondary">
-                Tutte le novita
+                Tutte le novità
               </Link>
               {relatedProduct ? (
                 <Link

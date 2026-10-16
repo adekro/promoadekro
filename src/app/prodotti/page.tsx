@@ -31,10 +31,10 @@ export default function ProdottiPage() {
           <div className="section-shell">
             <div className="section-header">
               <h1>
-                App e gestionali gia pronti, progettati intorno al lavoro reale
+                App e gestionali già pronti, progettati intorno al lavoro reale
               </h1>
               <p className="section-lead">
-                Ogni prodotto parte da un&apos;esigenza precisa e puo evolvere
+                Ogni prodotto parte da un&apos;esigenza precisa e può evolvere
                 con il contesto in cui lo usi.
               </p>
             </div>
@@ -42,14 +42,14 @@ export default function ProdottiPage() {
               <article className="stat-card">
                 <span className="stat-value">Rapido</span>
                 <p className="kpi-label">
-                  Parti da una struttura gia definita e riduci il tempo di
+                  Parti da una struttura già definita e riduci il tempo di
                   avvio.
                 </p>
               </article>
               <article className="stat-card">
                 <span className="stat-value">Adattabile</span>
                 <p className="kpi-label">
-                  Ogni prodotto puo essere personalizzato sulle tue priorita
+                  Ogni prodotto può essere personalizzato sulle tue priorità
                   operative.
                 </p>
               </article>

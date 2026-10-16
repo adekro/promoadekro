@@ -30,7 +30,7 @@ export default function ChiSiamoPage() {
               <p className="section-lead">
                 Adekro sviluppa software su misura, gestionali, app web e mobile,
                 automazioni e integrazioni per PMI che vogliono migliorare organizzazione
-                interna, presenza online e qualita del servizio. Lavoriamo con un approccio
+                interna, presenza online e qualità del servizio. Lavoriamo con un approccio
                 concreto: ascolto, programmazione solida e strumenti utili nel quotidiano.
               </p>
             </div>
@@ -62,19 +62,19 @@ export default function ChiSiamoPage() {
               <article className="card">
                 <h3>Analisi del contesto</h3>
                 <p>
-                  Studiamo strumenti gia in uso, frizioni operative, obiettivi commerciali e priorita del team per evitare progetti astratti.
+                  Studiamo strumenti già in uso, frizioni operative, obiettivi commerciali e priorità del team per evitare progetti astratti.
                 </p>
               </article>
               <article className="card">
                 <h3>Progettazione orientata all&apos;adozione</h3>
                 <p>
-                  Disegniamo interfacce, flussi e contenuti che possano essere compresi e usati con facilita da chi lavora ogni giorno.
+                  Disegniamo interfacce, flussi e contenuti che possano essere compresi e usati con facilità da chi lavora ogni giorno.
                 </p>
               </article>
               <article className="card">
                 <h3>Integrazione con il lavoro reale</h3>
                 <p>
-                  Le nostre soluzioni dialogano con i processi aziendali e con gli strumenti esistenti, senza creare complessita extra.
+                  Le nostre soluzioni dialogano con i processi aziendali e con gli strumenti esistenti, senza creare complessità extra.
                 </p>
               </article>
               <article className="card">
@@ -96,8 +96,8 @@ export default function ChiSiamoPage() {
             </div>
             <ul className="feature-list">
               <li>Hai bisogno di un sito o di un software che parli il linguaggio della tua impresa.</li>
-              <li>Vuoi ridurre attivita manuali, fogli sparsi e passaggi poco controllati.</li>
-              <li>Cerchi un partner tecnico che sappia spiegare scelte e priorita in modo semplice.</li>
+              <li>Vuoi ridurre attività manuali, fogli sparsi e passaggi poco controllati.</li>
+              <li>Cerchi un partner tecnico che sappia spiegare scelte e priorità in modo semplice.</li>
               <li>Vuoi far crescere gradualmente il progetto senza dover ripartire ogni volta da zero.</li>
             </ul>
             <div className="cta-row">
@@ -105,7 +105,7 @@ export default function ChiSiamoPage() {
                 Esplora le soluzioni
               </Link>
               <Link href="/contatti" className="btn btn-primary">
-                Prenota un confronto
+                Parliamo del tuo progetto
               </Link>
             </div>
           </div>

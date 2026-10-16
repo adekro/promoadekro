@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2>Dati trattati e finalita</h2>
             <p>
-              Il sito puo trattare i dati inviati volontariamente via email, come nome, indirizzo
+              Il sito può trattare i dati inviati volontariamente via email, come nome, indirizzo
               email e contenuto della richiesta, esclusivamente per rispondere al contatto e gestire
               eventuali rapporti professionali. I dati tecnici di navigazione sono trattati nella
               misura necessaria per sicurezza, funzionamento e manutenzione del sito.

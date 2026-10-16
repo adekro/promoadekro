@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const storageKey = "adekro-cookie-preferences";
 
@@ -21,6 +21,9 @@ export default function CookieConsent() {
   const [isOpen, setIsOpen] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [analytics, setAnalytics] = useState(false);
+  const dialogRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const frameId = requestAnimationFrame(() => {
@@ -30,6 +33,7 @@ export default function CookieConsent() {
     });
 
     const openSettings = () => {
+      returnFocusRef.current = document.activeElement as HTMLElement | null;
       setAnalytics(readPreferences()?.analytics ?? false);
       setShowSettings(true);
       setIsOpen(true);
@@ -41,6 +45,49 @@ export default function CookieConsent() {
       window.removeEventListener("adekro:open-cookie-settings", openSettings);
     };
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      returnFocusRef.current?.focus();
+      returnFocusRef.current = null;
+      return;
+    }
+
+    titleRef.current?.focus();
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        // Esc declines optional cookies on first visit; when reopened from the
+        // footer it just closes and keeps the stored choice.
+        if (readPreferences()) {
+          setShowSettings(false);
+          setIsOpen(false);
+        } else {
+          savePreferences(false);
+        }
+        return;
+      }
+
+      if (event.key !== "Tab" || !dialogRef.current) return;
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+        "button, input, [tabindex]:not([tabindex='-1'])",
+      );
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+      if (event.shiftKey && (active === first || active === titleRef.current)) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [isOpen]);
 
   function savePreferences(nextAnalytics: boolean) {
     const preferences: CookiePreferences = { analytics: nextAnalytics };
@@ -60,11 +107,12 @@ export default function CookieConsent() {
         aria-labelledby="cookie-consent-title"
         aria-modal="true"
         className="cookie-consent"
+        ref={dialogRef}
         role="dialog"
       >
         <div className="cookie-consent-copy">
           <p className="cookie-consent-label">PREFERENZE COOKIE</p>
-          <h2 id="cookie-consent-title">
+          <h2 id="cookie-consent-title" ref={titleRef} tabIndex={-1}>
             {showSettings ? "Gestisci le preferenze" : "La tua privacy conta"}
           </h2>
           <p>

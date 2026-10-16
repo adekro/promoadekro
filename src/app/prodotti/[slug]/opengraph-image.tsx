@@ -25,7 +25,7 @@ export default async function ProductOpenGraphImage({
     (
       <div
         style={{
-          background: "#102a43",
+          background: "#03152f",
           color: "#ffffff",
           display: "flex",
           flexDirection: "column",
@@ -37,7 +37,7 @@ export default async function ProductOpenGraphImage({
       >
         <div
           style={{
-            color: "#7dd3c7",
+            color: "#f1d18f",
             display: "flex",
             fontSize: 34,
             fontWeight: 700,

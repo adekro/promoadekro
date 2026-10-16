@@ -9,7 +9,7 @@ export default function OpenGraphImage() {
     (
       <div
         style={{
-          background: "#102a43",
+          background: "#03152f",
           color: "#ffffff",
           display: "flex",
           flexDirection: "column",
@@ -19,7 +19,7 @@ export default function OpenGraphImage() {
           width: "100%",
         }}
       >
-        <div style={{ color: "#7dd3c7", display: "flex", fontSize: 38, fontWeight: 700 }}>ADEKRO</div>
+        <div style={{ color: "#f1d18f", display: "flex", fontSize: 38, fontWeight: 700 }}>ADEKRO</div>
         <div style={{ display: "flex", fontSize: 76, fontWeight: 700, lineHeight: 1.1, marginTop: 30 }}>
           Software su misura per PMI
         </div>
