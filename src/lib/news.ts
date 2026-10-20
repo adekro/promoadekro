@@ -22,6 +22,20 @@ export const sectorLabels: Record<NewsItem["sector"], string> = {
 // resta sempre la prima mostrata in elenco e nella sitemap.
 export const news: NewsItem[] = [
   {
+    slug: "agricola-free-beta-fino-al-15-gennaio-2027",
+    title: "Agricola in free beta fino al 15 gennaio 2027: provala gratis",
+    sector: "agricola",
+    date: "2026-10-20",
+    summary:
+      "Parte la free beta di Agricola, il gestionale agricolo con mappe satellitari Copernicus e quaderno di campagna: registrati su agricola.adekro.com e usa il coupon per l'abbonamento Pro.",
+    body: [
+      "Agricola, il gestionale di Adekro per aziende agricole e agronomi, apre la free beta e resta aperta fino al 15 gennaio 2027. Basta registrarsi su agricola.adekro.com per iniziare a usarla subito, senza impegno.",
+      "Con Agricola disegni terreni e particelle, associ le colture, consulti i dati satellitari Copernicus con gli indici vegetativi NDVI, la mappa catastale e i confini delle zone vulnerabili, e tieni lo storico dei trattamenti fitosanitari fino alla creazione del quaderno di campagna.",
+      "Per l'open beta, in fase di registrazione trovi già visibile il coupon per l'abbonamento Pro. Provala sui tuoi terreni e dicci cosa migliorare: il tuo feedback guida lo sviluppo.",
+    ],
+    relatedProductSlug: "agricola",
+  },
+  {
     slug: "coldiretti-basilicata-mobilitazione-reddito-agricolo",
     title:
       "Coldiretti Basilicata in stato di mobilitazione: pronti a scendere in piazza",

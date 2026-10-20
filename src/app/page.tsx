@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { products, type Product } from "@/lib/products";
-import { SITE_URL } from "@/lib/site";
+import {
+  AGRICOLA_APP_URL,
+  AGRICOLA_BETA_END_LABEL,
+  SITE_URL,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Software su Misura e Gestionali per PMI",
@@ -223,6 +227,39 @@ export default function Home() {
             </div>
             <div className="hero-blueprint-status">
               <i /> In lavorazione
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-accent" aria-labelledby="agricola-beta">
+        <div className="container">
+          <div className="section-shell">
+            <span className="sheet-tab">Free beta · fino al {AGRICOLA_BETA_END_LABEL}</span>
+            <div className="section-header">
+              <h2 id="agricola-beta">
+                Agricola è in free beta: provala gratis fino al{" "}
+                {AGRICOLA_BETA_END_LABEL}.
+              </h2>
+              <p className="section-lead">
+                Terreni, particelle, mappe satellitari Copernicus con indici
+                NDVI, mappa catastale e quaderno di campagna in un unico
+                gestionale. Registrati ora: in fase di registrazione trovi già
+                il coupon per l&apos;abbonamento Pro.
+              </p>
+            </div>
+            <div className="cta-row">
+              <a
+                href={AGRICOLA_APP_URL}
+                className="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+              >
+                Prova Agricola gratis
+              </a>
+              <Link href="/prodotti/agricola" className="btn btn-secondary">
+                Scopri cosa include
+              </Link>
             </div>
           </div>
         </div>

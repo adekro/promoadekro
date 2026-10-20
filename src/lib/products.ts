@@ -158,6 +158,11 @@ export const products: Product[] = [
     ],
     faqs: [
       {
+        question: "Posso provare Agricola gratis?",
+        answer:
+          "Si, Agricola e in free beta fino al 15 gennaio 2027: registrati su agricola.adekro.com e, in fase di registrazione, trovi gia visibile il coupon per l'abbonamento Pro.",
+      },
+      {
         question: "Agricola aiuta a gestire terreni e particelle?",
         answer:
           "Si, Agricola raccoglie terreni, particelle e colture in una mappa operativa consultabile dal team.",

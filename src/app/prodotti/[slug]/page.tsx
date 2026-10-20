@@ -4,7 +4,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, products } from "@/lib/products";
 import { getGuidesByProduct } from "@/lib/guides";
-import { SITE_URL } from "@/lib/site";
+import {
+  AGRICOLA_APP_URL,
+  AGRICOLA_BETA_END_LABEL,
+  SITE_URL,
+} from "@/lib/site";
 
 type ProductPageProps = {
   params: Promise<{ slug: string }>;
@@ -179,14 +183,39 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <h1>{product.name}</h1>
               <p className="section-lead">{product.longDescription}</p>
             </div>
+            {product.slug === "agricola" ? (
+              <p className="section-lead">
+                <strong>Free beta fino al {AGRICOLA_BETA_END_LABEL}:</strong>{" "}
+                provala gratis su{" "}
+                <a href={AGRICOLA_APP_URL} target="_blank" rel="noopener">
+                  agricola.adekro.com
+                </a>
+                . In fase di registrazione trovi già il coupon per
+                l&apos;abbonamento Pro.
+              </p>
+            ) : null}
             <div className="cta-row">
+              {product.slug === "agricola" ? (
+                <a
+                  href={AGRICOLA_APP_URL}
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Prova gratis la beta
+                </a>
+              ) : null}
               <Link
                 href={
                   product.kind === "servizio"
                     ? "/contatti"
                     : `mailto:info@adekro.com?subject=${encodeURIComponent(`Richiesta demo ${product.name}`)}`
                 }
-                className="btn btn-primary"
+                className={
+                  product.slug === "agricola"
+                    ? "btn btn-secondary"
+                    : "btn btn-primary"
+                }
                 aria-label={
                   product.kind === "servizio"
                     ? `Parliamo del tuo progetto: ${product.name}`
