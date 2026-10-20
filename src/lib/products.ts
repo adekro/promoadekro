@@ -134,7 +134,7 @@ export const products: Product[] = [
     shortDescription:
       "Il gestionale per visualizzare terreni, colture e trattamenti in un unico quadro operativo.",
     metaDescription:
-      "Gestisci terreni, particelle e colture con dati satellitari Copernicus e storico dei trattamenti fitosanitari in un'unica mappa operativa. Richiedi una demo.",
+      "Gestisci terreni, particelle e colture con dati satellitari Copernicus e storico dei trattamenti fitosanitari in un'unica mappa operativa. Prova la free beta gratis.",
     longDescription:
       "Agricola aiuta agricoltori e agronomi a disegnare terreni e particelle, associare le colture, consultare dati satellitari Copernicus e gestire i prodotti fitosanitari impiegati in campo.",
     benefits: [

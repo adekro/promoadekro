@@ -175,12 +175,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <Image
                 alt={`Logo di ${product.name}, ${product.category} firmato Adekro`}
                 className={`product-detail-logo product-logo-${product.slug}`}
-                height={120}
+                height={product.slug === "agricola" ? 127 : 120}
                 priority
                 src={product.logo}
-                width={120}
+                width={product.slug === "agricola" ? 461 : 120}
               />
-              <h1>{product.name}</h1>
+              {/* Il logo di Agricola contiene gia il nome: l'h1 resta per SEO e screen reader. */}
+              <h1 className={product.slug === "agricola" ? "sr-only" : undefined}>
+                {product.name}
+              </h1>
               <p className="section-lead">{product.longDescription}</p>
             </div>
             {product.slug === "agricola" ? (
@@ -205,27 +208,25 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   Prova gratis la beta
                 </a>
               ) : null}
-              <Link
-                href={
-                  product.kind === "servizio"
-                    ? "/contatti"
-                    : `mailto:info@adekro.com?subject=${encodeURIComponent(`Richiesta demo ${product.name}`)}`
-                }
-                className={
-                  product.slug === "agricola"
-                    ? "btn btn-secondary"
-                    : "btn btn-primary"
-                }
-                aria-label={
-                  product.kind === "servizio"
-                    ? `Parliamo del tuo progetto: ${product.name}`
-                    : `Richiedi una demo per ${product.name}`
-                }
-              >
-                {product.kind === "servizio"
-                  ? "Parliamo del tuo progetto"
-                  : "Richiedi una demo"}
-              </Link>
+              {product.slug !== "agricola" ? (
+                <Link
+                  href={
+                    product.kind === "servizio"
+                      ? "/contatti"
+                      : `mailto:info@adekro.com?subject=${encodeURIComponent(`Richiesta demo ${product.name}`)}`
+                  }
+                  className="btn btn-primary"
+                  aria-label={
+                    product.kind === "servizio"
+                      ? `Parliamo del tuo progetto: ${product.name}`
+                      : `Richiedi una demo per ${product.name}`
+                  }
+                >
+                  {product.kind === "servizio"
+                    ? "Parliamo del tuo progetto"
+                    : "Richiedi una demo"}
+                </Link>
+              ) : null}
               <Link href="/prodotti" className="btn btn-secondary">
                 Torna ai prodotti
               </Link>
