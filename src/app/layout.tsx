@@ -5,7 +5,7 @@ import { Merriweather, Space_Grotesk } from "next/font/google";
 import CookieConsent from "@/components/CookieConsent";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 import NavLinks from "@/components/NavLinks";
-import { SITE_URL } from "@/lib/site";
+import { LEGAL, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -186,10 +186,16 @@ export default function RootLayout({
               </div>
             </div>
             <div className="footer-bottom">
-              <p>
-                Adekro di Emanuele Croce - Soluzioni informatiche per piccole e
-                medie imprese.
-              </p>
+              <div className="footer-company">
+                <p>
+                  {LEGAL.name} - Soluzioni informatiche per piccole e medie
+                  imprese.
+                </p>
+                <p>
+                  Sede: {LEGAL.address} · C.F. {LEGAL.fiscalCode} ·{" "}
+                  {LEGAL.email}
+                </p>
+              </div>
               <div className="footer-legal-links">
                 <Link href="/privacy-policy">Privacy Policy</Link>
                 <Link href="/cookie-policy">Cookie Policy</Link>
