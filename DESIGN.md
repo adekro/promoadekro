@@ -115,7 +115,7 @@ rounded:
   xs: "3px"
   sm: "4px"
   md: "6px"
-  lg: "8px"
+  lg: "6px"
   pill: "999px"
 spacing:
   sm: "0.8rem"
@@ -229,7 +229,7 @@ Navy and blue-reale on warm ivory, with brand gold reserved for ink, not fill.
 
 ## Layout
 
-Centered container at `min(1100px, 100% - 2.4rem)`, widened to `min(1280px, 100% - 2.4rem)` for the header/nav row. Sections use flat vertical rhythm (`.section` padding 3.2rem top/bottom, collapsing to 1rem between adjacent sections) rather than a hard-bordered card wrapping every section. Two-column grids are the default composition for hero and CTA blocks (`.product-hero-grid`, `.operational-grid`), collapsing to a single column under 900px. Product groups are separated by a dimension line (`.quota`), not a border. The dark service block holds a three-item list (`.service-list`, three columns, one under 900px) beside the single contact CTA; there is no separate strip of cards after it. The header needs about 950px for logo, six links and the CTA on one row: below 1200px the brand caption is hidden, below 1100px nav and CTA padding tighten, and below 1000px it stacks and is no longer sticky (stacked it is ~250px tall). `overflow-x: clip` (not `hidden`) is used so desktop sticky keeps working. Under 640px product cards are one column, preview above copy. Product and feature grids are 2-column (`.cards`, `.product-grid`, `.stats-grid` at 3-column), collapsing to 1 column under 900px. `.section-shell` is a bare positioning wrapper — no border, background, or shadow of its own — used specifically so a grid of cards is never nested inside a second bordered card; `.section.section-soft` instead applies a flat full-bleed tint at the section level, and `.section-accent .section-shell` is the one exception that keeps a real bordered/shadowed dark panel, because it is always a single CTA/feature block, never a wrapper around other cards.
+Centered container at `min(1100px, 100% - 2.4rem)`, widened to `min(1280px, 100% - 2.4rem)` for the header/nav row. Sections use flat vertical rhythm (`.section` padding 3.2rem top/bottom, collapsing to 1rem between adjacent sections) rather than a hard-bordered card wrapping every section. Two-column grids are the default composition for hero and CTA blocks (`.product-hero-grid`, `.operational-grid`), collapsing to a single column under 900px. Product groups are separated by a dimension line (`.dimension-line`), not a border. The dark service block holds a three-item list (`.service-list`, three columns, one under 900px) beside the single contact CTA; there is no separate strip of cards after it. The header needs about 950px for logo, six links and the CTA on one row: below 1200px the brand caption is hidden, below 1100px nav and CTA padding tighten, and below 1000px it stacks and is no longer sticky (stacked it is ~250px tall). `overflow-x: clip` (not `hidden`) is used so desktop sticky keeps working. Under 640px product cards are one column, preview above copy. Product and feature grids are 2-column (`.cards`, `.product-grid`, `.stats-grid` at 3-column), collapsing to 1 column under 900px. `.section-shell` is a bare positioning wrapper — no border, background, or shadow of its own — used specifically so a grid of cards is never nested inside a second bordered card; `.section.section-soft` instead applies a flat full-bleed tint at the section level, and `.section-accent .section-shell` is the one exception that keeps a real bordered/shadowed dark panel, because it is always a single CTA/feature block, never a wrapper around other cards.
 
 ## Elevation & Depth
 
@@ -239,21 +239,21 @@ Depth is structural, not ambient: instead of diffuse blurred drop shadows, surfa
 - **Plate (light)** (`box-shadow: 6px 6px 0 rgba(6, 27, 57, 0.16)`, token `--shadow-plate`): resting state for `.card`, `.stat-card`, `.product-card`.
 - **Plate (dark)** (`box-shadow: 6px 6px 0 rgba(200, 149, 62, 0.32)`, token `--shadow-plate-dark`): resting state for dark panels — `.hero-blueprint`, `.section-accent .section-shell`, `.operational-grid`.
 - **Plate hover (gold push)** (`box-shadow: 10px 10px 0 rgba(200, 149, 62, 0.16)` on cards/stats, `12px 12px 0 rgba(6, 27, 57, 0.12)` on product cards): the offset grows and the card nudges up-left (`translate(-2px,-2px)` to `-3px,-3px`) on hover, paired with a border color shift to brand gold.
-- A conventional diffuse blurred shadow is used only for two chrome elements that sit above page content rather than in the page flow: the sheet-tab's small drop shadow and the cookie-consent dialog's modal shadow.
+- No blurred shadow anywhere: the sheet-tab (`3px 3px 0`) and the cookie-consent dialog (`8px 8px 0`) also use flat offsets. The sticky header keeps a backdrop blur, which is a translucency effect, not a shadow.
 
 ### Named Rules
 **The Offset-Not-Blur Rule.** Card and panel depth at rest is a hard zero-blur offset shadow, never a blurred glow. Blur is reserved for true overlays (modal, floating tab), not for in-flow surfaces.
 
 ## Shapes
 
-Corners are sharp-to-slightly-softened by default: 6px (`--radius`) for cards, stat blocks, product cards, footer columns, and 8px (`--radius-lg`) for larger dark panels (hero blueprint, section-accent, operational grid). Buttons split the rule deliberately: `.btn-secondary` uses the sharp 4px radius like the rest of the system, while `.btn-primary` is the one full pill (999px) in the system, reserved for the primary call to action. Borders are hairline (1px) and do real structural work — card outlines, section dividers, the dashed `.process-connector` between process nodes — rather than being decorative. The fine millimeter grid (`.blueprint-grid`, `.blueprint-grid-dark`, 22–24px cell) is the system's one recurring background texture, restricted to the hero blueprint panel and the custom-gestionali product-card preview.
+Corners are sharp-to-slightly-softened by default: 6px (`--radius`) for cards, stat blocks, product cards, footer columns, and 6px (`--radius-lg`, the system maximum) for larger dark panels (hero blueprint, section-accent, operational grid). Buttons split the rule deliberately: `.btn-secondary` uses the sharp 4px radius like the rest of the system, while `.btn-primary` is the one full pill (999px) in the system, reserved for the primary call to action. Borders are hairline (1px) and do real structural work — card outlines, section dividers, the dashed `.process-connector` between process nodes — rather than being decorative. The fine millimeter grid (`.blueprint-grid`, `.blueprint-grid-dark`, 22–24px cell) is the system's one recurring background texture, restricted to the hero blueprint panel and the custom-gestionali product-card preview.
 
 ## Components
 
 ### Buttons
 - **Shape:** pill (999px radius) for primary; sharp rectangle (4px) for secondary.
-- **Primary:** brand gold fill (`#c8953e`) on navy text (`#03152f`), padding `0.82rem 1.3rem`, soft ambient shadow (the one place a diffuse shadow is allowed on an in-flow element, because the pill shape already signals "not a drafting plate").
-- **Hover / Focus:** primary darkens to `#9d6d25` with white text and lifts (`translateY(-2px)`) with a larger diffuse shadow; all interactive elements get a 3px solid brand-gold focus ring (`outline-offset: 3px`).
+- **Primary:** brand gold fill (`#c8953e`) on navy text (`#03152f`), padding `0.82rem 1.3rem`, flat offset shadow (`4px 4px 0`).
+- **Hover / Focus:** primary darkens to `#9d6d25` with white text and nudges up-left (`translate(-2px,-2px)`) with a larger flat offset; all interactive elements get a 3px solid brand-gold focus ring (`outline-offset: 3px`).
 - **Secondary:** hairline border, paper-white background, hover fills to soft-slate tint and border darkens to `bg-accent`.
 
 ### Cards / Containers
@@ -270,7 +270,7 @@ Corners are sharp-to-slightly-softened by default: 6px (`--radius`) for cards, s
 The illustration at the head of each product card, drawn as a sheet: flat `bg-strong` navy plate, `gold-light` linework (1px borders, 40–50% alpha rules), ivory type in label/small sizes, one filled or outlined gold-light element as the single accent, and a dimension line along the foot (`.product-preview::after`). Only the custom-software preview carries the millimeter grid. Previews are `aria-hidden` illustrations; their sample figures are not claims. No photography, no per-product colors.
 
 ### Dimension Line (signature component)
-`.quota`: a hairline in `brand-dark` with end ticks flanking a label-size value in `text-muted`, placed above each product group to measure it ("3 soluzioni"). The value is computed from the data, so it can never drift. It replaces the border that used to separate groups. Decorative otherwise, hence `aria-hidden`.
+`.dimension-line`: a hairline in `brand-dark` with end ticks flanking a label-size value in `text-muted`, placed above each product group to measure it ("3 soluzioni"). The value is computed from the data, so it can never drift. It replaces the border that used to separate groups. Decorative otherwise, hence `aria-hidden`.
 
 ### Service List
 Inside the dark service block: three items, each a `gold-light` Merriweather h3 over a hairline, with a body-size ivory line. Not cards: no fill, no shadow, no border box. One contact CTA sits in the block's right column.

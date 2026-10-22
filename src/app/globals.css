@@ -17,7 +17,7 @@
   --gold-light: #f1d18f;
   --blue-mid: #0b438a;
   --radius: 6px;
-  --radius-lg: 8px;
+  --radius-lg: 6px;
   --shadow-plate: 6px 6px 0 rgba(6, 27, 57, 0.16);
   --shadow-plate-dark: 6px 6px 0 rgba(200, 149, 62, 0.32);
   --font-tabular: "tnum" 1, "lnum" 1;
@@ -78,6 +78,7 @@ body {
   background: var(--bg-main);
   font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
   font-feature-settings: var(--font-tabular);
+  font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -170,7 +171,7 @@ ul {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 3px;
-  box-shadow: 0 4px 10px rgba(3, 21, 47, 0.18);
+  box-shadow: 3px 3px 0 rgba(3, 21, 47, 0.2);
 }
 
 .sheet-tab-inline {
@@ -292,14 +293,14 @@ ul {
   border-radius: 999px;
   background: var(--brand);
   color: #03152f;
-  box-shadow: 0 10px 15px -3px rgba(157, 109, 37, 0.28);
+  box-shadow: 4px 4px 0 rgba(6, 27, 57, 0.2);
 }
 
 .btn-primary:hover {
   background: var(--brand-dark);
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(157, 109, 37, 0.34);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 rgba(6, 27, 57, 0.24);
 }
 
 .btn-secondary {
@@ -317,7 +318,8 @@ ul {
 .section {
   padding: 3.2rem 0;
   position: relative;
-  overflow: hidden;
+  /* clip only the x axis: vertical overflow stays visible so plate shadows are not cut */
+  overflow-x: clip;
 }
 
 .section + .section {
@@ -505,7 +507,7 @@ ul {
 }
 
 .breadcrumb-list a:hover {
-  color: var(--brand);
+  color: var(--brand-ink);
 }
 
 .breadcrumb-list li[aria-current="page"] {
@@ -735,7 +737,7 @@ ul {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   background: var(--bg-surface);
-  box-shadow: 0 24px 80px rgba(3, 21, 47, 0.28);
+  box-shadow: 8px 8px 0 rgba(3, 21, 47, 0.28);
 }
 
 .cookie-consent-copy h2 {
@@ -972,7 +974,7 @@ ul {
 }
 
 /* Dimension line: measures a group of products. The value is the real count. */
-.quota {
+.dimension-line {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -985,24 +987,24 @@ ul {
   font-feature-settings: var(--font-tabular);
 }
 
-.quota-line {
+.dimension-line-rule {
   flex: 1;
   height: 11px;
-  --quota-ink: var(--brand-dark);
+  --dimension-ink: var(--brand-dark);
   background:
-    linear-gradient(var(--quota-ink), var(--quota-ink)) center / 100% 1px no-repeat;
+    linear-gradient(var(--dimension-ink), var(--dimension-ink)) center / 100% 1px no-repeat;
 }
 
-.quota-line-start {
+.dimension-line-rule-start {
   background:
-    linear-gradient(var(--quota-ink), var(--quota-ink)) center / 100% 1px no-repeat,
-    linear-gradient(var(--quota-ink), var(--quota-ink)) left / 1px 100% no-repeat;
+    linear-gradient(var(--dimension-ink), var(--dimension-ink)) center / 100% 1px no-repeat,
+    linear-gradient(var(--dimension-ink), var(--dimension-ink)) left / 1px 100% no-repeat;
 }
 
-.quota-line-end {
+.dimension-line-rule-end {
   background:
-    linear-gradient(var(--quota-ink), var(--quota-ink)) center / 100% 1px no-repeat,
-    linear-gradient(var(--quota-ink), var(--quota-ink)) right / 1px 100% no-repeat;
+    linear-gradient(var(--dimension-ink), var(--dimension-ink)) center / 100% 1px no-repeat,
+    linear-gradient(var(--dimension-ink), var(--dimension-ink)) right / 1px 100% no-repeat;
 }
 
 .product-category-heading {
@@ -1121,6 +1123,23 @@ ul {
 }
 
 .product-link:hover b { transform: translateX(4px); }
+
+/* Whole card is the click target: the link stretches over the card. */
+.product-card .product-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.product-card:has(.product-link:focus-visible) {
+  outline: 3px solid var(--brand-dark);
+  outline-offset: 3px;
+}
+
+.product-card .product-link:focus-visible {
+  outline: none;
+}
 
 /* Product previews: one drafting-sheet language. Navy plate, gold-light linework,
    ivory type, a dimension line along the foot. Gold is line and type here, never a fill.

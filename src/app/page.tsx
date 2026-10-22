@@ -42,14 +42,14 @@ function productsIn(slugs: string[]) {
   return products.filter((product) => slugs.includes(product.slug));
 }
 
-function Quota({ count }: { count: number }) {
+function DimensionLine({ count }: { count: number }) {
   return (
-    <div className="quota" aria-hidden="true">
-      <span className="quota-line quota-line-start" />
-      <span className="quota-value">
+    <div className="dimension-line" aria-hidden="true">
+      <span className="dimension-line-rule dimension-line-rule-start" />
+      <span className="dimension-line-value">
         {count} {count === 1 ? "soluzione" : "soluzioni"}
       </span>
-      <span className="quota-line quota-line-end" />
+      <span className="dimension-line-rule dimension-line-rule-end" />
     </div>
   );
 }
@@ -275,7 +275,7 @@ export default function Home() {
             </p>
           </div>
           <div className="product-category-group product-category-group-professional">
-            <Quota count={productsIn(professionalSlugs).length} />
+            <DimensionLine count={productsIn(professionalSlugs).length} />
             <div className="product-category-heading">
               <h3>
                 Per gestire il lavoro: controllo e continuità per ogni giornata
@@ -319,7 +319,7 @@ export default function Home() {
             </div>
           </div>
           <div className="product-category-group product-category-group-playful">
-            <Quota count={productsIn(playfulSlugs).length} />
+            <DimensionLine count={productsIn(playfulSlugs).length} />
             <div className="product-category-heading">
               <h3>Per divertirsi e migliorare: gioca, sperimenta, brinda.</h3>
               <p>
@@ -359,7 +359,7 @@ export default function Home() {
             </div>
           </div>
           <div className="product-category-group product-category-group-events">
-            <Quota count={productsIn(eventSlugs).length} />
+            <DimensionLine count={productsIn(eventSlugs).length} />
             <div className="product-category-heading">
               <h3>
                 Per i momenti importanti: organizza il matrimonio senza perdere
