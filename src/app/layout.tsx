@@ -43,7 +43,6 @@ export const metadata: Metadata = {
     "integrazioni API",
     "trasformazione digitale PMI",
     "app asta cio",
-    "app cocktail",
     "gestionale agricolo",
     "software gestione azienda agricola",
     "gestionale maneggio",

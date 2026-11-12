@@ -17,7 +17,7 @@ Questo progetto deve sempre puntare all'indicizzazione organica sui motori di ri
 
 ## Tono delle pagine app
 
-- Per Fantacalcio e DrinkTrainer, usa un tono più giocoso, coinvolgente e dinamico, mantenendo contenuti chiari e utili per l'utente.
+
 - Per HorseHouse e Agricola, usa un tono professionale, affidabile e orientato alla gestione operativa e al valore per il cliente.
 
 ## Nota operativa

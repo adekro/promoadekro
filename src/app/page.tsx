@@ -21,8 +21,6 @@ export const metadata: Metadata = {
     "sviluppo app mobile",
     "software gestionale",
     "automazioni e integrazioni",
-    "app asta fantacalcio",
-    "app cocktail",
     "gestionale agricolo",
     "gestionale maneggio",
     "software su misura PMI",
@@ -35,7 +33,6 @@ export const metadata: Metadata = {
 };
 
 const professionalSlugs = ["horsehouse", "agricola", "gestionali-su-misura"];
-const playfulSlugs = ["fantauction", "drinktrainer"];
 const eventSlugs = ["siplanner"];
 
 function productsIn(slugs: string[]) {
@@ -81,52 +78,6 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
         <div className="blueprint-line blueprint-line-two" />
         <div className="blueprint-node">Analisi</div>
         <div className="blueprint-node blueprint-node-active">Sviluppo</div>
-      </div>
-    );
-  }
-
-  if (slug === "fantauction") {
-    return (
-      <div className="preview-auction" aria-hidden="true">
-        <div className="preview-topline">
-          <span>ASTA LIVE</span>
-          <strong>184 cr</strong>
-        </div>
-        <div className="player-row">
-          <span>LAUTARO</span>
-          <b>Preferito</b>
-        </div>
-        <div className="player-row">
-          <span>LEAO</span>
-          <b>Rigorista</b>
-        </div>
-        <div className="credit-bars">
-          <i />
-          <i />
-          <i />
-          <i />
-        </div>
-      </div>
-    );
-  }
-
-  if (slug === "drinktrainer") {
-    return (
-      <div className="preview-drink" aria-hidden="true">
-        <div className="glass">
-          <i />
-          <i />
-          <i />
-        </div>
-        <div className="pour-meter">
-          <span>1.0 oz</span>
-          <b />
-        </div>
-        <div className="ingredient-pills">
-          <em>lime</em>
-          <em>rum</em>
-          <em>mint</em>
-        </div>
       </div>
     );
   }
@@ -289,46 +240,6 @@ export default function Home() {
             </div>
             <div className="product-grid">
               {productsIn(professionalSlugs).map((product) => (
-                <article
-                  className={`product-card product-card-${product.slug}`}
-                  key={product.slug}
-                >
-                  <ProductPreview slug={product.slug} />
-                  <div className="product-card-copy">
-                    <Image
-                      alt={`Logo di ${product.name}, ${product.category}`}
-                      className={`product-logo product-logo-${product.slug}`}
-                      height={80}
-                      src={product.logo}
-                      width={80}
-                    />
-                    <span className="sheet-tab sheet-tab-inline">
-                      {product.category}
-                    </span>
-                    <h4>{product.name}</h4>
-                    <p>{product.shortDescription}</p>
-                    <Link
-                      href={`/prodotti/${product.slug}`}
-                      className="product-link"
-                    >
-                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-          <div className="product-category-group product-category-group-playful">
-            <DimensionLine count={productsIn(playfulSlugs).length} />
-            <div className="product-category-heading">
-              <h3>Per divertirsi e migliorare: gioca, sperimenta, brinda.</h3>
-              <p>
-                App leggere e coinvolgenti per vivere meglio l&apos;asta del
-                fantacalcio e imparare l&apos;arte dei cocktail.
-              </p>
-            </div>
-            <div className="product-grid">
-              {productsIn(playfulSlugs).map((product) => (
                 <article
                   className={`product-card product-card-${product.slug}`}
                   key={product.slug}

@@ -10,7 +10,7 @@ web
 
 Due pubblici in proporzione simile:
 - **PMI in cerca di un gestionale su misura**: titolari/responsabili che non trovano un software standard adatto al proprio modo di lavorare e valutano uno sviluppo ad hoc con Adekro (servizio "Gestionali su Misura").
-- **Utenti interessati a un prodotto verticale gia pronto**: Agricola (agricoltori/agronomi), HorseHouse (maneggi/professionisti equestri), FantAuction (fantaallenatori), DrinkTrainer (bartender/appassionati cocktail), SiPlanner (coppie che organizzano il matrimonio).
+- **Utenti interessati a un prodotto verticale gia pronto**: Agricola (agricoltori/agronomi), HorseHouse (maneggi/professionisti equestri), SiPlanner (coppie che organizzano il matrimonio).
 
 ## Product Purpose
 

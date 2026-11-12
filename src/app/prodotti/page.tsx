@@ -13,8 +13,6 @@ export const metadata: Metadata = {
     "gestionale agricolo Copernicus",
     "gestionale maneggio",
     "software gestione cavalli",
-    "app asta fantacalcio",
-    "app cocktail bartender",
     "gestionale agricolo con dati satellitari Copernicus",
     "scheda digitale cura cavalli maneggio",
   ],
