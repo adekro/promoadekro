@@ -261,7 +261,7 @@ export default function Home() {
       <section className="section products-section">
         <div className="container">
           <div className="products-heading">
-            <h2>Tre gestionali e un&apos;app per il matrimonio.</h2>
+            <h2>I prodotti Adekro</h2>
           </div>
           <div className="product-category-group product-category-group-professional">
             <DimensionLine count={productsIn(professionalSlugs).length} />

@@ -1629,3 +1629,113 @@ ul {
 .hero-blueprint .dimension-line-rule {
   --dimension-ink: var(--gold-light);
 }
+
+/* FAQ: spec-sheet rows. Flat plate, numbered, native <details> (no script). */
+.faq-group {
+  margin-top: 3rem;
+}
+
+.faq-group-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  gap: 1.5rem 3rem;
+  align-items: start;
+}
+
+.faq-group-title {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: start;
+}
+
+.faq-group-title h2 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(1.55rem, 2.5vw, 2.3rem);
+  line-height: 1.1;
+}
+
+.faq-list {
+  border: 1px solid var(--text-main);
+  border-radius: var(--radius);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-plate);
+}
+
+.faq-item + .faq-item {
+  border-top: 1px solid var(--line-strong);
+}
+
+.faq-item summary {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr 1.5rem;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 1.1rem 1.2rem;
+  min-height: 2.75rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  justify-self: end;
+  color: var(--brand-ink);
+  font-weight: 700;
+}
+
+.faq-item[open] summary::after {
+  content: "\2212";
+}
+
+.faq-index {
+  color: var(--brand-ink);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.faq-item h3 {
+  margin: 0;
+  color: var(--text-main);
+  font-family: var(--font-space-grotesk), "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.faq-item p {
+  padding: 0 1.2rem 1.2rem calc(1.2rem + 2.4rem + 0.8rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.faq-item summary:focus-visible {
+  outline-offset: -3px;
+}
+
+.faq-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.faq-contact p {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .faq-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-item p {
+    padding-left: 1.2rem;
+  }
+}

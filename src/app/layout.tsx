@@ -153,7 +153,6 @@ export default function RootLayout({
                 <Link href="/">Home</Link>
                 <Link href="/chi-siamo">Chi siamo</Link>
                 <Link href="/prodotti">Prodotti</Link>
-                <Link href="/novita">Novità</Link>
                 <Link href="/contatti">Contatti</Link>
               </div>
               <div className="footer-column">
