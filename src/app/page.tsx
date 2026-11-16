@@ -165,9 +165,11 @@ export default function Home() {
         <div className="container product-hero-grid">
           <div className="hero-copy">
             <a
-              href="#agricola-beta"
+              href={AGRICOLA_APP_URL}
+              target="_blank"
+              rel="noopener"
               className="sheet-tab sheet-tab-inline hero-beta-tab"
-              aria-label={`Agricola in free beta fino al ${AGRICOLA_BETA_END_LABEL}: vai alla sezione`}
+              aria-label={`Agricola in free beta fino al ${AGRICOLA_BETA_END_LABEL}: apri agricola.adekro.com`}
             >
               Agricola free beta · fino al {AGRICOLA_BETA_END_LABEL}
             </a>
