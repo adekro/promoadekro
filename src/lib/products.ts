@@ -59,7 +59,7 @@ export const products: Product[] = [
       {
         question: "Posso far evolvere il gestionale anche dopo il rilascio?",
         answer:
-          "Si, un gestionale ad hoc e pensato per crescere: possiamo aggiungere nuove funzioni, automazioni e integrazioni man mano che l'azienda cambia esigenze.",
+          "Si, un gestionale ad hoc è pensato per crescere: possiamo aggiungere nuove funzioni, automazioni e integrazioni man mano che l'azienda cambia esigenze.",
       },
     ],
     process: [
