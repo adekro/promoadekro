@@ -36,6 +36,12 @@ Ogni layout strutturato deve posizionarsi al vertice dei Core Web Vitals e della
 
 ---
 
+## 🎯 PRECEDENZA SULLA SKILL `design-taste-frontend`
+
+Le regole di questo file hanno sempre la precedenza sulla skill `design-taste-frontend`. Usala per layout, ritmo, gerarchia e copy. Non applicare ciò che contraddice il design system Drafting Studio: foto stock, shader, gradienti, sfondi scuri fuori dai pannelli navy, icone decorative a colori, ombre sfocate, sollevamenti hover con blur.
+
+---
+
 ## 💻 MODALITÀ DI OUTPUT DEL TERMINALE
 
 1. **Risposte Dirette:** Non iniziare con messaggi di cortesia (_"Ecco il codice per Adekro..."_). Genera direttamente il codice o il file richiesto.

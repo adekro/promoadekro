@@ -1,0 +1,244 @@
+{
+ "url": "http://localhost:3000/",
+ "views": {
+  "desktop": {
+   "width": 1440,
+   "height": 900,
+   "navH": 91,
+   "scrollHeight": 4136,
+   "screens": 4.6,
+   "sections": [
+    {
+     "n": 1,
+     "tag": "section",
+     "id": "",
+     "cls": "product-hero",
+     "top": 91,
+     "h": 686,
+     "hScreens": 0.76,
+     "offGrid": 686,
+     "tiles": [
+      {
+       "file": "desktop-sec-01-a.jpg",
+       "scrollY": 91
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "tag": "section",
+     "id": "",
+     "cls": "section section-accent",
+     "top": 777,
+     "h": 397,
+     "hScreens": 0.44,
+     "offGrid": 397,
+     "tiles": [
+      {
+       "file": "desktop-sec-02-a.jpg",
+       "scrollY": 777
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "tag": "section",
+     "id": "",
+     "cls": "section products-section",
+     "top": 1174,
+     "h": 1181,
+     "hScreens": 1.31,
+     "offGrid": 281,
+     "tiles": [
+      {
+       "file": "desktop-sec-03-a.jpg",
+       "scrollY": 1174
+      },
+      {
+       "file": "desktop-sec-03-b.jpg",
+       "scrollY": 1455
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "tag": "section",
+     "id": "",
+     "cls": "section products-section products-section-events",
+     "top": 2355,
+     "h": 517,
+     "hScreens": 0.57,
+     "offGrid": 517,
+     "tiles": [
+      {
+       "file": "desktop-sec-04-a.jpg",
+       "scrollY": 2355
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "tag": "section",
+     "id": "",
+     "cls": "section operational-section",
+     "top": 2872,
+     "h": 500,
+     "hScreens": 0.56,
+     "offGrid": 500,
+     "tiles": [
+      {
+       "file": "desktop-sec-05-a.jpg",
+       "scrollY": 2872
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "tag": "footer",
+     "id": "",
+     "cls": "site-footer",
+     "top": 3429,
+     "h": 707,
+     "hScreens": 0.79,
+     "offGrid": 707,
+     "tiles": [
+      {
+       "file": "desktop-sec-06-a.jpg",
+       "scrollY": 3236,
+       "cutTop": 193,
+       "height": 707
+      }
+     ]
+    }
+   ],
+   "consoleErrors": []
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844,
+   "navH": 0,
+   "scrollHeight": 6963,
+   "screens": 8.25,
+   "sections": [
+    {
+     "n": 1,
+     "tag": "section",
+     "id": "",
+     "cls": "product-hero",
+     "top": 282,
+     "h": 1083,
+     "hScreens": 1.28,
+     "offGrid": 239,
+     "tiles": [
+      {
+       "file": "mobile-sec-01-a.jpg",
+       "scrollY": 282
+      },
+      {
+       "file": "mobile-sec-01-b.jpg",
+       "scrollY": 521
+      }
+     ]
+    },
+    {
+     "n": 2,
+     "tag": "section",
+     "id": "",
+     "cls": "section section-accent",
+     "top": 1365,
+     "h": 578,
+     "hScreens": 0.68,
+     "offGrid": 578,
+     "tiles": [
+      {
+       "file": "mobile-sec-02-a.jpg",
+       "scrollY": 1365
+      }
+     ]
+    },
+    {
+     "n": 3,
+     "tag": "section",
+     "id": "",
+     "cls": "section products-section",
+     "top": 1943,
+     "h": 1989,
+     "hScreens": 2.36,
+     "offGrid": 301,
+     "tiles": [
+      {
+       "file": "mobile-sec-03-a.jpg",
+       "scrollY": 1943
+      },
+      {
+       "file": "mobile-sec-03-b.jpg",
+       "scrollY": 2787
+      },
+      {
+       "file": "mobile-sec-03-c.jpg",
+       "scrollY": 3088
+      }
+     ]
+    },
+    {
+     "n": 4,
+     "tag": "section",
+     "id": "",
+     "cls": "section products-section products-section-events",
+     "top": 3931,
+     "h": 713,
+     "hScreens": 0.84,
+     "offGrid": 713,
+     "tiles": [
+      {
+       "file": "mobile-sec-04-a.jpg",
+       "scrollY": 3931
+      }
+     ]
+    },
+    {
+     "n": 5,
+     "tag": "section",
+     "id": "",
+     "cls": "section operational-section",
+     "top": 4644,
+     "h": 868,
+     "hScreens": 1.03,
+     "offGrid": 24,
+     "tiles": [
+      {
+       "file": "mobile-sec-05-a.jpg",
+       "scrollY": 4644
+      },
+      {
+       "file": "mobile-sec-05-b.jpg",
+       "scrollY": 4668
+      }
+     ]
+    },
+    {
+     "n": 6,
+     "tag": "footer",
+     "id": "",
+     "cls": "site-footer",
+     "top": 5568,
+     "h": 1395,
+     "hScreens": 1.65,
+     "offGrid": 551,
+     "tiles": [
+      {
+       "file": "mobile-sec-06-a.jpg",
+       "scrollY": 5568
+      },
+      {
+       "file": "mobile-sec-06-b.jpg",
+       "scrollY": 6119
+      }
+     ]
+    }
+   ],
+   "consoleErrors": []
+  }
+ },
+ "at": "2026-11-16T07:52:49.204Z"
+}

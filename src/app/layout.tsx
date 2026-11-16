@@ -124,10 +124,6 @@ export default function RootLayout({
                   width={180}
                 />
               </Link>
-              <p className="brand-caption">
-                Soluzioni digitali chiare per imprese che vogliono crescere con
-                ordine.
-              </p>
             </div>
             <nav aria-label="Navigazione principale" className="site-nav">
               <NavLinks />

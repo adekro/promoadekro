@@ -40,6 +40,8 @@ function productsIn(slugs: string[]) {
 }
 
 function DimensionLine({ count }: { count: number }) {
+  // A dimension measures a group: a single item has nothing to measure.
+  if (count < 2) return null;
   return (
     <div className="dimension-line" aria-hidden="true">
       <span className="dimension-line-rule dimension-line-rule-start" />
@@ -113,6 +115,36 @@ function ProductPreview({ slug }: { slug: Product["slug"] }) {
   );
 }
 
+function ProductCard({
+  product,
+  headingLevel,
+}: {
+  product: Product;
+  headingLevel: "h3" | "h4";
+}) {
+  const Heading = headingLevel;
+  return (
+    <article className={`product-card product-card-${product.slug}`}>
+      <ProductPreview slug={product.slug} />
+      <div className="product-card-copy">
+        <Image
+          alt={`Logo di ${product.name}, ${product.category}`}
+          className={`product-logo product-logo-${product.slug}`}
+          height={80}
+          src={product.logo}
+          width={80}
+        />
+        <span className="sheet-tab sheet-tab-inline">{product.category}</span>
+        <Heading>{product.name}</Heading>
+        <p>{product.shortDescription}</p>
+        <Link href={`/prodotti/${product.slug}`} className="product-link">
+          Scopri {product.name} <b aria-hidden="true">&rarr;</b>
+        </Link>
+      </div>
+    </article>
+  );
+}
+
 export default function Home() {
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -132,10 +164,18 @@ export default function Home() {
       <section className="product-hero">
         <div className="container product-hero-grid">
           <div className="hero-copy">
-            <h1>Software che segue il lavoro, non il contrario.</h1>
+            <a
+              href="#agricola-beta"
+              className="sheet-tab sheet-tab-inline hero-beta-tab"
+              aria-label={`Agricola in free beta fino al ${AGRICOLA_BETA_END_LABEL}: vai alla sezione`}
+            >
+              Agricola free beta · fino al {AGRICOLA_BETA_END_LABEL}
+            </a>
+            <h1>Gestionali su misura per PMI, aziende agricole e maneggi.</h1>
             <p>
-              Sviluppiamo software su misura, app web, app mobile e gestionali
-              per chi deve decidere, organizzare e tenere tutto sotto controllo.
+              Software che segue il lavoro, non il contrario. Sviluppiamo
+              software su misura, app web, app mobile e gestionali per chi deve
+              decidere, organizzare e tenere tutto sotto controllo.
             </p>
             <div className="cta-row">
               <Link href="/prodotti" className="btn btn-primary">
@@ -176,8 +216,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="hero-blueprint-status">
-              <i /> In lavorazione
+            <div className="dimension-line">
+              <span className="dimension-line-rule dimension-line-rule-start" />
+              <span className="dimension-line-value">3 fasi verificabili</span>
+              <span className="dimension-line-rule dimension-line-rule-end" />
             </div>
           </div>
         </div>
@@ -219,96 +261,46 @@ export default function Home() {
       <section className="section products-section">
         <div className="container">
           <div className="products-heading">
-            <h2>Soluzioni digitali per il lavoro e per le passioni.</h2>
-            <p>
-              Ogni app nasce da un bisogno concreto: rendere più semplice
-              un&apos;attività, un&apos;allenamento o un momento da condividere.
-            </p>
+            <h2>Tre gestionali e un&apos;app per il matrimonio.</h2>
           </div>
           <div className="product-category-group product-category-group-professional">
             <DimensionLine count={productsIn(professionalSlugs).length} />
             <div className="product-category-heading">
-              <h3>
-                Per gestire il lavoro: controllo e continuità per ogni giornata
-                operativa.
-              </h3>
+              <h3>Gestionali per maneggi e aziende agricole.</h3>
               <p>
                 Gestionali affidabili per maneggi e aziende agricole, oppure
                 costruiti su misura insieme ai nostri esperti quando le tue
                 esigenze sono uniche.
               </p>
             </div>
-            <div className="product-grid">
+            <div className="product-grid product-grid-featured">
               {productsIn(professionalSlugs).map((product) => (
-                <article
-                  className={`product-card product-card-${product.slug}`}
+                <ProductCard
                   key={product.slug}
-                >
-                  <ProductPreview slug={product.slug} />
-                  <div className="product-card-copy">
-                    <Image
-                      alt={`Logo di ${product.name}, ${product.category}`}
-                      className={`product-logo product-logo-${product.slug}`}
-                      height={80}
-                      src={product.logo}
-                      width={80}
-                    />
-                    <span className="sheet-tab sheet-tab-inline">
-                      {product.category}
-                    </span>
-                    <h4>{product.name}</h4>
-                    <p>{product.shortDescription}</p>
-                    <Link
-                      href={`/prodotti/${product.slug}`}
-                      className="product-link"
-                    >
-                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
-                    </Link>
-                  </div>
-                </article>
+                  product={product}
+                  headingLevel="h4"
+                />
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section products-section products-section-events">
+        <div className="container">
           <div className="product-category-group product-category-group-events">
             <DimensionLine count={productsIn(eventSlugs).length} />
             <div className="product-category-heading">
-              <h3>
-                Per i momenti importanti: organizza il matrimonio senza perdere
-                nulla di vista.
-              </h3>
-              <p>
-                Invitati, budget e fornitori in un unico spazio, dal primo
-                pensiero al giorno del sì.
-              </p>
+              <h2>App per organizzare il matrimonio.</h2>
+              <p>Invitati, budget e fornitori in un unico spazio.</p>
             </div>
             <div className="product-grid">
               {productsIn(eventSlugs).map((product) => (
-                <article
-                  className={`product-card product-card-${product.slug}`}
+                <ProductCard
                   key={product.slug}
-                >
-                  <ProductPreview slug={product.slug} />
-                  <div className="product-card-copy">
-                    <Image
-                      alt={`Logo di ${product.name}, ${product.category}`}
-                      className={`product-logo product-logo-${product.slug}`}
-                      height={80}
-                      src={product.logo}
-                      width={80}
-                    />
-                    <span className="sheet-tab sheet-tab-inline">
-                      {product.category}
-                    </span>
-                    <h4>{product.name}</h4>
-                    <p>{product.shortDescription}</p>
-                    <Link
-                      href={`/prodotti/${product.slug}`}
-                      className="product-link"
-                    >
-                      Scopri {product.name} <b aria-hidden="true">&rarr;</b>
-                    </Link>
-                  </div>
-                </article>
+                  product={product}
+                  headingLevel="h3"
+                />
               ))}
             </div>
           </div>
@@ -319,19 +311,16 @@ export default function Home() {
         <div className="container">
           <div className="operational-grid">
             <div>
-              <h2>
-                Quando il lavoro ha regole sue, il software deve saperle
-                rispettare.
-              </h2>
+              <h2>Gestionali, app e automazioni su misura per le PMI.</h2>
             </div>
             <div className="operational-copy">
               <p>
                 Progettiamo software gestionali, app web e mobile, automazioni e
                 integrazioni API su misura per organizzare processi, dati e
-                persone attorno a quello che conta davvero nella tua attività.
+                persone nella tua attività.
               </p>
               <Link href="/contatti" className="btn btn-primary">
-                Parliamo del tuo progetto
+                Richiedi un preventivo
               </Link>
             </div>
             <ul className="service-list">
