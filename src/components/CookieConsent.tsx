@@ -124,7 +124,7 @@ export default function CookieConsent() {
 
         <div className="cookie-actions">
           <button className="cookie-primary-button" onClick={acknowledge} type="button">
-            Ho capito
+            Accetta e continua
           </button>
         </div>
       </section>
